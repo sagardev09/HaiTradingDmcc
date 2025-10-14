@@ -47,27 +47,27 @@ export default function Footer() {
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-green-400 via-green-600 to-green-400" />
 
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 pt-16 pb-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 pb-8">
         {/* Top Section - Logo, Description, and Newsletter */}
-        <div className="grid md:grid-cols-3 gap-12 mb-12 pb-12 border-b border-slate-700">
+        <div className="grid md:grid-cols-3 gap-8 sm:gap-12 mb-8 sm:mb-12 pb-8 sm:pb-12 border-b border-slate-700">
           {/* Logo and Description */}
           <div className="md:col-span-1">
-            <div className="mb-6">
+            <div className="mb-4 sm:mb-6">
               {/* Logo Placeholder */}
-              <div className="w-48 h-16 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center border border-white/20">
-                <span className="text-2xl font-bold text-white">HAI TRADING</span>
-                <span className="text-xs text-green-400 ml-1">DMCC</span>
+              <div className="w-40 sm:w-48 h-14 sm:h-16 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center border border-white/20">
+                <span className="text-lg sm:text-2xl font-bold text-white">HAI TRADING</span>
+                <span className="text-[10px] sm:text-xs text-green-400 ml-1">DMCC</span>
               </div>
             </div>
-            <p className="text-slate-300 text-sm leading-relaxed mb-6">
+            <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6">
               Independent global market leader in food commodities, connecting supply and demand sustainably across Africa.
             </p>
             {/* Trust Badges */}
-            <div className="flex items-center gap-3">
-              <div className="px-3 py-1.5 bg-green-600/20 border border-green-500/30 rounded-full text-xs text-green-300 font-medium">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+              <div className="px-2 sm:px-3 py-1 sm:py-1.5 bg-green-600/20 border border-green-500/30 rounded-full text-[10px] sm:text-xs text-green-300 font-medium">
                 ✓ ISO Certified
               </div>
-              <div className="px-3 py-1.5 bg-green-600/20 border border-green-500/30 rounded-full text-xs text-green-300 font-medium">
+              <div className="px-2 sm:px-3 py-1 sm:py-1.5 bg-green-600/20 border border-green-500/30 rounded-full text-[10px] sm:text-xs text-green-300 font-medium whitespace-nowrap">
                 ✓ Trusted Since 2014
               </div>
             </div>
@@ -75,38 +75,38 @@ export default function Footer() {
 
           {/* Newsletter Signup */}
           <div className="md:col-span-2">
-            <h3 className="text-xl font-semibold mb-4">Stay Updated</h3>
-            <p className="text-slate-300 text-sm mb-4">
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Stay Updated</h3>
+            <p className="text-slate-300 text-xs sm:text-sm mb-4">
               Subscribe to our newsletter for the latest commodity market insights and company updates.
             </p>
-            <form className="flex gap-3 max-w-md">
+            <form className="flex flex-col sm:flex-row gap-2 sm:gap-3 max-w-md">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+                className="flex-1 px-3 sm:px-4 py-2.5 sm:py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-sm sm:text-base text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
               />
               <button
                 type="submit"
-                className="px-6 py-3 bg-green-600 hover:bg-green-700 rounded-lg font-medium transition-all duration-200 flex items-center gap-2 hover:scale-105 shadow-lg"
+                className="px-4 sm:px-6 py-2.5 sm:py-3 bg-green-600 hover:bg-green-700 rounded-lg font-medium text-sm sm:text-base transition-all duration-200 flex items-center justify-center gap-2 hover:scale-105 shadow-lg whitespace-nowrap"
               >
                 Subscribe
-                <ArrowRight className="size-4" />
+                <ArrowRight className="size-3 sm:size-4" />
               </button>
             </form>
           </div>
         </div>
 
         {/* Links Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
           {/* Company Links */}
           <div>
-            <h4 className="font-semibold text-lg mb-4 text-white">Company</h4>
-            <ul className="space-y-3">
+            <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-white">Company</h4>
+            <ul className="space-y-2 sm:space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-slate-300 hover:text-green-400 text-sm transition-colors duration-200 flex items-center gap-1 group"
+                    className="text-slate-300 hover:text-green-400 text-xs sm:text-sm transition-colors duration-200 flex items-center gap-1 group"
                   >
                     <span className="group-hover:translate-x-1 transition-transform">{link.name}</span>
                   </Link>
@@ -117,13 +117,13 @@ export default function Footer() {
 
           {/* Products Links */}
           <div>
-            <h4 className="font-semibold text-lg mb-4 text-white">Products</h4>
-            <ul className="space-y-3">
+            <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-white">Products</h4>
+            <ul className="space-y-2 sm:space-y-3">
               {footerLinks.products.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-slate-300 hover:text-green-400 text-sm transition-colors duration-200 flex items-center gap-1 group"
+                    className="text-slate-300 hover:text-green-400 text-xs sm:text-sm transition-colors duration-200 flex items-center gap-1 group"
                   >
                     <span className="group-hover:translate-x-1 transition-transform">{link.name}</span>
                   </Link>
@@ -134,13 +134,13 @@ export default function Footer() {
 
           {/* Resources Links */}
           <div>
-            <h4 className="font-semibold text-lg mb-4 text-white">Resources</h4>
-            <ul className="space-y-3">
+            <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-white">Resources</h4>
+            <ul className="space-y-2 sm:space-y-3">
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-slate-300 hover:text-green-400 text-sm transition-colors duration-200 flex items-center gap-1 group"
+                    className="text-slate-300 hover:text-green-400 text-xs sm:text-sm transition-colors duration-200 flex items-center gap-1 group"
                   >
                     <span className="group-hover:translate-x-1 transition-transform">{link.name}</span>
                   </Link>
@@ -151,13 +151,13 @@ export default function Footer() {
 
           {/* Support Links */}
           <div>
-            <h4 className="font-semibold text-lg mb-4 text-white">Support</h4>
-            <ul className="space-y-3">
+            <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-white">Support</h4>
+            <ul className="space-y-2 sm:space-y-3">
               {footerLinks.support.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-slate-300 hover:text-green-400 text-sm transition-colors duration-200 flex items-center gap-1 group"
+                    className="text-slate-300 hover:text-green-400 text-xs sm:text-sm transition-colors duration-200 flex items-center gap-1 group"
                   >
                     <span className="group-hover:translate-x-1 transition-transform">{link.name}</span>
                   </Link>
@@ -168,17 +168,17 @@ export default function Footer() {
         </div>
 
         {/* Contact Info Section */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12 pb-12 border-b border-slate-700">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12 pb-8 sm:pb-12 border-b border-slate-700">
           {/* Email */}
-          <div className="flex items-start gap-4">
-            <div className="flex-shrink-0 w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center border border-green-500/30">
-              <Mail className="size-5 text-green-400" />
+          <div className="flex items-start gap-3 sm:gap-4">
+            <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-green-600/20 rounded-lg flex items-center justify-center border border-green-500/30">
+              <Mail className="size-4 sm:size-5 text-green-400" />
             </div>
-            <div>
-              <p className="text-slate-400 text-sm mb-1">Email Us</p>
+            <div className="min-w-0">
+              <p className="text-slate-400 text-xs sm:text-sm mb-1">Email Us</p>
               <a
                 href="mailto:Muzaffar@haidmcc.com"
-                className="text-white hover:text-green-400 transition-colors font-medium"
+                className="text-white hover:text-green-400 transition-colors font-medium text-xs sm:text-base break-all"
               >
                 Muzaffar@haidmcc.com
               </a>
@@ -186,29 +186,29 @@ export default function Footer() {
           </div>
 
           {/* Phone */}
-          <div className="flex items-start gap-4">
-            <div className="flex-shrink-0 w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center border border-green-500/30">
-              <Phone className="size-5 text-green-400" />
+          <div className="flex items-start gap-3 sm:gap-4">
+            <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-green-600/20 rounded-lg flex items-center justify-center border border-green-500/30">
+              <Phone className="size-4 sm:size-5 text-green-400" />
             </div>
             <div>
-              <p className="text-slate-400 text-sm mb-1">Call Us</p>
-              <a href="tel:+97145754755" className="text-white hover:text-green-400 transition-colors font-medium block">
+              <p className="text-slate-400 text-xs sm:text-sm mb-1">Call Us</p>
+              <a href="tel:+97145754755" className="text-white hover:text-green-400 transition-colors font-medium text-xs sm:text-base block">
                 +971 4 575 4755
               </a>
-              <a href="tel:+971505013725" className="text-white hover:text-green-400 transition-colors font-medium">
+              <a href="tel:+971505013725" className="text-white hover:text-green-400 transition-colors font-medium text-xs sm:text-base">
                 +971 50 501 3725
               </a>
             </div>
           </div>
 
           {/* Address */}
-          <div className="flex items-start gap-4">
-            <div className="flex-shrink-0 w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center border border-green-500/30">
-              <MapPin className="size-5 text-green-400" />
+          <div className="flex items-start gap-3 sm:gap-4 sm:col-span-2 md:col-span-1">
+            <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-green-600/20 rounded-lg flex items-center justify-center border border-green-500/30">
+              <MapPin className="size-4 sm:size-5 text-green-400" />
             </div>
             <div>
-              <p className="text-slate-400 text-sm mb-1">Visit Us</p>
-              <p className="text-white text-sm leading-relaxed">
+              <p className="text-slate-400 text-xs sm:text-sm mb-1">Visit Us</p>
+              <p className="text-white text-xs sm:text-sm leading-relaxed">
                 Office 1406, Gold Crest Executive<br />
                 Cluster C, JLT Dubai, UAE
               </p>
@@ -217,37 +217,37 @@ export default function Footer() {
         </div>
 
         {/* Bottom Section - Copyright and Social */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6">
           {/* Copyright */}
-          <div className="text-slate-400 text-sm">
+          <div className="text-slate-400 text-xs sm:text-sm text-center md:text-left">
             <p>
               © {currentYear} <span className="text-white font-medium">HAI Trading DMCC</span>. All rights reserved.
             </p>
           </div>
 
           {/* Social Links */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             {socialLinks.map((social) => (
               <a
                 key={social.name}
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`w-10 h-10 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center border border-white/20 ${social.color} transition-all duration-300 hover:scale-110 hover:border-transparent group`}
+                className={`w-9 h-9 sm:w-10 sm:h-10 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center border border-white/20 ${social.color} transition-all duration-300 hover:scale-110 hover:border-transparent group`}
                 aria-label={social.name}
               >
-                <social.icon className="size-5 text-slate-300 group-hover:text-white transition-colors" />
+                <social.icon className="size-4 sm:size-5 text-slate-300 group-hover:text-white transition-colors" />
               </a>
             ))}
           </div>
 
           {/* Legal Links */}
-          <div className="flex items-center gap-4 text-sm">
-            <Link href="#" className="text-slate-400 hover:text-green-400 transition-colors">
+          <div className="flex items-center gap-3 sm:gap-4 text-xs sm:text-sm">
+            <Link href="#" className="text-slate-400 hover:text-green-400 transition-colors whitespace-nowrap">
               Privacy Policy
             </Link>
             <span className="text-slate-600">|</span>
-            <Link href="#" className="text-slate-400 hover:text-green-400 transition-colors">
+            <Link href="#" className="text-slate-400 hover:text-green-400 transition-colors whitespace-nowrap">
               Terms of Service
             </Link>
           </div>
