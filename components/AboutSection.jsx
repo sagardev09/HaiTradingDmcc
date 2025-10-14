@@ -369,7 +369,7 @@ export default function AboutSection() {
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-200 hover:scale-105 shadow-lg"
               >
-                Join Our Teams
+                Join Our Team
                 <ArrowRight className="size-5" />
               </Link>
             </div>
