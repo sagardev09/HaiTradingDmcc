@@ -1,25 +1,25 @@
 "use client";
 
-import Navbar from "./Navbar";
+import { Sparkles } from "lucide-react";
 
 export default function HeroSection() {
   return (
     <>
-      <section className="relative flex flex-col items-center max-md:px-2  text-black text-sm pb-28 pt-8  ">
-        <Navbar />
+      <section className="relative flex flex-col items-center max-md:px-2  text-black text-sm pb-20 mt-20">
         <div className="flex flex-col items-center justify-center h-full ">
-          <div className="flex flex-wrap items-center justify-center px-4 py-2 mt-24 rounded-full border border-green-600 bg-green-600/10 text-xs">
-            <span className="text-green-700 font-semibold uppercase tracking-wide">
-              🌍 Global Trading Solutions
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-black rounded-full mb-6">
+            <Sparkles className="size-5 text-primary " />
+            <span className="text-sm font-medium text-primary">
+              Global Trading Solutions
             </span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl text-center font-bold max-w-5xl mt-6 bg-gradient-to-r from-black via-green-800 to-green-600 text-transparent bg-clip-text">
+          <h1 className="text-5xl md:text-7xl text-center font-bold max-w-5xl mt-6 text-primary">
             HAI TRADING DMCC
           </h1>
           <p className="text-gray-700 text-base md:text-lg max-md:px-4 text-center max-w-4xl mt-6 leading-relaxed">
             Based in{" "}
-            <span className="font-semibold text-green-700">Dubai, UAE</span>, we
+            <span className="font-semibold text-primary">Dubai, UAE</span>, we
             trade premium staples like rice, sugar, spices, palm oil, and paper
             — connecting global supply with demand across{" "}
             <span className="font-semibold">East and West Africa</span> with

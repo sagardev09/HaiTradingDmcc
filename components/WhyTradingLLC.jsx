@@ -9,7 +9,7 @@ export default function WhyTradingLLC() {
                 }
             `}</style>
 
-      <h1 className="text-3xl font-semibold text-center mx-auto ">
+      <h1 className="text-3xl font-semibold text-center mx-auto text-primary">
         WHY HAI TRADING DMCC ?
       </h1>
       <p className="text-sm text-slate-500 text-center mt-2 max-w-md mx-auto">

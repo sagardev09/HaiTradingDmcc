@@ -23,7 +23,13 @@ export default function NewsSection() {
   const [hoveredArticle, setHoveredArticle] = useState(null);
 
   // News categories
-  const categories = ["All", "Company News", "Market Insights", "Industry Trends", "Sustainability"];
+  const categories = [
+    "All",
+    "Company News",
+    "Market Insights",
+    "Industry Trends",
+    "Sustainability",
+  ];
 
   // News articles
   const articles = [
@@ -65,7 +71,8 @@ export default function NewsSection() {
     },
     {
       id: 4,
-      title: "Partnership with Leading African Distributors Strengthens Market Presence",
+      title:
+        "Partnership with Leading African Distributors Strengthens Market Presence",
       excerpt:
         "New strategic partnerships with key distributors across East Africa enhance our ability to deliver quality products efficiently.",
       category: "Company News",
@@ -147,40 +154,39 @@ export default function NewsSection() {
   const featuredArticles = articles.filter((article) => article.featured);
 
   return (
-    <section className="relative min-h-screen bg-[url(https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/green-gradient-bg.svg)] dark:bg-gradient-to-b dark:from-slate-900 dark:via-slate-800 dark:to-green-950 bg-top bg-no-repeat">
-      {/* Animated background dots */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:24px_24px]" />
-
-      {/* Spotlight effect */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/80 dark:to-slate-900/80 pointer-events-none" />
-
+    <section className="relative min-h-screen">
       <div className="relative z-10 flex flex-col items-center max-md:px-2 text-black dark:text-white text-sm pb-28 pt-8">
-        <Navbar />
-
         <div className="w-full max-w-7xl mx-auto px-4 mt-16">
           {/* Hero Section */}
           <div className="text-center mb-16 animate-fade-in">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 dark:bg-green-900/40 rounded-full mb-6">
-              <Sparkles className="size-5 text-green-600 dark:text-green-400" />
-              <span className="text-sm font-medium text-green-700 dark:text-green-300">Latest Updates</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-black rounded-full mb-6">
+              <Sparkles className="size-5 text-primary " />
+              <span className="text-sm font-medium text-primary">
+                Latest Updates
+              </span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-semibold mb-6 bg-gradient-to-r from-black dark:from-white to-[#37ac6e] dark:to-green-400 text-transparent bg-clip-text">
+            <h1 className="text-4xl md:text-6xl font-semibold mb-6 text-primary">
               News & Insights
             </h1>
 
-            <p className="text-zinc-800 dark:text-slate-300 md:text-lg max-w-3xl mx-auto">
-              Stay informed with the latest developments, market insights, and industry trends from{" "}
-              <span className="font-semibold text-green-600 dark:text-green-400">HAI Trading DMCC</span> and the
-              global commodity trading sector.
+            <p className="text-black md:text-lg max-w-3xl mx-auto">
+              Stay informed with the latest developments, market insights, and
+              industry trends from{" "}
+              <span className="font-semibold text-primary">
+                HAI Trading DMCC
+              </span>{" "}
+              and the global commodity trading sector.
             </p>
           </div>
 
           {/* Featured Articles Section */}
           <div className="mb-16">
             <div className="flex items-center gap-3 mb-8">
-              <Award className="size-6 text-green-600 dark:text-green-400" />
-              <h2 className="text-3xl font-semibold text-black dark:text-white">Featured Stories</h2>
+              <Award className="size-6 text-primary-foreground" />
+              <h2 className="text-3xl font-semibold text-primary">
+                Featured Stories
+              </h2>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
@@ -211,15 +217,21 @@ export default function NewsSection() {
                     </h3>
 
                     {/* Excerpt */}
-                    <p className="text-zinc-600 dark:text-slate-400 leading-relaxed mb-6 line-clamp-3">
+                    <p className="text-secondary-foreground leading-relaxed mb-6 line-clamp-3">
                       {article.excerpt}
                     </p>
 
                     {/* Meta Info */}
-                    <div className="flex flex-wrap items-center gap-4 mb-6 text-sm text-zinc-500 dark:text-slate-500">
+                    <div className="flex flex-wrap items-center gap-4 mb-6 text-sm text-zinc-500 dark:text-slate-300">
                       <div className="flex items-center gap-2">
                         <Calendar className="size-4" />
-                        <span>{new Date(article.date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}</span>
+                        <span>
+                          {new Date(article.date).toLocaleDateString("en-US", {
+                            month: "short",
+                            day: "numeric",
+                            year: "numeric",
+                          })}
+                        </span>
                       </div>
                       <div className="flex items-center gap-2">
                         <Clock className="size-4" />
@@ -256,8 +268,10 @@ export default function NewsSection() {
           {/* Category Filter */}
           <div className="mb-12">
             <div className="flex items-center gap-3 mb-6">
-              <Filter className="size-6 text-green-600 dark:text-green-400" />
-              <h2 className="text-2xl font-semibold text-black dark:text-white">Browse by Category</h2>
+              <Filter className="size-6 text-primary-foreground" />
+              <h2 className="text-2xl font-semibold text-primary">
+                Browse by Category
+              </h2>
             </div>
 
             <div className="flex flex-wrap gap-3">
@@ -265,7 +279,7 @@ export default function NewsSection() {
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
+                  className={`px-6 py-3 rounded-full font-medium transition-all duration-200 cursor-pointer ${
                     selectedCategory === category
                       ? "bg-green-600 dark:bg-green-700 text-white shadow-lg scale-105"
                       : "bg-white/80 dark:bg-slate-800/80 text-black dark:text-white border border-slate-200 dark:border-slate-700 hover:border-green-500 dark:hover:border-green-400"
@@ -279,7 +293,7 @@ export default function NewsSection() {
 
           {/* All Articles Grid */}
           <div className="mb-16">
-            <h2 className="text-3xl font-semibold text-black dark:text-white mb-8">
+            <h2 className="text-3xl font-semibold text-primary mb-8">
               {selectedCategory === "All" ? "All Articles" : selectedCategory}
             </h2>
 
@@ -306,15 +320,20 @@ export default function NewsSection() {
                     </h3>
 
                     {/* Excerpt */}
-                    <p className="text-zinc-600 dark:text-slate-400 text-sm mb-4 line-clamp-2">
+                    <p className="text-secondary-foreground text-sm mb-4 line-clamp-2">
                       {article.excerpt}
                     </p>
 
                     {/* Meta */}
-                    <div className="flex items-center gap-3 text-xs text-zinc-500 dark:text-slate-500 mb-4">
+                    <div className="flex items-center gap-3 text-xs text-zinc-500 dark:text-slate-300 mb-4">
                       <div className="flex items-center gap-1">
                         <Calendar className="size-3" />
-                        <span>{new Date(article.date).toLocaleDateString("en-US", { month: "short", day: "numeric" })}</span>
+                        <span>
+                          {new Date(article.date).toLocaleDateString("en-US", {
+                            month: "short",
+                            day: "numeric",
+                          })}
+                        </span>
                       </div>
                       <div className="flex items-center gap-1">
                         <Clock className="size-3" />
@@ -346,7 +365,8 @@ export default function NewsSection() {
               </h2>
 
               <p className="text-green-50 text-lg mb-8">
-                Get the latest news, market insights, and industry updates delivered directly to your inbox
+                Get the latest news, market insights, and industry updates
+                delivered directly to your inbox
               </p>
 
               <form className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
@@ -371,7 +391,8 @@ export default function NewsSection() {
               Have a Story to Share?
             </h2>
             <p className="text-zinc-600 dark:text-slate-400 text-lg mb-8 max-w-2xl mx-auto">
-              We're always interested in hearing from industry experts, partners, and clients. Get in touch to share your insights.
+              We're always interested in hearing from industry experts,
+              partners, and clients. Get in touch to share your insights.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link

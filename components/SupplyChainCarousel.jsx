@@ -61,7 +61,7 @@ export default function SupplyChainCarousel() {
   return (
     <div className="flex h-full w-full items-center justify-center overflow-hidden  py-20">
       <div className="w-full  px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-black relative">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-primary relative">
           Our Supply Chain
         </h2>
         <Carousel_006
