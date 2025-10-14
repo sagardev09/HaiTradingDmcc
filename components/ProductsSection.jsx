@@ -21,7 +21,13 @@ export default function ProductsSection() {
   const [hoveredProduct, setHoveredProduct] = useState(null);
 
   // Product categories
-  const categories = ["All", "Grains & Flour", "Oils", "Sugar & Sweeteners", "Other Products"];
+  const categories = [
+    "All",
+    "Grains & Flour",
+    "Oils",
+    "Sugar & Sweeteners",
+    "Other Products",
+  ];
 
   // Products data
   const products = [
@@ -30,7 +36,8 @@ export default function ProductsSection() {
       name: "Sugar",
       category: "Sugar & Sweeteners",
       icon: "🍬",
-      description: "Premium quality refined sugar for various culinary and industrial applications",
+      description:
+        "Premium quality refined sugar for various culinary and industrial applications",
       features: [
         "High purity refined sugar",
         "Available in granulated and powder forms",
@@ -48,7 +55,8 @@ export default function ProductsSection() {
       name: "Rice",
       category: "Grains & Flour",
       icon: "🌾",
-      description: "Premium quality rice varieties including Basmati and long grain rice",
+      description:
+        "Premium quality rice varieties including Basmati and long grain rice",
       features: [
         "Multiple rice varieties",
         "Basmati and long grain options",
@@ -84,7 +92,8 @@ export default function ProductsSection() {
       name: "Sunflower Oil",
       category: "Oils",
       icon: "🌻",
-      description: "Pure sunflower oil rich in vitamins and perfect for healthy cooking",
+      description:
+        "Pure sunflower oil rich in vitamins and perfect for healthy cooking",
       features: [
         "Cold-pressed extraction",
         "Rich in vitamins A, D, and E",
@@ -156,7 +165,8 @@ export default function ProductsSection() {
       name: "Door Skin",
       category: "Other Products",
       icon: "🚪",
-      description: "High-quality door skin panels for construction and furniture",
+      description:
+        "High-quality door skin panels for construction and furniture",
       features: [
         "Durable construction",
         "Multiple finishes available",
@@ -174,7 +184,8 @@ export default function ProductsSection() {
       name: "Paper",
       category: "Other Products",
       icon: "📄",
-      description: "Premium quality paper products for industrial and commercial use",
+      description:
+        "Premium quality paper products for industrial and commercial use",
       features: [
         "Multiple paper grades",
         "Eco-friendly options",
@@ -200,10 +211,30 @@ export default function ProductsSection() {
 
   // Stats
   const stats = [
-    { icon: Package, label: "Product Categories", value: "9+", color: "text-green-600" },
-    { icon: Globe, label: "Source Countries", value: "15+", color: "text-blue-600" },
-    { icon: Award, label: "Quality Certified", value: "100%", color: "text-purple-600" },
-    { icon: TrendingUp, label: "Client Satisfaction", value: "98%", color: "text-orange-600" },
+    {
+      icon: Package,
+      label: "Product Categories",
+      value: "9+",
+      color: "text-green-600",
+    },
+    {
+      icon: Globe,
+      label: "Source Countries",
+      value: "15+",
+      color: "text-blue-600",
+    },
+    {
+      icon: Award,
+      label: "Quality Certified",
+      value: "100%",
+      color: "text-purple-600",
+    },
+    {
+      icon: TrendingUp,
+      label: "Client Satisfaction",
+      value: "98%",
+      color: "text-orange-600",
+    },
   ];
 
   // Why choose our products
@@ -211,12 +242,14 @@ export default function ProductsSection() {
     {
       icon: Award,
       title: "Premium Quality",
-      description: "All products meet international quality standards and certifications",
+      description:
+        "All products meet international quality standards and certifications",
     },
     {
       icon: Globe,
       title: "Global Sourcing",
-      description: "Sourced from the finest producers across multiple continents",
+      description:
+        "Sourced from the finest producers across multiple continents",
     },
     {
       icon: CheckCircle2,
@@ -231,32 +264,29 @@ export default function ProductsSection() {
   ];
 
   return (
-    <section className="relative min-h-screen bg-[url(https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/green-gradient-bg.svg)] dark:bg-gradient-to-b dark:from-slate-900 dark:via-slate-800 dark:to-green-950 bg-top bg-no-repeat">
-      {/* Animated background dots */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:24px_24px]" />
-
-      {/* Spotlight effect */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/80 dark:to-slate-900/80 pointer-events-none" />
-
+    <section className="relative min-h-screen ">
       <div className="relative z-10 flex flex-col items-center max-md:px-2 text-black dark:text-white text-sm pb-28 pt-8">
-        <Navbar />
-
         <div className="w-full max-w-7xl mx-auto px-4 mt-16">
           {/* Hero Section */}
           <div className="text-center mb-16 animate-fade-in">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 dark:bg-green-900/40 rounded-full mb-6">
-              <Sparkles className="size-5 text-green-600 dark:text-green-400" />
-              <span className="text-sm font-medium text-green-700 dark:text-green-300">Premium Commodities</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-black rounded-full mb-6">
+              <Sparkles className="size-5 text-primary " />
+              <span className="text-sm font-medium text-primary">
+                Premium Commodities
+              </span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-semibold mb-6 bg-gradient-to-r from-black dark:from-white to-[#37ac6e] dark:to-green-400 text-transparent bg-clip-text">
+            <h1 className="text-4xl md:text-6xl font-semibold mb-6 text-primary">
               Our Products
             </h1>
 
-            <p className="text-zinc-800 dark:text-slate-300 md:text-lg max-w-3xl mx-auto mb-8">
+            <p className="text-black md:text-lg max-w-3xl mx-auto mb-8">
               Discover our comprehensive range of{" "}
-              <span className="font-semibold text-green-600 dark:text-green-400">premium food commodities</span> and
-              industrial products, sourced globally and delivered with excellence.
+              <span className="font-semibold text-primary">
+                premium food commodities
+              </span>{" "}
+              and industrial products, sourced globally and delivered with
+              excellence.
             </p>
 
             {/* Stats Grid */}
@@ -264,11 +294,15 @@ export default function ProductsSection() {
               {stats.map((stat, index) => (
                 <div
                   key={index}
-                  className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                  className="bg-primary backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 >
-                  <stat.icon className={`size-8 ${stat.color} dark:brightness-125 mx-auto mb-3`} />
-                  <div className="text-3xl font-bold text-black dark:text-white mb-1">{stat.value}</div>
-                  <div className="text-sm text-zinc-600 dark:text-slate-400">{stat.label}</div>
+                  <stat.icon
+                    className={`size-8 ${stat.color} dark:brightness-125 mx-auto mb-3`}
+                  />
+                  <div className="text-3xl font-bold text-black dark:text-white mb-1">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm text-secondary">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -278,7 +312,9 @@ export default function ProductsSection() {
           <div className="mb-16">
             <div className="flex items-center gap-3 mb-8">
               <Star className="size-6 text-green-600 dark:text-green-400 fill-current" />
-              <h2 className="text-3xl font-semibold text-black dark:text-white">Featured Products</h2>
+              <h2 className="text-3xl font-semibold text-primary">
+                Featured Products
+              </h2>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -298,7 +334,9 @@ export default function ProductsSection() {
                   </div>
 
                   {/* Gradient background */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
+                  />
 
                   <div className="relative z-10 p-6">
                     {/* Product Icon */}
@@ -317,8 +355,11 @@ export default function ProductsSection() {
                     </div>
 
                     {/* Brand */}
-                    <div className="text-xs text-zinc-500 dark:text-slate-500 mb-4">
-                      Brand: <span className="font-semibold text-zinc-700 dark:text-slate-400">{product.brands[0]}</span>
+                    <div className="text-xs text-secondary-foreground mb-4">
+                      Brand:{" "}
+                      <span className="font-semibold ">
+                        {product.brands[0]}
+                      </span>
                     </div>
 
                     {/* Learn More */}
@@ -337,14 +378,16 @@ export default function ProductsSection() {
 
           {/* Category Filter */}
           <div className="mb-12">
-            <h2 className="text-3xl font-semibold text-black dark:text-white mb-6">Browse by Category</h2>
+            <h2 className="text-3xl font-semibold text-primary mb-6">
+              Browse by Category
+            </h2>
 
             <div className="flex flex-wrap gap-3 mb-8">
               {categories.map((category) => (
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`px-6 py-3 rounded-full font-medium transition-all duration-200 ${
+                  className={`px-6 py-3 rounded-full font-medium transition-all cursor-pointer duration-200 ${
                     selectedCategory === category
                       ? "bg-green-600 dark:bg-green-700 text-white shadow-lg scale-105"
                       : "bg-white/80 dark:bg-slate-800/80 text-black dark:text-white border border-slate-200 dark:border-slate-700 hover:border-green-500 dark:hover:border-green-400"
@@ -358,7 +401,7 @@ export default function ProductsSection() {
 
           {/* All Products Grid */}
           <div className="mb-16">
-            <h2 className="text-3xl font-semibold text-black dark:text-white mb-8">
+            <h2 className="text-3xl font-semibold text-primary mb-8">
               {selectedCategory === "All" ? "All Products" : selectedCategory}
             </h2>
 
@@ -371,7 +414,9 @@ export default function ProductsSection() {
                   onMouseLeave={() => setHoveredProduct(null)}
                 >
                   {/* Gradient overlay */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
+                  />
 
                   <div className="relative z-10 p-8">
                     {/* Product Icon */}
@@ -387,19 +432,22 @@ export default function ProductsSection() {
                       <div className="inline-block px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300 text-xs rounded-full font-medium mb-4">
                         {product.category}
                       </div>
-                      <p className="text-zinc-600 dark:text-slate-400 leading-relaxed mb-4">
+                      <p className="text-secondary-foreground leading-relaxed mb-4">
                         {product.description}
                       </p>
                     </div>
 
                     {/* Features List */}
                     <div className="mb-6">
-                      <p className="text-xs font-semibold text-zinc-500 dark:text-slate-500 mb-3 uppercase tracking-wide">
+                      <p className="text-xs font-semibold text-secondary mb-3 uppercase tracking-wide">
                         Key Features
                       </p>
                       <div className="space-y-2">
                         {product.features.slice(0, 3).map((feature, idx) => (
-                          <div key={idx} className="flex items-start gap-2 text-sm text-zinc-700 dark:text-slate-300">
+                          <div
+                            key={idx}
+                            className="flex items-start gap-2 text-sm text-zinc-700 dark:text-slate-300"
+                          >
                             <CheckCircle2 className="size-4 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
                             <span>{feature}</span>
                           </div>
@@ -411,12 +459,20 @@ export default function ProductsSection() {
                     <div className="pt-6 border-t border-slate-200 dark:border-slate-700 mb-6">
                       <div className="grid grid-cols-2 gap-4 text-sm">
                         <div>
-                          <p className="text-zinc-500 dark:text-slate-500 text-xs mb-1">Brand</p>
-                          <p className="font-semibold text-black dark:text-white">{product.brands[0]}</p>
+                          <p className="text-zinc-500 dark:text-slate-300 text-xs mb-1">
+                            Brand
+                          </p>
+                          <p className="font-semibold text-black dark:text-white">
+                            {product.brands[0]}
+                          </p>
                         </div>
                         <div>
-                          <p className="text-zinc-500 dark:text-slate-500 text-xs mb-1">Origin</p>
-                          <p className="font-semibold text-black dark:text-white">{product.origin}</p>
+                          <p className="text-zinc-500 dark:text-slate-300 text-xs mb-1">
+                            Origin
+                          </p>
+                          <p className="font-semibold text-black dark:text-white">
+                            {product.origin}
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -438,10 +494,10 @@ export default function ProductsSection() {
           {/* Why Choose Our Products Section */}
           <div className="mb-16">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-semibold text-black dark:text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-semibold text-primary mb-4">
                 Why Choose Our Products?
               </h2>
-              <p className="text-zinc-600 dark:text-slate-400 text-lg max-w-2xl mx-auto">
+              <p className="text-secondary text-lg max-w-2xl mx-auto">
                 Quality, reliability, and excellence in every product we deliver
               </p>
             </div>
@@ -479,8 +535,10 @@ export default function ProductsSection() {
               </h2>
 
               <p className="text-green-50 text-lg max-w-3xl mx-auto mb-8">
-                Every product undergoes rigorous quality control and meets international food safety standards.
-                We partner with certified suppliers and conduct regular audits to ensure consistent excellence.
+                Every product undergoes rigorous quality control and meets
+                international food safety standards. We partner with certified
+                suppliers and conduct regular audits to ensure consistent
+                excellence.
               </p>
 
               <div className="flex flex-wrap items-center justify-center gap-4">
@@ -503,7 +561,8 @@ export default function ProductsSection() {
               Interested in Our Products?
             </h2>
             <p className="text-zinc-600 dark:text-slate-400 text-lg mb-8 max-w-2xl mx-auto">
-              Get in touch with us to discuss your requirements, request samples, or learn more about bulk ordering
+              Get in touch with us to discuss your requirements, request
+              samples, or learn more about bulk ordering
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link
