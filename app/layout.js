@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
                 backgroundSize: "20px 20px",
               }}
             />
-            {/* Noise Texture Background - Dark Mode (White Dots) */}
+
             <div
               className="absolute inset-0 z-0 opacity-50 hidden dark:block"
               style={{
