@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function NewsPage() {
   return (
-    <main>
+    <main className="pt-20">
       <NewsSection />
     </main>
   );

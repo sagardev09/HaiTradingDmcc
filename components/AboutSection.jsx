@@ -155,7 +155,7 @@ export default function AboutSection() {
               About HAI Trading DMCC
             </h1>
 
-            <p className="text-black  md:text-xl max-w-4xl mx-auto mb-8 leading-relaxed">
+            <p className="text-black dark:text-white  md:text-xl max-w-4xl mx-auto mb-8 leading-relaxed">
               We are an{" "}
               <span className="font-semibold text-primary">
                 independent global market leader
@@ -355,10 +355,10 @@ export default function AboutSection() {
                           index % 2 === 0 ? "md:text-right" : "md:text-left"
                         }`}
                       >
-                        <div className="text-primary-foreground font-bold text-2xl mb-2">
+                        <div className="text-primary-foreground dark:text-white font-bold text-2xl mb-2">
                           {milestone.year}
                         </div>
-                        <h3 className="text-xl font-semibold text-primary-foreground mb-2">
+                        <h3 className="text-xl font-semibold text-primary-foreground dark:text-muted mb-2">
                           {milestone.event}
                         </h3>
                         <p className="text-secondary">
@@ -401,7 +401,7 @@ export default function AboutSection() {
                       <feature.icon className="size-6 text-green-600 dark:text-green-400" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-primary-foreground mb-2">
+                      <h3 className="text-lg font-semibold text-primary-foreground dark:text-muted mb-2">
                         {feature.title}
                       </h3>
                       <p className="text-secondary text-sm">

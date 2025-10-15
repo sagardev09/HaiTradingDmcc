@@ -46,10 +46,10 @@ const MainFaq = () => {
                 }
             `}</style>
       <div className="flex flex-col items-center text-center text-slate-800 px-3">
-        <h1 className="text-3xl md:text-5xl font-bold mt-2 text-black">
+        <h1 className="text-3xl md:text-5xl font-bold mt-2 text-black dark:text-white">
           Frequently Asked Questions
         </h1>
-        <p className="text-base text-gray-700 mt-4 max-w-2xl">
+        <p className="text-base text-gray-700 dark:text-secondary-foreground mt-4 max-w-2xl">
           Have questions about our services? Find answers to the most common
           questions about HAI Trading DMCC, our global operations, and how we
           can help your business grow.
@@ -84,7 +84,7 @@ const MainFaq = () => {
                 </svg>
               </div>
               <p
-                className={`text-base leading-relaxed text-gray-700 px-5 transition-all duration-500 ease-in-out ${
+                className={`text-base leading-relaxed text-gray-700 dark:text-secondary-foreground px-5 transition-all duration-500 ease-in-out ${
                   openIndex === index
                     ? "opacity-100 max-h-[400px] translate-y-0 pt-4 pb-2"
                     : "opacity-0 max-h-0 -translate-y-2"

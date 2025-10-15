@@ -150,7 +150,7 @@ export default function BrandsSection() {
               Our Trusted Brands
             </h1>
 
-            <p className="text-black md:text-lg max-w-3xl mx-auto mb-8">
+            <p className="text-black dark:text-white md:text-lg max-w-3xl mx-auto mb-8">
               Discover our premium portfolio of{" "}
               <span className="font-semibold text-primary">
                 AGT and Libaax brands

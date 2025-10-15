@@ -12,7 +12,7 @@ export default function WhyTradingLLC() {
       <h1 className="text-3xl font-semibold text-center mx-auto text-primary">
         WHY HAI TRADING DMCC ?
       </h1>
-      <p className="text-sm text-slate-500 text-center mt-2 max-w-md mx-auto">
+      <p className="text-sm text-slate-500 dark:text-secondary-foreground text-center mt-2 max-w-md mx-auto">
         Everything you need to manage, track, and grow your finances, securely
         and efficiently.
       </p>
@@ -24,10 +24,10 @@ export default function WhyTradingLLC() {
             src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/features/image-1.png"
             alt=""
           />
-          <h3 className="text-base font-semibold text-slate-700 mt-4">
+          <h3 className="text-base font-semibold text-slate-700 dark:text-white mt-4">
             Feedback analyser
           </h3>
-          <p className="text-sm text-slate-600 mt-1">
+          <p className="text-sm text-slate-600 dark:text-secondary-foreground mt-1">
             Get instant insights into your finances with live dashboards.
           </p>
         </div>
@@ -37,10 +37,10 @@ export default function WhyTradingLLC() {
             src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/features/image-2.png"
             alt=""
           />
-          <h3 className="text-base font-semibold text-slate-700 mt-4">
+          <h3 className="text-base font-semibold text-slate-700 dark:text-white mt-4">
             User management
           </h3>
-          <p className="text-sm text-slate-600 mt-1">
+          <p className="text-sm text-slate-600 dark:text-secondary-foreground mt-1">
             Get instant insights into your finances with live dashboards.
           </p>
         </div>
@@ -50,10 +50,10 @@ export default function WhyTradingLLC() {
             src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/features/image-3.png"
             alt=""
           />
-          <h3 className="text-base font-semibold text-slate-700 mt-4">
+          <h3 className="text-base font-semibold text-slate-700 dark:text-white mt-4">
             Better invoicing
           </h3>
-          <p className="text-sm text-slate-600 mt-1">
+          <p className="text-sm text-slate-600 dark:text-secondary-foreground mt-1">
             Get instant insights into your finances with live dashboards.
           </p>
         </div>

@@ -170,7 +170,7 @@ export default function NewsSection() {
               News & Insights
             </h1>
 
-            <p className="text-black md:text-lg max-w-3xl mx-auto">
+            <p className="text-black dark:text-white md:text-lg max-w-3xl mx-auto">
               Stay informed with the latest developments, market insights, and
               industry trends from{" "}
               <span className="font-semibold text-primary">

@@ -11,10 +11,10 @@ export const ShuffleHero = () => {
         <span className="block mb-4 text-xs md:text-sm text-green-600 font-semibold uppercase tracking-wide">
           Our Portfolio
         </span>
-        <h3 className="text-4xl md:text-6xl font-bold text-black">
+        <h3 className="text-4xl md:text-6xl font-bold text-black dark:text-secondary-foreground">
           Trusted Brands We Represent
         </h3>
-        <p className="text-base md:text-lg text-gray-700 my-4 md:my-6">
+        <p className="text-base md:text-lg text-gray-700 dark:text-white my-4 md:my-6">
           We partner with leading global brands to deliver quality products and
           services. Our diverse portfolio represents excellence in trading and
           distribution across multiple industries.
@@ -84,8 +84,8 @@ const squareData = [
   },
 ];
 
-const generateSquares = () => {
-  return shuffle(squareData).map((sq) => (
+const generateSquares = (data) => {
+  return data.map((sq) => (
     <motion.div
       key={sq.id}
       layout
@@ -102,9 +102,11 @@ const generateSquares = () => {
 
 const ShuffleGrid = () => {
   const timeoutRef = useRef(null);
-  const [squares, setSquares] = useState(generateSquares());
+  const [isMounted, setIsMounted] = useState(false);
+  const [squareOrder, setSquareOrder] = useState(squareData);
 
   useEffect(() => {
+    setIsMounted(true);
     shuffleSquares();
 
     return () => {
@@ -115,14 +117,13 @@ const ShuffleGrid = () => {
   }, []);
 
   const shuffleSquares = () => {
-    setSquares(generateSquares());
-
+    setSquareOrder((prev) => shuffle([...prev]));
     timeoutRef.current = setTimeout(shuffleSquares, 4000);
   };
 
   return (
     <div className="grid grid-cols-3 grid-rows-2 h-[400px] gap-3">
-      {squares.map((sq) => sq)}
+      {generateSquares(squareOrder)}
     </div>
   );
 };

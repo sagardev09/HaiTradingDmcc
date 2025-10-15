@@ -1,6 +1,7 @@
 "use client";
 
 import { Sparkles } from "lucide-react";
+import Brands from "./MarqueeBrands";
 
 export default function HeroSection() {
   return (
@@ -17,16 +18,16 @@ export default function HeroSection() {
           <h1 className="text-5xl md:text-7xl text-center font-bold max-w-5xl mt-6 text-primary">
             HAI TRADING DMCC
           </h1>
-          <p className="text-gray-700 text-base md:text-lg max-md:px-4 text-center max-w-4xl mt-6 leading-relaxed">
+          <p className="text-gray-700 dark:text-foreground text-base md:text-lg max-md:px-4 text-center max-w-4xl mt-6 leading-relaxed">
             Based in{" "}
             <span className="font-semibold text-primary">Dubai, UAE</span>, we
             trade premium staples like rice, sugar, spices, palm oil, and paper
             — connecting global supply with demand across{" "}
-            <span className="font-semibold">East and West Africa</span> with
+            <span className="font-semibold ">East and West Africa</span> with
             integrity and expertise.
           </p>
 
-          <p className="text-gray-800 text-base md:text-lg max-md:px-4 text-center max-w-4xl mt-4 leading-relaxed font-medium">
+          <p className="text-gray-800 dark:text-secondary-foreground text-base md:text-lg max-md:px-4 text-center max-w-4xl mt-4 leading-relaxed font-medium">
             We bridge markets through quality, trust, and sustainable global
             trade.
           </p>
@@ -54,6 +55,10 @@ export default function HeroSection() {
                 />
               </svg>
             </button>
+          </div>
+
+          <div className="mt-20">
+            <Brands />
           </div>
         </div>
       </section>

@@ -20,25 +20,38 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${poppins.variable} font-sans antialiased`}
+        className={`${poppins.variable} font-sans antialiased bg-white dark:bg-gray-900 transition-colors duration-300`}
         style={{ fontFamily: "var(--font-poppins)" }}
+        suppressHydrationWarning
       >
-        <div className="min-h-screen w-full bg-white relative">
-          <div
-            className="absolute inset-0 z-0"
-            style={{
-              backgroundImage: `
-        radial-gradient(150% 150% at 50% 90%, #ffffff 40%, #10b981 100%)
-      `,
-              backgroundSize: "100% 100%",
-            }}
-          />
-          {/* <ThemeProvider> */}
-          <Navbar />
-          {children}
-          <Footer />
-          {/* </ThemeProvider> */}
-        </div>
+        <ThemeProvider>
+          <div className="min-h-screen w-full bg-white dark:bg-gray-900 relative transition-colors duration-300">
+            {/* Noise Texture Background - Light Mode (Black Dots) */}
+            <div
+              className="absolute inset-0 z-0 opacity-50 dark:hidden"
+              style={{
+                backgroundImage:
+                  "radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.35) 1px, transparent 0)",
+                backgroundSize: "20px 20px",
+              }}
+            />
+            {/* Noise Texture Background - Dark Mode (White Dots) */}
+            <div
+              className="absolute inset-0 z-0 opacity-50 hidden dark:block"
+              style={{
+                backgroundImage:
+                  "radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.45) 1px, transparent 0)",
+                backgroundSize: "20px 20px",
+              }}
+            />
+
+            <div className="relative z-10">
+              <Navbar />
+              {children}
+              <Footer />
+            </div>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

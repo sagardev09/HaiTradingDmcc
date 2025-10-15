@@ -280,7 +280,7 @@ export default function ProductsSection() {
               Our Products
             </h1>
 
-            <p className="text-black md:text-lg max-w-3xl mx-auto mb-8">
+            <p className="text-black dark:text-white md:text-lg max-w-3xl mx-auto mb-8">
               Discover our comprehensive range of{" "}
               <span className="font-semibold text-primary">
                 premium food commodities
