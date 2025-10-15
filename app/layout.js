@@ -26,7 +26,6 @@ export default function RootLayout({ children }) {
       >
         <ThemeProvider>
           <div className="min-h-screen w-full bg-white dark:bg-gray-900 relative transition-colors duration-300">
-            {/* Noise Texture Background - Light Mode (Black Dots) */}
             <div
               className="absolute inset-0 z-0 opacity-50 dark:hidden"
               style={{
