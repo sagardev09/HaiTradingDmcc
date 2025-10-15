@@ -1,0 +1,17 @@
+{
+  "nav": {
+    "home": "Guriga",
+    "about": "Naga Aqoonso",
+    "products": "Alaabta",
+    "brands": "Sumadaha",
+    "clients": "Macaamiisha",
+    "news": "Wararka",
+    "contact": "Nala Soo Xiriir"
+  },
+  "common": {
+    "readMore": "Akhri Wax Badan",
+    "viewAll": "Daawo Dhammaan",
+    "getStarted": "Bilow Hadda",
+    "learnMore": "Wax Badan Ka Baro"
+  }
+}

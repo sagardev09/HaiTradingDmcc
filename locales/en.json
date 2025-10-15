@@ -1,0 +1,17 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "products": "Products",
+    "brands": "Brands",
+    "clients": "Clients",
+    "news": "News",
+    "contact": "Contact Us"
+  },
+  "common": {
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "getStarted": "Get Started",
+    "learnMore": "Learn More"
+  }
+}

@@ -138,7 +138,7 @@ export default function AboutSection() {
             </p>
 
             {/* Quick stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
               {[
                 { value: "2014", label: "Established" },
                 { value: "10K+", label: "Tons Traded" },
@@ -153,7 +153,7 @@ export default function AboutSection() {
                   <div className="text-sm text-zinc-600 dark:text-slate-400">{stat.label}</div>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* Mission & Vision Cards */}

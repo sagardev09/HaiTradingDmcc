@@ -1,0 +1,17 @@
+{
+  "nav": {
+    "home": "መነሻ",
+    "about": "ስለእኛ",
+    "products": "ምርቶች",
+    "brands": "ብራንዶች",
+    "clients": "ደንበኞች",
+    "news": "ዜና",
+    "contact": "አግኙን"
+  },
+  "common": {
+    "readMore": "ተጨማሪ ያንብቡ",
+    "viewAll": "ሁሉንም ይመልከቱ",
+    "getStarted": "ይጀምሩ",
+    "learnMore": "ተጨማሪ ይወቁ"
+  }
+}

@@ -19,11 +19,13 @@ export default function ClientsSection() {
     { name: "Djibouti", region: "East Africa", flag: "🇩🇯", established: "2018", products: ["Sugar", "Rice", "Palm Oil"] },
     { name: "Cameroon", region: "West Africa", flag: "🇨🇲", established: "2017", products: ["Rice", "Palm Oil", "Wheat Flour"] },
     { name: "Togo", region: "West Africa", flag: "🇹🇬", established: "2019", products: ["Sugar", "Sunflower Oil", "Rice"] },
+    { name: "Mali", region: "West Africa", flag: "🇲🇱", established: "2020", products: ["Rice", "Sugar", "Palm Oil"] },
+    { name: "Burkina Faso", region: "West Africa", flag: "🇧🇫", established: "2021", products: ["Wheat Flour", "Rice", "Sunflower Oil"] },
   ];
 
   // Stats data
   const stats = [
-    { icon: Globe, label: "Countries Served", value: "9+", color: "text-green-600" },
+    { icon: Globe, label: "Countries Served", value: "11+", color: "text-green-600" },
     { icon: Users, label: "Happy Clients", value: "500+", color: "text-blue-600" },
     { icon: Package, label: "Products Delivered", value: "10K+", color: "text-purple-600" },
     { icon: TrendingUp, label: "Years in Business", value: "8+", color: "text-orange-600" },
