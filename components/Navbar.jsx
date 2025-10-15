@@ -36,51 +36,53 @@ export default function Navbar() {
   return (
     <>
       {/* Desktop & Mobile Navbar */}
-      <nav className="flex items-center border mx-4 w-full max-w-4xl justify-between border-slate-700 dark:border-slate-600 px-4 py-2.5 rounded-full text-black dark:text-white bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm relative z-10">
-        <span className="font-semibold">HAI TRADING DMCC</span>
+      <div className="w-screen mx-auto pt-6">
+        <nav className="flex items-center border  w-full max-w-[90%] mx-auto  justify-between border-slate-700 dark:border-slate-600 px-4 py-2.5 rounded-lg text-black dark:text-white bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm relative z-10">
+          <span className="font-semibold">HAI TRADING DMCC</span>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-2">
-          {menuLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.path}
-              className={`px-4 py-2 cursor-pointer transition-all ${
-                isActive(link.path)
-                  ? "border border-black/10 dark:border-white/20 bg-black/10 dark:bg-white/10 font-medium rounded-full"
-                  : "hover:bg-black/5 dark:hover:bg-white/10 rounded-full"
-              }`}
-            >
-              {link.name}
-            </Link>
-          ))}
-        </div>
-
-        {/* Right Side - Desktop & Mobile */}
-        <div className="flex items-center gap-3">
-          {/* Hamburger Menu Button - Mobile Only */}
-          <button
-            onClick={openNavbar}
-            className="md:hidden p-1 hover:bg-black/5 dark:hover:bg-white/10 rounded-lg transition"
-            aria-label="Open menu"
-          >
-            <Menu className="size-6" />
-          </button>
-
-          {/* Desktop Contact Us */}
-          <Link
-            href="/contact"
-            className="hidden md:inline-flex items-center justify-center bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full transition"
-          >
-            Contact Us
-          </Link>
-
-          {/* Desktop Theme Toggle */}
-          <div className="hidden md:block">
-            <ThemeToggle />
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center gap-2">
+            {menuLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.path}
+                className={`px-4 py-2 cursor-pointer transition-all ${
+                  isActive(link.path)
+                    ? "border border-black/10 dark:border-white/20 bg-black/10 dark:bg-white/10 font-medium rounded-full"
+                    : "hover:bg-black/5 dark:hover:bg-white/10 rounded-full"
+                }`}
+              >
+                {link.name}
+              </Link>
+            ))}
           </div>
-        </div>
-      </nav>
+
+          {/* Right Side - Desktop & Mobile */}
+          <div className="flex items-center gap-3">
+            {/* Hamburger Menu Button - Mobile Only */}
+            <button
+              onClick={openNavbar}
+              className="md:hidden p-1 hover:bg-black/5 dark:hover:bg-white/10 rounded-lg transition"
+              aria-label="Open menu"
+            >
+              <Menu className="size-6" />
+            </button>
+
+            {/* Desktop Contact Us */}
+            <Link
+              href="/contact"
+              className="hidden md:inline-flex items-center justify-center bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full transition"
+            >
+              Contact Us
+            </Link>
+
+            {/* Desktop Theme Toggle */}
+            <div className="hidden md:block">
+              <ThemeToggle />
+            </div>
+          </div>
+        </nav>
+      </div>
 
       {/* Mobile Menu Fullscreen Overlay */}
       {isMenuOpen && (
