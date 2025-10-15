@@ -20,7 +20,7 @@ export default function ProductsSection() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [hoveredProduct, setHoveredProduct] = useState(null);
 
-  // Product categories
+  // All Product categories
   const categories = ["All", "Grains & Flour", "Oils", "Sugar & Sweeteners", "Other Products"];
 
   // Products data
