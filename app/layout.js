@@ -30,7 +30,9 @@ export default function RootLayout({ children }) {
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/80 dark:to-slate-900/80 pointer-events-none" />
 
           <ThemeProvider>
-            <Navbar />
+            <div className="relative z-10 flex flex-col items-center pt-8">
+              <Navbar />
+            </div>
             {children}
             <Footer />
           </ThemeProvider>

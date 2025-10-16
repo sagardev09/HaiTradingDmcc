@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Navbar from "./Navbar";
 import { Globe, MapPin, Users, TrendingUp, Package, CheckCircle2, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
@@ -39,9 +38,7 @@ export default function ClientsSection() {
       {/* Spotlight effect */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/80 dark:to-slate-900/80 pointer-events-none" />
 
-      <div className="relative z-10 flex flex-col items-center max-md:px-2 text-black dark:text-white text-sm pb-28 pt-8">
-        <Navbar />
-
+      <div className="relative z-0 flex flex-col items-center max-md:px-2 text-black dark:text-white text-sm pb-28 pt-8">
         <div className="w-full max-w-7xl mx-auto px-4 mt-16">
           {/* Hero Section */}
           <div className="text-center mb-16 animate-fade-in">

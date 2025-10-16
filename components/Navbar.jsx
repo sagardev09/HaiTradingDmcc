@@ -1,15 +1,16 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "./ThemeToggle";
-import LanguageSwitcher from "./LanguageSwitcher";
-import { X, Menu } from "lucide-react";
+import { X, Menu, Globe, ChevronDown } from "lucide-react";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLangOpen, setIsLangOpen] = useState(false);
   const pathname = usePathname();
+  const langDropdownRef = useRef(null);
 
   const closeNavbar = () => {
     setIsMenuOpen(false);
@@ -19,12 +20,53 @@ export default function Navbar() {
     setIsMenuOpen(true);
   };
 
+  // Language data
+  const languages = {
+    en: { name: "English", flag: "🇬🇧" },
+    ar: { name: "العربية", flag: "🇸🇦" },
+    so: { name: "Soomaali", flag: "🇸🇴" },
+    am: { name: "አማርኛ", flag: "🇪🇹" }
+  };
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (langDropdownRef.current && !langDropdownRef.current.contains(event.target)) {
+        setIsLangOpen(false);
+      }
+    }
+
+    if (isLangOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isLangOpen]);
+
   // Extract current language from pathname
   const currentLang = useMemo(() => {
     const segments = pathname.split('/').filter(Boolean);
     const locales = ['en', 'ar', 'so', 'am'];
     return locales.includes(segments[0]) ? segments[0] : 'en';
   }, [pathname]);
+
+  // Handle language change
+  const handleLanguageChange = (newLang) => {
+    const segments = pathname.split('/').filter(Boolean);
+    const locales = ['en', 'ar', 'so', 'am'];
+    const currentLocale = locales.includes(segments[0]) ? segments[0] : null;
+
+    if (currentLocale) {
+      segments[0] = newLang;
+    } else {
+      segments.unshift(newLang);
+    }
+
+    const newPath = '/' + segments.join('/');
+    window.location.href = newPath;
+  };
 
   const menuLinks = [
     { name: "Home", path: "" },
@@ -47,7 +89,7 @@ export default function Navbar() {
   return (
     <>
       {/* Desktop & Mobile Navbar */}
-      <nav className="flex items-center border mx-4 w-full max-w-7xl justify-between border-slate-700 dark:border-slate-600 px-6 py-3 rounded-xl text-black dark:text-white bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm relative z-10">
+      <nav className="flex items-center border mx-4 w-full max-w-7xl justify-between border-slate-700 dark:border-slate-600 px-6 py-3 rounded-xl text-black dark:text-white bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm relative z-50">
         <span className="font-semibold">HAI TRADING DMCC</span>
 
         {/* Desktop Menu */}
@@ -87,8 +129,64 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Language Switcher */}
-          <div className="hidden md:block">
-            <LanguageSwitcher />
+          <div className="hidden md:block relative" ref={langDropdownRef}>
+            <button
+              onClick={() => setIsLangOpen(!isLangOpen)}
+              className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/10 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 hover:bg-white/20 dark:hover:bg-slate-700/50 transition-all duration-200"
+              aria-label="Change language"
+            >
+              <Globe className="size-4 text-slate-700 dark:text-slate-300" />
+              <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                {languages[currentLang].flag} {languages[currentLang].name}
+              </span>
+              <ChevronDown
+                className={`size-4 text-slate-700 dark:text-slate-300 transition-transform duration-200 ${
+                  isLangOpen ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+
+            {/* Language Dropdown */}
+            {isLangOpen && (
+              <div className="absolute right-0 top-full mt-2 w-48 bg-white dark:bg-slate-800 rounded-xl shadow-2xl border border-slate-200 dark:border-slate-700 overflow-hidden z-[200] animate-fade-in">
+                <div className="py-2">
+                  {Object.entries(languages).map(([code, lang]) => (
+                    <button
+                      key={code}
+                      onClick={() => {
+                        handleLanguageChange(code);
+                        setIsLangOpen(false);
+                      }}
+                      className={`w-full px-4 py-2.5 text-left flex items-center gap-3 transition-colors ${
+                        currentLang === code
+                          ? "bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 font-medium"
+                          : "text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700/50"
+                      }`}
+                    >
+                      <span className="text-xl">{lang.flag}</span>
+                      <span className="text-sm">{lang.name}</span>
+                      {currentLang === code && (
+                        <span className="ml-auto">
+                          <svg
+                            className="size-4 text-green-600 dark:text-green-400"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M5 13l4 4L19 7"
+                            />
+                          </svg>
+                        </span>
+                      )}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Desktop Theme Toggle */}
@@ -100,7 +198,7 @@ export default function Navbar() {
 
       {/* Mobile Menu Fullscreen Overlay */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 z-[100] bg-white dark:bg-slate-900 animate-fade-in">
+        <div className="md:hidden fixed inset-0 z-[9999] bg-white dark:bg-slate-900 animate-fade-in">
           <div className="flex flex-col h-full">
             {/* Mobile Menu Header */}
             <div className="flex items-center justify-between px-6 py-4 border-b border-slate-200 dark:border-slate-700">
@@ -148,11 +246,29 @@ export default function Navbar() {
             {/* Mobile Menu Footer */}
             <div className="px-6 py-4 border-t border-slate-200 dark:border-slate-700 space-y-4">
               {/* Language Switcher */}
-              <div className="flex items-center justify-between">
-                <span className="text-sm text-slate-600 dark:text-slate-400">
+              <div className="space-y-2">
+                <span className="text-sm text-slate-600 dark:text-slate-400 block">
                   Language
                 </span>
-                <LanguageSwitcher openUpward={true} />
+                <div className="grid grid-cols-2 gap-2">
+                  {Object.entries(languages).map(([code, lang]) => (
+                    <button
+                      key={code}
+                      onClick={() => {
+                        handleLanguageChange(code);
+                        closeNavbar();
+                      }}
+                      className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-colors ${
+                        currentLang === code
+                          ? "bg-green-600 text-white font-medium"
+                          : "bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600"
+                      }`}
+                    >
+                      <span className="text-lg">{lang.flag}</span>
+                      <span className="text-xs">{lang.name}</span>
+                    </button>
+                  ))}
+                </div>
               </div>
 
               {/* Theme Toggle */}
