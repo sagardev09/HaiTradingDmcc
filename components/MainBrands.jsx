@@ -8,7 +8,7 @@ export const ShuffleHero = () => {
   return (
     <section className="w-full px-8 py-16 md:py-36 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-6xl mx-auto relative">
       <div>
-        <span className="block mb-4 text-xs md:text-sm text-green-600 font-semibold uppercase tracking-wide">
+        <span className="block mb-4 text-xs md:text-sm text-teal-600 font-semibold uppercase tracking-wide">
           Our Portfolio
         </span>
         <h3 className="text-4xl md:text-6xl font-bold text-black dark:text-secondary-foreground">
@@ -21,9 +21,9 @@ export const ShuffleHero = () => {
         </p>
         <button
           className={cn(
-            "bg-green-600 text-white font-medium py-2.5 px-6 rounded-full",
-            "transition-all hover:bg-green-700 active:scale-95",
-            "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2"
+            "bg-teal-600 text-white font-medium py-2.5 px-6 rounded-full",
+            "transition-all hover:bg-teal-700 active:scale-95",
+            "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 focus-visible:ring-offset-2"
           )}
         >
           Explore Our Brands

@@ -24,34 +24,37 @@ export default function ClientsSection() {
 
   // Stats data
   const stats = [
-    { icon: Globe, label: "Countries Served", value: "11+", color: "text-green-600" },
+    { icon: Globe, label: "Countries Served", value: "11+", color: "text-teal-600" },
     { icon: Users, label: "Happy Clients", value: "500+", color: "text-blue-600" },
     { icon: Package, label: "Products Delivered", value: "10K+", color: "text-purple-600" },
     { icon: TrendingUp, label: "Years in Business", value: "8+", color: "text-orange-600" },
   ];
 
   return (
-    <section className="relative min-h-screen bg-[url(https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/green-gradient-bg.svg)] dark:bg-gradient-to-b dark:from-slate-900 dark:via-slate-800 dark:to-green-950 bg-top bg-no-repeat">
+    <section className="relative min-h-screen">
+      {/* Background gradient with reduced opacity */}
+      <div className="absolute inset-0 bg-[url(https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/green-gradient-bg.svg)] dark:bg-gradient-to-b dark:from-slate-900 dark:via-slate-800 dark:to-teal-950 bg-top bg-no-repeat opacity-20" />
+
       {/* Animated background dots */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:24px_24px]" />
 
       {/* Spotlight effect */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/80 dark:to-slate-900/80 pointer-events-none" />
 
-      <div className="relative z-0 flex flex-col items-center max-md:px-2 text-black dark:text-white text-sm pb-28 pt-8">
+      <div className="relative z-0 flex flex-col items-center px-4 sm:px-6 md:px-8 text-black dark:text-white text-sm pb-28 pt-8">
         <div className="w-full max-w-7xl mx-auto px-4 mt-16">
           {/* Hero Section */}
           <div className="text-center mb-16 animate-fade-in">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 dark:bg-green-900/40 rounded-full mb-6">
-              <Globe className="size-5 text-green-600 dark:text-green-400" />
-              <span className="text-sm font-medium text-green-700 dark:text-green-300">Serving Africa with Excellence</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-100 dark:bg-teal-900/40 rounded-full mb-6">
+              <Globe className="size-5 text-teal-600 dark:text-teal-400" />
+              <span className="text-xs sm:text-sm font-medium text-teal-700 dark:text-teal-300">Serving Africa with Excellence</span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-semibold mb-6 bg-gradient-to-r from-black dark:from-white to-[#37ac6e] dark:to-green-400 text-transparent bg-clip-text">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 bg-gradient-to-r from-black dark:from-white to-teal-600 dark:to-teal-400 text-transparent bg-clip-text px-2 break-words">
               Our Global Clients
             </h1>
 
-            <p className="text-zinc-800 dark:text-slate-300 md:text-lg max-w-3xl mx-auto mb-8">
+            <p className="text-sm sm:text-base md:text-lg max-w-3xl mx-auto mb-8">
               Building lasting partnerships across East and West Africa, delivering quality commodities
               and exceptional service to markets that matter.
             </p>
@@ -80,7 +83,7 @@ export default function ClientsSection() {
               </div>
               <div className="hidden md:flex items-center gap-4">
                 <div className="flex items-center gap-2 text-sm">
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-teal-500 rounded-full"></div>
                   <span className="text-zinc-600 dark:text-slate-400">East Africa</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm">
@@ -101,7 +104,7 @@ export default function ClientsSection() {
                   {/* Colored accent based on region */}
                   <div
                     className={`absolute top-0 left-0 w-2 h-full rounded-l-2xl ${
-                      country.region === "East Africa" ? "bg-green-500" : "bg-blue-500"
+                      country.region === "East Africa" ? "bg-teal-500" : "bg-blue-500"
                     }`}
                   />
 
@@ -109,18 +112,18 @@ export default function ClientsSection() {
                     <div className="flex items-center gap-3">
                       <div className="text-4xl">{country.flag}</div>
                       <div>
-                        <h3 className="text-xl font-semibold text-black dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">
+                        <h3 className="text-xl font-semibold text-black dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
                           {country.name}
                         </h3>
                         <p className="text-sm text-zinc-600 dark:text-slate-400">{country.region}</p>
                       </div>
                     </div>
-                    <MapPin className="size-5 text-zinc-400 dark:text-slate-500 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors" />
+                    <MapPin className="size-5 text-zinc-400 dark:text-slate-500 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors" />
                   </div>
 
                   <div className="space-y-3">
                     <div className="flex items-center gap-2 text-sm text-zinc-600 dark:text-slate-400">
-                      <CheckCircle2 className="size-4 text-green-600 dark:text-green-400" />
+                      <CheckCircle2 className="size-4 text-teal-600 dark:text-teal-400" />
                       <span>Partner since {country.established}</span>
                     </div>
 
@@ -130,7 +133,7 @@ export default function ClientsSection() {
                         {country.products.map((product, idx) => (
                           <span
                             key={idx}
-                            className="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300 text-xs rounded-full font-medium"
+                            className="px-3 py-1 bg-teal-100 dark:bg-teal-900/40 text-teal-700 dark:text-teal-300 text-xs rounded-full font-medium"
                           >
                             {product}
                           </span>
@@ -140,14 +143,14 @@ export default function ClientsSection() {
                   </div>
 
                   {/* Hover effect overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 dark:from-green-400/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 dark:from-teal-400/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
                 </div>
               ))}
             </div>
           </div>
 
           {/* Why Partner With Us Section */}
-          <div className="bg-gradient-to-br from-green-600 to-green-700 rounded-3xl p-8 md:p-12 mb-16 relative overflow-hidden shadow-2xl">
+          <div className="bg-gradient-to-br from-teal-600 to-teal-700 rounded-3xl p-8 md:p-12 mb-16 relative overflow-hidden shadow-2xl">
             {/* Animated background pattern */}
             <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,.1)_50%,transparent_75%,transparent_100%)] bg-[length:250%_250%] animate-shimmer" />
 
@@ -163,7 +166,7 @@ export default function ClientsSection() {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Quality Assurance</h3>
-                    <p className="text-green-50">
+                    <p className="text-teal-50">
                       Premium commodities with rigorous quality control and certification
                     </p>
                   </div>
@@ -175,7 +178,7 @@ export default function ClientsSection() {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Reliable Supply Chain</h3>
-                    <p className="text-green-50">
+                    <p className="text-teal-50">
                       Efficient logistics and timely delivery to ensure your business continuity
                     </p>
                   </div>
@@ -187,7 +190,7 @@ export default function ClientsSection() {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Competitive Pricing</h3>
-                    <p className="text-green-50">
+                    <p className="text-teal-50">
                       Best market rates with flexible payment terms tailored to your needs
                     </p>
                   </div>
@@ -199,7 +202,7 @@ export default function ClientsSection() {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">Dedicated Support</h3>
-                    <p className="text-green-50">
+                    <p className="text-teal-50">
                       24/7 customer service with local market expertise and multilingual support
                     </p>
                   </div>
@@ -208,7 +211,7 @@ export default function ClientsSection() {
 
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-white text-green-600 px-8 py-4 rounded-full font-semibold hover:bg-green-50 transition-all duration-200 hover:scale-105 shadow-lg"
+                className="inline-flex items-center gap-2 bg-white text-teal-600 px-8 py-4 rounded-full font-semibold hover:bg-teal-50 transition-all duration-200 hover:scale-105 shadow-lg"
               >
                 Become a Client
                 <ArrowRight className="size-5" />
@@ -255,7 +258,7 @@ export default function ClientsSection() {
                   key={index}
                   className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 >
-                  <div className="text-5xl text-green-600 dark:text-green-400 mb-4">"</div>
+                  <div className="text-5xl text-teal-600 dark:text-teal-400 mb-4">"</div>
                   <p className="text-zinc-700 dark:text-slate-300 mb-6 italic">{testimonial.quote}</p>
                   <div className="flex items-center gap-3">
                     <div className="text-3xl">{testimonial.flag}</div>
@@ -281,7 +284,7 @@ export default function ClientsSection() {
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-200 hover:scale-105 shadow-lg"
+                className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-200 hover:scale-105 shadow-lg"
               >
                 Get in Touch
                 <ArrowRight className="size-5" />

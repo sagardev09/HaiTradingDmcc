@@ -37,7 +37,7 @@ const MainFaq = () => {
     },
   ];
   return (
-    <section className="w-full py-16  relative">
+    <section className="w-full py-12 sm:py-16 relative">
       <style>{`
                 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -45,11 +45,11 @@ const MainFaq = () => {
                     font-family: 'Poppins', sans-serif;
                 }
             `}</style>
-      <div className="flex flex-col items-center text-center text-slate-800 px-3">
-        <h1 className="text-3xl md:text-5xl font-bold mt-2 text-black dark:text-white">
+      <div className="flex flex-col items-center text-center text-slate-800 px-4 sm:px-6 md:px-8">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-2 text-black dark:text-white px-2 break-words">
           Frequently Asked Questions
         </h1>
-        <p className="text-base text-gray-700 dark:text-secondary-foreground mt-4 max-w-2xl">
+        <p className="text-sm sm:text-base text-gray-700 dark:text-secondary-foreground mt-4 max-w-2xl px-2">
           Have questions about our services? Find answers to the most common
           questions about HAI Trading DMCC, our global operations, and how we
           can help your business grow.
@@ -58,10 +58,10 @@ const MainFaq = () => {
           {faqsData.map((faq, index) => (
             <div key={index} className="flex flex-col items-start w-full">
               <div
-                className="flex items-center justify-between w-full cursor-pointer border border-green-200 bg-white hover:bg-green-50 p-5 rounded-lg shadow-sm hover:shadow-md transition-all"
+                className="flex items-center justify-between w-full cursor-pointer border border-teal-200 bg-white hover:bg-teal-50 p-5 rounded-lg shadow-sm hover:shadow-md transition-all"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
-                <h2 className="text-base font-semibold text-gray-900 pr-4">
+                <h2 className="text-sm sm:text-base font-semibold text-gray-900 pr-4 break-words">
                   {faq.question}
                 </h2>
                 <svg
@@ -84,7 +84,7 @@ const MainFaq = () => {
                 </svg>
               </div>
               <p
-                className={`text-base leading-relaxed text-gray-700 dark:text-secondary-foreground px-5 transition-all duration-500 ease-in-out ${
+                className={`text-sm sm:text-base leading-relaxed text-gray-700 dark:text-secondary-foreground px-5 transition-all duration-500 ease-in-out ${
                   openIndex === index
                     ? "opacity-100 max-h-[400px] translate-y-0 pt-4 pb-2"
                     : "opacity-0 max-h-0 -translate-y-2"

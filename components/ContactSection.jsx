@@ -26,21 +26,24 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="relative min-h-screen bg-[url(https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/green-gradient-bg.svg)] dark:bg-gradient-to-b dark:from-slate-900 dark:via-slate-800 dark:to-green-950 bg-top bg-no-repeat">
+    <section className="relative min-h-screen">
+      {/* Background gradient with reduced opacity */}
+      <div className="absolute inset-0 bg-[url(https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/green-gradient-bg.svg)] dark:bg-gradient-to-b dark:from-slate-900 dark:via-slate-800 dark:to-teal-950 bg-top bg-no-repeat opacity-20" />
+
       {/* Animated background dots */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:24px_24px]" />
 
       {/* Spotlight effect */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/80 dark:to-slate-900/80 pointer-events-none" />
 
-      <div className="relative z-0 flex flex-col items-center max-md:px-2 text-black dark:text-white text-sm pb-28 pt-8">
+      <div className="relative z-0 flex flex-col items-center px-4 sm:px-6 md:px-8 text-black dark:text-white text-sm pb-28 pt-8">
         <div className="w-full max-w-7xl mx-auto px-4 mt-16">
           {/* Header with animation */}
           <div className="text-center mb-16 animate-fade-in">
-            <h1 className="text-4xl md:text-6xl font-semibold mb-4 bg-gradient-to-r from-black dark:from-white to-[#37ac6e] dark:to-green-400 text-transparent bg-clip-text">
+            <h1 className="text-4xl md:text-6xl font-semibold mb-4 bg-gradient-to-r from-black dark:from-white to-teal-600 dark:to-teal-400 text-transparent bg-clip-text">
               Get in Touch
             </h1>
-            <p className="text-zinc-800 dark:text-slate-300 md:text-lg max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
               Let's discuss how we can help grow your business with our proven solutions
             </p>
           </div>
@@ -50,11 +53,11 @@ export default function ContactSection() {
             {/* Contact Form with floating effect */}
             <div className="relative group">
               {/* Glow effect on hover */}
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-green-600 to-green-400 rounded-2xl blur opacity-0 group-hover:opacity-30 transition duration-500" />
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-teal-600 to-teal-400 rounded-2xl blur opacity-0 group-hover:opacity-30 transition duration-500" />
 
               <div className="relative bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-xl h-full flex flex-col">
                 <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2 text-black dark:text-white">
-                  <Send className="size-6 text-green-600 dark:text-green-400" />
+                  <Send className="size-6 text-teal-600 dark:text-teal-400" />
                   Send us a message
                 </h2>
 
@@ -66,7 +69,7 @@ export default function ContactSection() {
                       className={cn(
                         "absolute left-4 transition-all duration-200 text-zinc-600 dark:text-slate-400 pointer-events-none",
                         focusedField === "name" || formData.name
-                          ? "-top-2.5 text-xs bg-white dark:bg-slate-800 px-2 text-green-600 dark:text-green-400 font-medium"
+                          ? "-top-2.5 text-xs bg-white dark:bg-slate-800 px-2 text-teal-600 dark:text-teal-400 font-medium"
                           : "top-3 text-sm"
                       )}
                     >
@@ -81,7 +84,7 @@ export default function ContactSection() {
                       onFocus={() => setFocusedField("name")}
                       onBlur={() => setFocusedField(null)}
                       required
-                      className="w-full px-4 py-3 border-2 border-slate-200 dark:border-slate-600 rounded-lg focus:border-green-600 focus:ring-2 focus:ring-green-600/20 outline-none transition-all duration-200 bg-white dark:bg-slate-700 text-black dark:text-white"
+                      className="w-full px-4 py-3 border-2 border-slate-200 dark:border-slate-600 rounded-lg focus:border-teal-600 focus:ring-2 focus:ring-teal-600/20 outline-none transition-all duration-200 bg-white dark:bg-slate-700 text-black dark:text-white"
                     />
                   </div>
 
@@ -92,7 +95,7 @@ export default function ContactSection() {
                       className={cn(
                         "absolute left-4 transition-all duration-200 text-zinc-600 dark:text-slate-400 pointer-events-none",
                         focusedField === "email" || formData.email
-                          ? "-top-2.5 text-xs bg-white dark:bg-slate-800 px-2 text-green-600 dark:text-green-400 font-medium"
+                          ? "-top-2.5 text-xs bg-white dark:bg-slate-800 px-2 text-teal-600 dark:text-teal-400 font-medium"
                           : "top-3 text-sm"
                       )}
                     >
@@ -107,7 +110,7 @@ export default function ContactSection() {
                       onFocus={() => setFocusedField("email")}
                       onBlur={() => setFocusedField(null)}
                       required
-                      className="w-full px-4 py-3 border-2 border-slate-200 dark:border-slate-600 rounded-lg focus:border-green-600 focus:ring-2 focus:ring-green-600/20 outline-none transition-all duration-200 bg-white dark:bg-slate-700 text-black dark:text-white"
+                      className="w-full px-4 py-3 border-2 border-slate-200 dark:border-slate-600 rounded-lg focus:border-teal-600 focus:ring-2 focus:ring-teal-600/20 outline-none transition-all duration-200 bg-white dark:bg-slate-700 text-black dark:text-white"
                     />
                   </div>
 
@@ -118,7 +121,7 @@ export default function ContactSection() {
                       className={cn(
                         "absolute left-4 transition-all duration-200 text-zinc-600 dark:text-slate-400 pointer-events-none",
                         focusedField === "phone" || formData.phone
-                          ? "-top-2.5 text-xs bg-white dark:bg-slate-800 px-2 text-green-600 dark:text-green-400 font-medium"
+                          ? "-top-2.5 text-xs bg-white dark:bg-slate-800 px-2 text-teal-600 dark:text-teal-400 font-medium"
                           : "top-3 text-sm"
                       )}
                     >
@@ -132,7 +135,7 @@ export default function ContactSection() {
                       onChange={handleChange}
                       onFocus={() => setFocusedField("phone")}
                       onBlur={() => setFocusedField(null)}
-                      className="w-full px-4 py-3 border-2 border-slate-200 dark:border-slate-600 rounded-lg focus:border-green-600 focus:ring-2 focus:ring-green-600/20 outline-none transition-all duration-200 bg-white dark:bg-slate-700 text-black dark:text-white"
+                      className="w-full px-4 py-3 border-2 border-slate-200 dark:border-slate-600 rounded-lg focus:border-teal-600 focus:ring-2 focus:ring-teal-600/20 outline-none transition-all duration-200 bg-white dark:bg-slate-700 text-black dark:text-white"
                     />
                   </div>
 
@@ -143,7 +146,7 @@ export default function ContactSection() {
                       className={cn(
                         "absolute left-4 transition-all duration-200 text-zinc-600 dark:text-slate-400 pointer-events-none",
                         focusedField === "company" || formData.company
-                          ? "-top-2.5 text-xs bg-white dark:bg-slate-800 px-2 text-green-600 dark:text-green-400 font-medium"
+                          ? "-top-2.5 text-xs bg-white dark:bg-slate-800 px-2 text-teal-600 dark:text-teal-400 font-medium"
                           : "top-3 text-sm"
                       )}
                     >
@@ -157,7 +160,7 @@ export default function ContactSection() {
                       onChange={handleChange}
                       onFocus={() => setFocusedField("company")}
                       onBlur={() => setFocusedField(null)}
-                      className="w-full px-4 py-3 border-2 border-slate-200 dark:border-slate-600 rounded-lg focus:border-green-600 focus:ring-2 focus:ring-green-600/20 outline-none transition-all duration-200 bg-white dark:bg-slate-700 text-black dark:text-white"
+                      className="w-full px-4 py-3 border-2 border-slate-200 dark:border-slate-600 rounded-lg focus:border-teal-600 focus:ring-2 focus:ring-teal-600/20 outline-none transition-all duration-200 bg-white dark:bg-slate-700 text-black dark:text-white"
                     />
                   </div>
 
@@ -168,7 +171,7 @@ export default function ContactSection() {
                       className={cn(
                         "absolute left-4 transition-all duration-200 text-zinc-600 dark:text-slate-400 pointer-events-none",
                         focusedField === "message" || formData.message
-                          ? "-top-2.5 text-xs bg-white dark:bg-slate-800 px-2 text-green-600 dark:text-green-400 font-medium"
+                          ? "-top-2.5 text-xs bg-white dark:bg-slate-800 px-2 text-teal-600 dark:text-teal-400 font-medium"
                           : "top-3 text-sm"
                       )}
                     >
@@ -183,14 +186,14 @@ export default function ContactSection() {
                       onBlur={() => setFocusedField(null)}
                       required
                       rows="4"
-                      className="w-full px-4 py-3 border-2 border-slate-200 dark:border-slate-600 rounded-lg focus:border-green-600 focus:ring-2 focus:ring-green-600/20 outline-none transition-all duration-200 bg-white dark:bg-slate-700 text-black dark:text-white resize-none"
+                      className="w-full px-4 py-3 border-2 border-slate-200 dark:border-slate-600 rounded-lg focus:border-teal-600 focus:ring-2 focus:ring-teal-600/20 outline-none transition-all duration-200 bg-white dark:bg-slate-700 text-black dark:text-white resize-none"
                     />
                   </div>
 
                   {/* Submit Button with hover effect */}
                   <button
                     type="submit"
-                    className="w-full bg-green-600 hover:bg-green-700 text-white font-medium px-6 py-3.5 rounded-lg transition-all duration-200 flex items-center justify-center gap-2 group shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] mt-auto"
+                    className="w-full bg-teal-600 hover:bg-teal-700 text-white font-medium px-6 py-3.5 rounded-lg transition-all duration-200 flex items-center justify-center gap-2 group shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] mt-auto"
                   >
                     Send Message
                     <Send className="size-4 group-hover:translate-x-1 transition-transform" />
@@ -203,19 +206,19 @@ export default function ContactSection() {
             <div className="relative group">
               <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 h-full">
                 <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2 text-black dark:text-white">
-                  <Info className="size-6 text-green-600 dark:text-green-400" />
+                  <Info className="size-6 text-teal-600 dark:text-teal-400" />
                   Contact Information
                 </h2>
 
                 <div className="space-y-5">
                   {/* Email */}
                   <div className="flex items-start gap-4 group cursor-pointer">
-                    <div className="flex-shrink-0 w-12 h-12 bg-green-100 dark:bg-green-900/40 rounded-full flex items-center justify-center group-hover:bg-green-600 group-hover:scale-110 transition-all duration-200">
-                      <Mail className="size-5 text-green-600 dark:text-green-400 group-hover:text-white transition-colors" />
+                    <div className="flex-shrink-0 w-12 h-12 bg-teal-100 dark:bg-teal-900/40 rounded-full flex items-center justify-center group-hover:bg-teal-600 group-hover:scale-110 transition-all duration-200">
+                      <Mail className="size-5 text-teal-600 dark:text-teal-400 group-hover:text-white transition-colors" />
                     </div>
                     <div>
                       <h3 className="font-medium text-sm text-zinc-600 dark:text-slate-400 mb-1">Email</h3>
-                      <a href="mailto:Muzaffar@haidmcc.com" className="text-base text-black dark:text-white hover:text-green-600 dark:hover:text-green-400 transition-colors">
+                      <a href="mailto:Muzaffar@haidmcc.com" className="text-base text-black dark:text-white hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
                         Muzaffar@haidmcc.com
                       </a>
                     </div>
@@ -223,15 +226,15 @@ export default function ContactSection() {
 
                   {/* Phone */}
                   <div className="flex items-start gap-4 group cursor-pointer">
-                    <div className="flex-shrink-0 w-12 h-12 bg-green-100 dark:bg-green-900/40 rounded-full flex items-center justify-center group-hover:bg-green-600 group-hover:scale-110 transition-all duration-200">
-                      <Phone className="size-5 text-green-600 dark:text-green-400 group-hover:text-white transition-colors" />
+                    <div className="flex-shrink-0 w-12 h-12 bg-teal-100 dark:bg-teal-900/40 rounded-full flex items-center justify-center group-hover:bg-teal-600 group-hover:scale-110 transition-all duration-200">
+                      <Phone className="size-5 text-teal-600 dark:text-teal-400 group-hover:text-white transition-colors" />
                     </div>
                     <div>
                       <h3 className="font-medium text-sm text-zinc-600 dark:text-slate-400 mb-1">Phone</h3>
-                      <a href="tel:+97145754755" className="text-base text-black dark:text-white hover:text-green-600 dark:hover:text-green-400 transition-colors block">
+                      <a href="tel:+97145754755" className="text-base text-black dark:text-white hover:text-teal-600 dark:hover:text-teal-400 transition-colors block">
                         +971 4 575 4755
                       </a>
-                      <a href="tel:+971505013725" className="text-base text-black dark:text-white hover:text-green-600 dark:hover:text-green-400 transition-colors block">
+                      <a href="tel:+971505013725" className="text-base text-black dark:text-white hover:text-teal-600 dark:hover:text-teal-400 transition-colors block">
                         +971 50 501 3725
                       </a>
                     </div>
@@ -239,8 +242,8 @@ export default function ContactSection() {
 
                   {/* Address */}
                   <div className="flex items-start gap-4 group cursor-pointer">
-                    <div className="flex-shrink-0 w-12 h-12 bg-green-100 dark:bg-green-900/40 rounded-full flex items-center justify-center group-hover:bg-green-600 group-hover:scale-110 transition-all duration-200">
-                      <MapPin className="size-5 text-green-600 dark:text-green-400 group-hover:text-white transition-colors" />
+                    <div className="flex-shrink-0 w-12 h-12 bg-teal-100 dark:bg-teal-900/40 rounded-full flex items-center justify-center group-hover:bg-teal-600 group-hover:scale-110 transition-all duration-200">
+                      <MapPin className="size-5 text-teal-600 dark:text-teal-400 group-hover:text-white transition-colors" />
                     </div>
                     <div>
                       <h3 className="font-medium text-sm text-zinc-600 dark:text-slate-400 mb-1">Address</h3>
@@ -253,8 +256,8 @@ export default function ContactSection() {
 
                   {/* Business Hours */}
                   <div className="flex items-start gap-4 group cursor-pointer">
-                    <div className="flex-shrink-0 w-12 h-12 bg-green-100 dark:bg-green-900/40 rounded-full flex items-center justify-center group-hover:bg-green-600 group-hover:scale-110 transition-all duration-200">
-                      <Clock className="size-5 text-green-600 dark:text-green-400 group-hover:text-white transition-colors" />
+                    <div className="flex-shrink-0 w-12 h-12 bg-teal-100 dark:bg-teal-900/40 rounded-full flex items-center justify-center group-hover:bg-teal-600 group-hover:scale-110 transition-all duration-200">
+                      <Clock className="size-5 text-teal-600 dark:text-teal-400 group-hover:text-white transition-colors" />
                     </div>
                     <div>
                       <h3 className="font-medium text-sm text-zinc-600 dark:text-slate-400 mb-1">Business Hours</h3>
@@ -272,7 +275,7 @@ export default function ContactSection() {
             {/* Social Media Card */}
             <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-xl hover:shadow-2xl transition-all duration-300">
                 <h3 className="text-2xl font-semibold mb-4 flex items-center gap-2 text-black dark:text-white">
-                  <Share2 className="size-6 text-green-600 dark:text-green-400" />
+                  <Share2 className="size-6 text-teal-600 dark:text-teal-400" />
                   Connect With Us
                 </h3>
                 <p className="text-zinc-600 dark:text-slate-400 mb-6">Follow us on social media for updates and news</p>
@@ -331,7 +334,7 @@ export default function ContactSection() {
               </div>
 
             {/* Quick Response Card */}
-            <div className="relative overflow-hidden bg-gradient-to-br from-green-600 to-green-700 p-8 rounded-2xl shadow-xl">
+            <div className="relative overflow-hidden bg-gradient-to-br from-teal-600 to-teal-700 p-8 rounded-2xl shadow-xl">
                 {/* Animated background pattern */}
                 <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,.1)_50%,transparent_75%,transparent_100%)] bg-[length:250%_250%] animate-shimmer" />
 
@@ -340,11 +343,11 @@ export default function ContactSection() {
                     <Zap className="size-6 text-white" />
                     Quick Response
                   </h3>
-                  <p className="text-green-50 mb-6">
+                  <p className="text-teal-50 mb-6">
                     We typically respond within 24 hours during business days. For urgent matters, please call us directly.
                   </p>
                   <div className="flex items-center gap-2 text-white">
-                    <div className="w-2 h-2 bg-green-300 rounded-full animate-pulse" />
+                    <div className="w-2 h-2 bg-teal-300 rounded-full animate-pulse" />
                     <span className="text-sm font-medium">Online now</span>
                   </div>
                 </div>

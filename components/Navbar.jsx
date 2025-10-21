@@ -90,7 +90,21 @@ export default function Navbar() {
     <>
       {/* Desktop & Mobile Navbar */}
       <nav className="flex items-center border mx-4 w-full max-w-7xl justify-between border-slate-700 dark:border-slate-600 px-6 py-3 rounded-xl text-black dark:text-white bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm relative z-50">
-        <span className="font-semibold">HAI TRADING DMCC</span>
+        <Link href={`/${currentLang}`} className="flex items-center gap-3">
+          <img
+            src="/donore.png"
+            alt="HAI Trading DMCC"
+            className="h-8 sm:h-10 w-auto object-contain"
+          />
+          <div className="flex flex-col">
+            <span className="text-sm sm:text-base font-bold text-black dark:text-white leading-tight">
+              HAI GENERAL TRADING
+            </span>
+            <span className="text-[10px] sm:text-xs font-semibold text-teal-600 dark:text-teal-400 leading-tight">
+              DMCC
+            </span>
+          </div>
+        </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-2">
@@ -123,7 +137,7 @@ export default function Navbar() {
           {/* Desktop Contact Us */}
           <Link
             href={`/${currentLang}/contact`}
-            className="hidden md:inline-flex items-center justify-center bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition"
+            className="hidden md:inline-flex items-center justify-center bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-lg transition"
           >
             Contact Us
           </Link>
@@ -159,7 +173,7 @@ export default function Navbar() {
                       }}
                       className={`w-full px-4 py-2.5 text-left flex items-center gap-3 transition-colors ${
                         currentLang === code
-                          ? "bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 font-medium"
+                          ? "bg-teal-50 dark:bg-teal-900/20 text-teal-700 dark:text-teal-400 font-medium"
                           : "text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700/50"
                       }`}
                     >
@@ -168,7 +182,7 @@ export default function Navbar() {
                       {currentLang === code && (
                         <span className="ml-auto">
                           <svg
-                            className="size-4 text-green-600 dark:text-green-400"
+                            className="size-4 text-teal-600 dark:text-teal-400"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -202,9 +216,21 @@ export default function Navbar() {
           <div className="flex flex-col h-full">
             {/* Mobile Menu Header */}
             <div className="flex items-center justify-between px-6 py-4 border-b border-slate-200 dark:border-slate-700">
-              <span className="font-semibold text-lg text-black dark:text-white">
-                HAI TRADING DMCC
-              </span>
+              <div className="flex items-center gap-3">
+                <img
+                  src="/donore.png"
+                  alt="HAI Trading DMCC"
+                  className="h-10 w-auto object-contain"
+                />
+                <div className="flex flex-col">
+                  <span className="text-base font-bold text-black dark:text-white leading-tight">
+                    HAI GENERAL TRADING
+                  </span>
+                  <span className="text-xs font-semibold text-teal-600 dark:text-teal-400 leading-tight">
+                    DMCC
+                  </span>
+                </div>
+              </div>
               <button
                 onClick={closeNavbar}
                 className="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition"
@@ -224,7 +250,7 @@ export default function Navbar() {
                     onClick={closeNavbar}
                     className={`block px-4 py-3 rounded-xl font-medium transition-all ${
                       isActive(link.path)
-                        ? "bg-green-600 text-white shadow-lg"
+                        ? "bg-teal-600 text-white shadow-lg"
                         : "text-black dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800"
                     }`}
                   >
@@ -237,7 +263,7 @@ export default function Navbar() {
               <Link
                 href={`/${currentLang}/contact`}
                 onClick={closeNavbar}
-                className="block w-full mt-6 bg-green-600 hover:bg-green-700 text-white text-center px-6 py-3 rounded-xl font-medium transition shadow-lg"
+                className="block w-full mt-6 bg-teal-600 hover:bg-teal-700 text-white text-center px-6 py-3 rounded-xl font-medium transition shadow-lg"
               >
                 Contact Us
               </Link>
@@ -260,7 +286,7 @@ export default function Navbar() {
                       }}
                       className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-colors ${
                         currentLang === code
-                          ? "bg-green-600 text-white font-medium"
+                          ? "bg-teal-600 text-white font-medium"
                           : "bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600"
                       }`}
                     >

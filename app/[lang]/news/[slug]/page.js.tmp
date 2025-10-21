@@ -1,0 +1,5 @@
+import NewsArticle from "@/components/NewsArticle";
+import { notFound } from "next/navigation";
+
+// Article data with full content
+const articlesData = {

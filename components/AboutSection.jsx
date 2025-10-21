@@ -30,7 +30,7 @@ export default function AboutSection() {
       icon: Shield,
       title: "Quality & Integrity",
       description: "Uncompromising standards in every transaction, building trust through excellence",
-      color: "bg-green-100 text-green-600",
+      color: "bg-teal-100 text-teal-600",
     },
     {
       icon: Handshake,
@@ -108,28 +108,31 @@ export default function AboutSection() {
   ];
 
   return (
-    <section className="relative min-h-screen bg-[url(https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/green-gradient-bg.svg)] dark:bg-gradient-to-b dark:from-slate-900 dark:via-slate-800 dark:to-green-950 bg-top bg-no-repeat">
+    <section className="relative min-h-screen">
+      {/* Background gradient with reduced opacity */}
+      <div className="absolute inset-0 bg-[url(https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/green-gradient-bg.svg)] dark:bg-gradient-to-b dark:from-slate-900 dark:via-slate-800 dark:to-teal-950 bg-top bg-no-repeat opacity-20" />
+
       {/* Animated background dots */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:24px_24px]" />
 
       {/* Spotlight effect */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/80 dark:to-slate-900/80 pointer-events-none" />
 
-      <div className="relative z-0 flex flex-col items-center max-md:px-2 text-black dark:text-white text-sm pb-28 pt-8">
-        <div className="w-full max-w-7xl mx-auto px-4 mt-16">
+      <div className="relative z-0 flex flex-col items-center px-4 sm:px-6 md:px-8 text-black dark:text-white text-sm pb-28 pt-8">
+        <div className="w-full max-w-7xl mx-auto mt-16">
           {/* Hero Section */}
           <div className="text-center mb-20 animate-fade-in">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 dark:bg-green-900/40 rounded-full mb-6">
-              <Sparkles className="size-5 text-green-600 dark:text-green-400" />
-              <span className="text-sm font-medium text-green-700 dark:text-green-300">Established 2014</span>
+            <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-teal-100 dark:bg-teal-900/40 rounded-full mb-6">
+              <Sparkles className="size-4 sm:size-5 text-teal-600 dark:text-teal-400" />
+              <span className="text-xs sm:text-sm font-medium text-teal-700 dark:text-teal-300">Established 2014</span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-semibold mb-6 bg-gradient-to-r from-black dark:from-white to-[#37ac6e] dark:to-green-400 text-transparent bg-clip-text">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 bg-gradient-to-r from-black dark:from-white to-teal-600 dark:to-teal-400 text-transparent bg-clip-text px-2 break-words">
               About HAI Trading DMCC
             </h1>
 
-            <p className="text-zinc-800 dark:text-slate-300 md:text-xl max-w-4xl mx-auto mb-8 leading-relaxed">
-              We are an <span className="font-semibold text-green-600 dark:text-green-400">independent global market leader</span> in food
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-zinc-800 dark:text-slate-300 max-w-4xl mx-auto mb-8 leading-relaxed px-2">
+              We are an <span className="font-semibold text-teal-600 dark:text-teal-400">independent global market leader</span> in food
               commodities, connecting supply and demand sustainably by integrating{" "}
               <span className="font-semibold text-black dark:text-white">global know-how with local knowledge</span>.
             </p>
@@ -146,7 +149,7 @@ export default function AboutSection() {
                   key={index}
                   className="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm p-4 rounded-xl border border-slate-200 dark:border-slate-700"
                 >
-                  <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-1">{stat.value}</div>
+                  <div className="text-3xl font-bold text-teal-600 dark:text-teal-400 mb-1">{stat.value}</div>
                   <div className="text-sm text-zinc-600 dark:text-slate-400">{stat.label}</div>
                 </div>
               ))}
@@ -158,11 +161,11 @@ export default function AboutSection() {
             {/* Mission Card */}
             <div className="group relative bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden">
               {/* Animated gradient background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 dark:from-green-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 dark:from-teal-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <div className="relative z-10">
-                <div className="w-16 h-16 bg-green-100 dark:bg-green-900/40 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Target className="size-8 text-green-600 dark:text-green-400" />
+                <div className="w-16 h-16 bg-teal-100 dark:bg-teal-900/40 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Target className="size-8 text-teal-600 dark:text-teal-400" />
                 </div>
 
                 <h2 className="text-3xl font-semibold text-black dark:text-white mb-4 flex items-center gap-3">
@@ -170,7 +173,7 @@ export default function AboutSection() {
                 </h2>
 
                 <p className="text-zinc-700 dark:text-slate-300 text-lg leading-relaxed">
-                  To establish a <span className="font-semibold text-green-600 dark:text-green-400">global presence</span> through our
+                  To establish a <span className="font-semibold text-teal-600 dark:text-teal-400">global presence</span> through our
                   completely integrated business model, customer-centric products, dependable commitments,{" "}
                   <span className="font-semibold text-black dark:text-white">unrivaled quality</span>, timely services, and{" "}
                   <span className="font-semibold text-black dark:text-white">ethical business practices</span>.
@@ -180,7 +183,7 @@ export default function AboutSection() {
                   {["Quality", "Service", "Ethics", "Innovation"].map((tag, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1 bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-300 text-sm rounded-full font-medium"
+                      className="px-3 py-1 bg-teal-100 dark:bg-teal-900/40 text-teal-700 dark:text-teal-300 text-sm rounded-full font-medium"
                     >
                       {tag}
                     </span>
@@ -190,7 +193,7 @@ export default function AboutSection() {
             </div>
 
             {/* Vision Card */}
-            <div className="group relative bg-gradient-to-br from-green-600 to-green-700 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden">
+            <div className="group relative bg-gradient-to-br from-teal-600 to-teal-700 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden">
               {/* Animated shimmer */}
               <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,.1)_50%,transparent_75%,transparent_100%)] bg-[length:250%_250%] animate-shimmer" />
 
@@ -203,7 +206,7 @@ export default function AboutSection() {
                   Our Vision
                 </h2>
 
-                <p className="text-green-50 text-lg leading-relaxed mb-6">
+                <p className="text-teal-50 text-lg leading-relaxed mb-6">
                   To encourage <span className="font-semibold text-white">entrepreneurship</span>, enable our employees
                   to shape their own future, and expand naturally by leveraging our strengths while maintaining our{" "}
                   <span className="font-semibold text-white">expertise in commodity groups</span>.
@@ -213,7 +216,7 @@ export default function AboutSection() {
                   {["Empower People", "Natural Growth", "Market Expertise"].map((item, idx) => (
                     <div key={idx} className="flex items-center gap-3 text-white">
                       <CheckCircle2 className="size-5 flex-shrink-0" />
-                      <span className="text-green-50">{item}</span>
+                      <span className="text-teal-50">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -243,14 +246,14 @@ export default function AboutSection() {
                     <value.icon className="size-7 dark:brightness-150" />
                   </div>
 
-                  <h3 className="text-xl font-semibold text-black dark:text-white mb-3 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors">
+                  <h3 className="text-xl font-semibold text-black dark:text-white mb-3 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
                     {value.title}
                   </h3>
 
                   <p className="text-zinc-600 dark:text-slate-400 leading-relaxed">{value.description}</p>
 
                   {/* Hover indicator */}
-                  <div className="mt-4 flex items-center gap-2 text-green-600 dark:text-green-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="mt-4 flex items-center gap-2 text-teal-600 dark:text-teal-400 opacity-0 group-hover:opacity-100 transition-opacity">
                     <span className="text-sm font-medium">Learn more</span>
                     <ArrowRight className="size-4" />
                   </div>
@@ -270,7 +273,7 @@ export default function AboutSection() {
 
             <div className="relative">
               {/* Timeline line */}
-              <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-green-600 via-green-500 to-green-400" />
+              <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-teal-600 via-teal-500 to-teal-400" />
 
               <div className="space-y-12">
                 {milestones.map((milestone, index) => (
@@ -287,14 +290,14 @@ export default function AboutSection() {
                           index % 2 === 0 ? "md:text-right" : "md:text-left"
                         }`}
                       >
-                        <div className="text-green-600 dark:text-green-400 font-bold text-2xl mb-2">{milestone.year}</div>
+                        <div className="text-teal-600 dark:text-teal-400 font-bold text-2xl mb-2">{milestone.year}</div>
                         <h3 className="text-xl font-semibold text-black dark:text-white mb-2">{milestone.event}</h3>
                         <p className="text-zinc-600 dark:text-slate-400">{milestone.description}</p>
                       </div>
                     </div>
 
                     {/* Timeline dot */}
-                    <div className="hidden md:flex flex-shrink-0 w-6 h-6 bg-green-600 dark:bg-green-500 rounded-full border-4 border-white dark:border-slate-800 shadow-lg relative z-10" />
+                    <div className="hidden md:flex flex-shrink-0 w-6 h-6 bg-teal-600 dark:bg-teal-500 rounded-full border-4 border-white dark:border-slate-800 shadow-lg relative z-10" />
 
                     {/* Spacer for alternating layout */}
                     <div className="hidden md:block flex-1" />
@@ -320,8 +323,8 @@ export default function AboutSection() {
                   className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-green-100 dark:bg-green-900/40 rounded-xl flex items-center justify-center">
-                      <feature.icon className="size-6 text-green-600 dark:text-green-400" />
+                    <div className="flex-shrink-0 w-12 h-12 bg-teal-100 dark:bg-teal-900/40 rounded-xl flex items-center justify-center">
+                      <feature.icon className="size-6 text-teal-600 dark:text-teal-400" />
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-black dark:text-white mb-2">{feature.title}</h3>
@@ -334,16 +337,16 @@ export default function AboutSection() {
           </div>
 
           {/* Culture & Team Section */}
-          <div className="mb-20 bg-gradient-to-br from-slate-50 to-green-50 dark:from-slate-800 dark:to-green-950 rounded-3xl p-8 md:p-12 border border-slate-200 dark:border-slate-700">
+          <div className="mb-20 bg-gradient-to-br from-slate-50 to-teal-50 dark:from-slate-800 dark:to-teal-950 rounded-3xl p-8 md:p-12 border border-slate-200 dark:border-slate-700">
             <div className="max-w-4xl mx-auto text-center">
-              <div className="w-20 h-20 bg-green-600 dark:bg-green-700 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 bg-teal-600 dark:bg-teal-700 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <Users className="size-10 text-white" />
               </div>
 
               <h2 className="text-3xl md:text-4xl font-semibold text-black dark:text-white mb-6">Our Team & Culture</h2>
 
               <p className="text-zinc-700 dark:text-slate-300 text-lg leading-relaxed mb-8">
-                We are composed of <span className="font-semibold text-green-600 dark:text-green-400">motivated professionals</span> who
+                We are composed of <span className="font-semibold text-teal-600 dark:text-teal-400">motivated professionals</span> who
                 bring global expertise and local market knowledge to every transaction. Our decentralized
                 decision-making empowers teams to deliver exceptional results while maintaining the highest standards of
                 quality and service.
@@ -356,7 +359,7 @@ export default function AboutSection() {
                   { icon: Award, label: "Excellence Focused" },
                 ].map((item, idx) => (
                   <div key={idx} className="bg-white/60 dark:bg-slate-700/60 backdrop-blur-sm p-6 rounded-xl border border-slate-200 dark:border-slate-600">
-                    <item.icon className="size-8 text-green-600 dark:text-green-400 mx-auto mb-3" />
+                    <item.icon className="size-8 text-teal-600 dark:text-teal-400 mx-auto mb-3" />
                     <p className="font-semibold text-black dark:text-white">{item.label}</p>
                   </div>
                 ))}
@@ -364,7 +367,7 @@ export default function AboutSection() {
 
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-200 hover:scale-105 shadow-lg"
+                className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-200 hover:scale-105 shadow-lg"
               >
                 Join Our Team
                 <ArrowRight className="size-5" />
@@ -383,7 +386,7 @@ export default function AboutSection() {
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-200 hover:scale-105 shadow-lg"
+                className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-200 hover:scale-105 shadow-lg"
               >
                 Get Started
                 <ArrowRight className="size-5" />

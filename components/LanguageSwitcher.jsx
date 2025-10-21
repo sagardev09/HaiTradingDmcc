@@ -66,7 +66,7 @@ export default function LanguageSwitcher({ openUpward = false }) {
                 onClick={() => handleLocaleChange(loc)}
                 className={`w-full px-4 py-2.5 text-left flex items-center gap-3 transition-colors ${
                   locale === loc
-                    ? "bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 font-medium"
+                    ? "bg-teal-50 dark:bg-teal-900/20 text-teal-700 dark:text-teal-400 font-medium"
                     : "text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700/50"
                 }`}
               >
@@ -75,7 +75,7 @@ export default function LanguageSwitcher({ openUpward = false }) {
                 {locale === loc && (
                   <span className="ml-auto">
                     <svg
-                      className="size-4 text-green-600 dark:text-green-400"
+                      className="size-4 text-teal-600 dark:text-teal-400"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
