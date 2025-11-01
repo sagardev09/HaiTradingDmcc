@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Package, Award, Globe, TrendingUp, CheckCircle2, ArrowRight, Sparkles, Star, ShoppingBag } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function BrandsSection() {
   const [hoveredBrand, setHoveredBrand] = useState(null);
@@ -16,6 +17,7 @@ export default function BrandsSection() {
       products: ["Industrial Paper", "Packaging Paper", "Specialty Paper"],
       color: "from-blue-600 to-blue-700",
       icon: "📄",
+      image: "https://images.unsplash.com/photo-1648622981113-1e0f7e2c1b4e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1169",
       featured: false,
     },
     {
@@ -25,6 +27,7 @@ export default function BrandsSection() {
       products: ["Refined Palm Oil", "Cooking Oil", "Food Grade"],
       color: "from-orange-600 to-orange-700",
       icon: "🌴",
+      image: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400&h=256&fit=crop",
       featured: true,
     },
     {
@@ -34,6 +37,17 @@ export default function BrandsSection() {
       products: ["Basmati Rice", "Long Grain Rice", "Premium Rice"],
       color: "from-amber-600 to-amber-700",
       icon: "🌾",
+      image: "/brands/libaax-rice.jpg",
+      featured: true,
+    },
+    {
+      name: "Libaax Vegetable Cooking Oil",
+      category: "Edible Oils",
+      description: "Premium vegetable cooking oil perfect for all your culinary needs",
+      products: ["Vegetable Cooking Oil", "Refined Oil", "Multi-purpose Oil"],
+      color: "from-green-600 to-green-700",
+      icon: "🫒",
+      image: "/brands/libaax-vegetable-oil.jpg",
       featured: true,
     },
     {
@@ -43,6 +57,7 @@ export default function BrandsSection() {
       products: ["Refined Sugar", "Granulated Sugar", "Food Grade Sugar"],
       color: "from-pink-600 to-pink-700",
       icon: "🍬",
+      image: "https://images.unsplash.com/photo-1673791031093-eb8eefa60083?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1173",
       featured: false,
     },
     {
@@ -52,6 +67,7 @@ export default function BrandsSection() {
       products: ["Pure Sunflower Oil", "Refined Oil", "Cooking Oil"],
       color: "from-yellow-600 to-yellow-700",
       icon: "🌻",
+      image: "/brands/libaax-sunflower-oil.jpg",
       featured: true,
     },
     {
@@ -61,13 +77,14 @@ export default function BrandsSection() {
       products: ["All Purpose Flour", "Bread Flour", "Premium Wheat Flour"],
       color: "from-stone-600 to-stone-700",
       icon: "🌾",
+      image: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=400&h=256&fit=crop",
       featured: false,
     },
   ];
 
   // Stats
   const stats = [
-    { icon: Package, label: "Premium Brands", value: "6+", color: "text-teal-600" },
+    { icon: Package, label: "Premium Brands", value: "7+", color: "text-teal-600" },
     { icon: Globe, label: "Countries Served", value: "9+", color: "text-blue-600" },
     { icon: Award, label: "Years of Trust", value: "10+", color: "text-purple-600" },
     { icon: TrendingUp, label: "Products Delivered", value: "10K+", color: "text-orange-600" },
@@ -173,14 +190,31 @@ export default function BrandsSection() {
                   {/* Gradient background */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${brand.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
 
-                  <div className="relative z-10 p-8">
-                    {/* Brand Icon */}
-                    <div className="w-20 h-20 bg-white dark:bg-slate-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                      <span className="text-4xl">{brand.icon}</span>
-                    </div>
+                  <div className="relative z-10">
+                    {/* Brand Image - Full Width */}
+                    {brand.image ? (
+                      <div className="w-full h-64 p-4">
+                        <div className="w-full h-full rounded-2xl overflow-hidden border-2 border-slate-200 dark:border-slate-600 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                          <Image
+                            src={brand.image}
+                            alt={brand.name}
+                            width={400}
+                            height={256}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          />
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="p-8 pb-4">
+                        {/* Brand Icon */}
+                        <div className="w-20 h-20 bg-white dark:bg-slate-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300 overflow-hidden">
+                          <span className="text-4xl">{brand.icon}</span>
+                        </div>
+                      </div>
+                    )}
 
                     {/* Brand Info */}
-                    <div className="mb-4">
+                    <div className="px-8 pb-4">
                       <h3 className="text-2xl font-bold text-black dark:text-white mb-2 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
                         {brand.name}
                       </h3>
@@ -193,7 +227,7 @@ export default function BrandsSection() {
                     </div>
 
                     {/* Products List */}
-                    <div className="mb-6">
+                    <div className="px-8 pb-6">
                       <p className="text-xs font-semibold text-zinc-500 dark:text-slate-500 mb-3 uppercase tracking-wide">
                         Key Products
                       </p>
@@ -208,7 +242,7 @@ export default function BrandsSection() {
                     </div>
 
                     {/* Learn More Button */}
-                    <div className="pt-6 border-t border-slate-200 dark:border-slate-700">
+                    <div className="px-8 pb-8 pt-6 border-t border-slate-200 dark:border-slate-700 mx-8">
                       <div className="flex items-center justify-between text-teal-600 dark:text-teal-400 font-semibold group-hover:translate-x-2 transition-transform">
                         <span>Learn More</span>
                         <ArrowRight className="size-5" />

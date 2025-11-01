@@ -14,6 +14,7 @@ import {
   Star,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function ProductsSection() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -29,6 +30,7 @@ export default function ProductsSection() {
       name: "Sugar",
       category: "Sugar & Sweeteners",
       icon: "🍬",
+      image: "https://images.unsplash.com/photo-1673791031093-eb8eefa60083?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1173",
       description: "Premium quality refined sugar for various culinary and industrial applications",
       features: [
         "High purity refined sugar",
@@ -47,6 +49,7 @@ export default function ProductsSection() {
       name: "Rice",
       category: "Grains & Flour",
       icon: "🌾",
+      image: "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&h=400&fit=crop",
       description: "Premium quality rice varieties including Basmati and long grain rice",
       features: [
         "Multiple rice varieties",
@@ -65,6 +68,7 @@ export default function ProductsSection() {
       name: "Palm Oil",
       category: "Oils",
       icon: "🌴",
+      image: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400&h=400&fit=crop",
       description: "Pure and refined palm oil for cooking and food processing",
       features: [
         "100% pure palm oil",
@@ -83,6 +87,7 @@ export default function ProductsSection() {
       name: "Sunflower Oil",
       category: "Oils",
       icon: "🌻",
+      image: "https://images.unsplash.com/photo-1603833797131-3c0a18fcb6b1?w=400&h=400&fit=crop",
       description: "Pure sunflower oil rich in vitamins and perfect for healthy cooking",
       features: [
         "Cold-pressed extraction",
@@ -101,6 +106,7 @@ export default function ProductsSection() {
       name: "Dry Nuts",
       category: "Other Products",
       icon: "🥜",
+      image: "https://images.unsplash.com/photo-1608797178974-15b35a64ede9?w=400&h=400&fit=crop",
       description: "Premium quality assorted dry nuts rich in nutrients",
       features: [
         "Variety of nuts available",
@@ -119,6 +125,7 @@ export default function ProductsSection() {
       name: "Wheat Flour",
       category: "Grains & Flour",
       icon: "🌾",
+      image: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=400&h=400&fit=crop",
       description: "Premium wheat flour for baking and culinary excellence",
       features: [
         "Multiple flour grades",
@@ -137,6 +144,7 @@ export default function ProductsSection() {
       name: "Spices",
       category: "Other Products",
       icon: "🌶️",
+      image: "https://images.unsplash.com/photo-1596040033229-a0b3b1e0f69a?w=400&h=400&fit=crop",
       description: "Wide variety of authentic spices for culinary perfection",
       features: [
         "Authentic flavors",
@@ -155,6 +163,7 @@ export default function ProductsSection() {
       name: "Door Skin",
       category: "Other Products",
       icon: "🚪",
+      image: "https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?w=400&h=400&fit=crop",
       description: "High-quality door skin panels for construction and furniture",
       features: [
         "Durable construction",
@@ -173,6 +182,7 @@ export default function ProductsSection() {
       name: "Paper",
       category: "Other Products",
       icon: "📄",
+      image: "https://images.unsplash.com/photo-1648622981113-1e0f7e2c1b4e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1169",
       description: "Premium quality paper products for industrial and commercial use",
       features: [
         "Multiple paper grades",
@@ -301,9 +311,15 @@ export default function ProductsSection() {
                   <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
 
                   <div className="relative z-10 p-6">
-                    {/* Product Icon */}
-                    <div className="w-16 h-16 bg-teal-100 dark:bg-teal-900/40 rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                      <span className="text-3xl">{product.icon}</span>
+                    {/* Product Image */}
+                    <div className="w-16 h-16 bg-teal-100 dark:bg-teal-900/40 rounded-2xl overflow-hidden mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <Image
+                        src={product.image}
+                        alt={product.name}
+                        width={64}
+                        height={64}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
 
                     {/* Product Name */}
@@ -374,9 +390,15 @@ export default function ProductsSection() {
                   <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
 
                   <div className="relative z-10 p-8">
-                    {/* Product Icon */}
-                    <div className="w-20 h-20 bg-white dark:bg-slate-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                      <span className="text-4xl">{product.icon}</span>
+                    {/* Product Image */}
+                    <div className="w-20 h-20 bg-white dark:bg-slate-700 rounded-2xl overflow-hidden mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <Image
+                        src={product.image}
+                        alt={product.name}
+                        width={80}
+                        height={80}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
 
                     {/* Product Info */}
