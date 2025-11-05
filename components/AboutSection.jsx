@@ -225,37 +225,63 @@ export default function AboutSection() {
           </div>
 
           {/* Core Values Section */}
-          <div className="mb-20">
-            <div className="text-center mb-12">
+          <div className="mb-20 relative">
+            <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-semibold text-black dark:text-white mb-4">Our Core Values</h2>
               <p className="text-zinc-600 dark:text-slate-400 text-lg max-w-2xl mx-auto">
                 The principles that guide our decisions and define who we are
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Accordion-style Layout */}
+            <div className="max-w-5xl mx-auto space-y-3">
               {values.map((value, index) => (
                 <div
                   key={index}
-                  className="group bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
+                  className="group relative"
                   onMouseEnter={() => setActiveValue(index)}
                 >
-                  <div
-                    className={`w-14 h-14 ${value.color} dark:bg-opacity-20 dark:brightness-125 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
-                  >
-                    <value.icon className="size-7 dark:brightness-150" />
-                  </div>
+                  <div className={`relative overflow-hidden rounded-2xl bg-white dark:bg-slate-800 border-l-4 ${
+                    activeValue === index
+                      ? 'border-teal-500 shadow-2xl shadow-teal-500/20'
+                      : 'border-slate-300 dark:border-slate-600 shadow-lg hover:border-teal-400'
+                  } transition-all duration-300`}>
 
-                  <h3 className="text-xl font-semibold text-black dark:text-white mb-3 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
-                    {value.title}
-                  </h3>
+                    {/* Content Container */}
+                    <div className="flex items-center gap-6 p-6">
+                      {/* Icon */}
+                      <div className={`flex-shrink-0 w-20 h-20 ${value.color} dark:bg-opacity-30 rounded-xl flex items-center justify-center shadow-md ${
+                        activeValue === index ? 'scale-110' : 'scale-100'
+                      } transition-transform duration-300`}>
+                        <value.icon className="size-10 dark:brightness-150" />
+                      </div>
 
-                  <p className="text-zinc-600 dark:text-slate-400 leading-relaxed">{value.description}</p>
+                      {/* Text Content */}
+                      <div className="flex-1 min-w-0">
+                        <h3 className={`text-xl md:text-2xl font-bold mb-2 ${
+                          activeValue === index
+                            ? 'text-teal-600 dark:text-teal-400'
+                            : 'text-black dark:text-white'
+                        } transition-colors duration-300`}>
+                          {value.title}
+                        </h3>
+                        <p className="text-zinc-600 dark:text-slate-300 text-sm md:text-base leading-relaxed">
+                          {value.description}
+                        </p>
+                      </div>
 
-                  {/* Hover indicator */}
-                  <div className="mt-4 flex items-center gap-2 text-teal-600 dark:text-teal-400 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span className="text-sm font-medium">Learn more</span>
-                    <ArrowRight className="size-4" />
+                      {/* Index Number */}
+                      <div className="hidden md:flex flex-shrink-0 items-center justify-center w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-700">
+                        <span className="text-slate-600 dark:text-slate-300 font-bold text-lg">
+                          {String(index + 1).padStart(2, '0')}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Hover Gradient Overlay */}
+                    <div className={`absolute inset-0 bg-gradient-to-r ${value.color.replace('bg-', 'from-').replace('-100', '-50')} to-transparent opacity-0 ${
+                      activeValue === index ? 'opacity-5' : ''
+                    } transition-opacity duration-300 pointer-events-none`} />
                   </div>
                 </div>
               ))}
@@ -376,7 +402,7 @@ export default function AboutSection() {
           </div>
 
           {/* Final CTA Section */}
-          <div className="text-center bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-12 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl">
+          {/* <div className="text-center bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-12 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-xl">
             <h2 className="text-3xl md:text-4xl font-semibold text-black dark:text-white mb-4">
               Ready to Partner with Us?
             </h2>
@@ -398,7 +424,7 @@ export default function AboutSection() {
                 View Products
               </Link>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

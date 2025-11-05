@@ -98,7 +98,7 @@ export default function Navbar() {
           />
           <div className="flex flex-col">
             <span className="text-sm sm:text-base font-bold text-black dark:text-white leading-tight">
-              HAI GENERAL TRADING
+              HAI TRADING
             </span>
             <span className="text-[10px] sm:text-xs font-semibold text-teal-600 dark:text-teal-400 leading-tight">
               DMCC
@@ -224,7 +224,7 @@ export default function Navbar() {
                 />
                 <div className="flex flex-col">
                   <span className="text-base font-bold text-black dark:text-white leading-tight">
-                    HAI GENERAL TRADING
+                    HAI TRADING
                   </span>
                   <span className="text-xs font-semibold text-teal-600 dark:text-teal-400 leading-tight">
                     DMCC

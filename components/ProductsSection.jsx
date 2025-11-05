@@ -295,57 +295,70 @@ export default function ProductsSection() {
               {featuredProducts.map((product) => (
                 <div
                   key={product.id}
-                  className="group relative bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl border border-slate-200 dark:border-slate-700 shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer"
+                  className="group relative rounded-2xl overflow-hidden cursor-pointer h-80 shadow-xl hover:shadow-2xl transition-all duration-500"
                   onMouseEnter={() => setHoveredProduct(product.id)}
                   onMouseLeave={() => setHoveredProduct(null)}
                 >
+                  {/* Product Image Background */}
+                  <div className="absolute inset-0">
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      width={400}
+                      height={400}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    />
+                    {/* Dark overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20 group-hover:from-black/90 group-hover:via-black/70 transition-all duration-500" />
+                  </div>
+
                   {/* Featured badge */}
                   <div className="absolute top-4 right-4 z-20">
-                    <div className="flex items-center gap-1 bg-teal-600 dark:bg-teal-700 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                    <div className="flex items-center gap-1 bg-teal-600 text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-lg">
                       <Star className="size-3 fill-current" />
                       Featured
                     </div>
                   </div>
 
-                  {/* Gradient background */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
-
-                  <div className="relative z-10 p-6">
-                    {/* Product Image */}
-                    <div className="w-16 h-16 bg-teal-100 dark:bg-teal-900/40 rounded-2xl overflow-hidden mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                      <Image
-                        src={product.image}
-                        alt={product.name}
-                        width={64}
-                        height={64}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-
-                    {/* Product Name */}
-                    <h3 className="text-xl font-bold text-black dark:text-white mb-2 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+                  {/* Content - Slides up from bottom on hover */}
+                  <div className={`absolute inset-x-0 bottom-0 p-6 z-10 transition-all duration-500 ${
+                    hoveredProduct === product.id
+                      ? 'translate-y-0'
+                      : 'translate-y-[calc(100%-80px)]'
+                  }`}>
+                    {/* Product Name - Always partially visible */}
+                    <h3 className="text-2xl font-bold text-white mb-4">
                       {product.name}
                     </h3>
 
-                    {/* Category */}
-                    <div className="inline-block px-3 py-1 bg-teal-100 dark:bg-teal-900/40 text-teal-700 dark:text-teal-300 text-xs rounded-full font-medium mb-3">
-                      {product.category}
-                    </div>
+                    {/* Additional Content - Shows on hover */}
+                    <div className={`transition-all duration-500 ${
+                      hoveredProduct === product.id
+                        ? 'opacity-100 max-h-96'
+                        : 'opacity-0 max-h-0'
+                    } overflow-hidden`}>
+                      {/* Category */}
+                      <div className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs rounded-full font-medium mb-3">
+                        {product.category}
+                      </div>
 
-                    {/* Brand */}
-                    <div className="text-xs text-zinc-500 dark:text-slate-500 mb-4">
-                      Brand: <span className="font-semibold text-zinc-700 dark:text-slate-400">{product.brands[0]}</span>
-                    </div>
+                      {/* Brand */}
+                      <div className="text-sm text-white/90 mb-3">
+                        Brand: <span className="font-semibold text-white">{product.brands[0]}</span>
+                      </div>
 
-                    {/* Learn More */}
-                    <div className="flex items-center gap-2 text-teal-600 dark:text-teal-400 font-semibold text-sm group-hover:translate-x-2 transition-transform">
-                      <span>View Details</span>
-                      <ArrowRight className="size-4" />
+                      {/* Description */}
+                      <p className="text-white/80 text-sm mb-4 line-clamp-2">
+                        {product.description}
+                      </p>
+
+                      {/* View Details Button */}
+                      <div className="flex items-center gap-2 text-teal-400 font-semibold text-sm">
+                        <span>View Details</span>
+                        <ArrowRight className="size-4 group-hover:translate-x-1 transition-transform" />
+                      </div>
                     </div>
                   </div>
-
-                  {/* Hover border effect */}
-                  <div className="absolute inset-0 border-2 border-teal-500 dark:border-teal-400 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
                 </div>
               ))}
             </div>
@@ -468,21 +481,27 @@ export default function ProductsSection() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Grid Layout - 2x2 */}
+            <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                  className="group flex items-start gap-5 p-6 bg-gradient-to-r from-white to-slate-50 dark:from-slate-800 dark:to-slate-700 rounded-2xl border border-slate-200 dark:border-slate-600 hover:border-teal-400 dark:hover:border-teal-500 shadow-md hover:shadow-xl transition-all duration-300"
                 >
-                  <div className="w-14 h-14 bg-teal-100 dark:bg-teal-900/40 rounded-xl flex items-center justify-center mb-4">
-                    <feature.icon className="size-7 text-teal-600 dark:text-teal-400" />
+                  {/* Icon */}
+                  <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                    <feature.icon className="size-8 text-white" />
                   </div>
-                  <h3 className="text-lg font-semibold text-black dark:text-white mb-2">
-                    {feature.title}
-                  </h3>
-                  <p className="text-zinc-600 dark:text-slate-400 text-sm">
-                    {feature.description}
-                  </p>
+
+                  {/* Content */}
+                  <div className="flex-1 pt-1">
+                    <h3 className="text-xl font-bold text-black dark:text-white mb-2 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+                      {feature.title}
+                    </h3>
+                    <p className="text-zinc-600 dark:text-slate-300 text-sm leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>

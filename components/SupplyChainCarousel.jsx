@@ -16,45 +16,49 @@ import {
 export default function SupplyChainCarousel() {
   const images = [
     {
-      src: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=500&h=500&fit=crop",
-      alt: "Supply Chain 1",
-      title: "Global Sourcing",
+      src: "https://images.unsplash.com/photo-1673791031093-eb8eefa60083?q=80&w=1200&auto=format&fit=crop",
+      alt: "Premium Sugar",
+      title: "Sugar",
     },
     {
-      src: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=500&h=500&fit=crop",
-      alt: "Supply Chain 2",
-      title: "Logistics",
+      src: "https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=1200&auto=format&fit=crop",
+      alt: "Premium Rice",
+      title: "Rice",
     },
     {
-      src: "https://images.unsplash.com/photo-1553413077-190dd305871c?w=500&h=500&fit=crop",
-      alt: "Supply Chain 3",
-      title: "Warehousing",
+      src: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?q=80&w=1200&auto=format&fit=crop",
+      alt: "Palm Oil",
+      title: "Palm Oil",
     },
     {
-      src: "https://images.unsplash.com/photo-1601598851547-4302969d0614?w=500&h=500&fit=crop",
-      alt: "Supply Chain 4",
-      title: "Distribution",
+      src: "https://plus.unsplash.com/premium_photo-1663089525424-ca57c1a28a08?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+      alt: "Sunflower Oil",
+      title: "Sunflower Oil",
     },
     {
-      src: "https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=500&h=500&fit=crop",
-      alt: "Supply Chain 5",
-      title: "Quality Control",
-    },
-
-    {
-      src: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=500&h=500&fit=crop",
-      alt: "Supply Chain 7",
-      title: "Supply Management",
+      src: "https://images.unsplash.com/photo-1608797178974-15b35a64ede9?q=80&w=1200&auto=format&fit=crop",
+      alt: "Dry Fruits and Nuts",
+      title: "Dry Fruits & Nuts",
     },
     {
-      src: "https://images.unsplash.com/photo-1494412519320-aa613dfb7738?w=500&h=500&fit=crop",
-      alt: "Supply Chain 8",
-      title: "Import/Export",
+      src: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?q=80&w=1200&auto=format&fit=crop",
+      alt: "Wheat Flour",
+      title: "Wheat Flour",
     },
     {
-      src: "https://images.unsplash.com/photo-1511376777868-611b54f68947?w=500&h=500&fit=crop",
-      alt: "Supply Chain 9",
-      title: "Trade Solutions",
+      src: "https://images.unsplash.com/photo-1506368249639-73a05d6f6488?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687",
+      alt: "Premium Spices",
+      title: "Spices",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?q=80&w=1200&auto=format&fit=crop",
+      alt: "Door Skin",
+      title: "Door Skin",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1648622981113-1e0f7e2c1b4e?q=80&w=1200&auto=format&fit=crop",
+      alt: "Paper and Paper Cups",
+      title: "Paper & Paper Cups",
     },
   ];
 
@@ -68,6 +72,7 @@ export default function SupplyChainCarousel() {
           images={images}
           className=""
           loop={true}
+          autoplay={true}
           showNavigation={true}
           showPagination={true}
         />
@@ -87,6 +92,10 @@ const Carousel_006 = ({
   const [api, setApi] = useState(null);
   const [current, setCurrent] = useState(0);
 
+  const autoplayPlugin = React.useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: false })
+  );
+
   useEffect(() => {
     if (!api) return;
 
@@ -103,17 +112,7 @@ const Carousel_006 = ({
         loop,
         slidesToScroll: 1,
       }}
-      plugins={
-        autoplay
-          ? [
-              Autoplay({
-                delay: 2000,
-                stopOnInteraction: true,
-                stopOnMouseEnter: true,
-              }),
-            ]
-          : []
-      }
+      plugins={autoplay ? [autoplayPlugin.current] : []}
     >
       <CarouselContent className="flex h-[500px] w-full">
         {images.map((img, index) => (
