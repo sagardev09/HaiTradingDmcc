@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Package,
   CheckCircle2,
@@ -19,54 +19,57 @@ import Image from "next/image";
 export default function ProductsSection() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [hoveredProduct, setHoveredProduct] = useState(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState({});
 
   // All Product categories
-  const categories = ["All", "Grains & Flour", "Oils", "Sugar & Sweeteners", "Other Products"];
+  const categories = ["All", "Sugar", "Rice", "Palm Oil", "Sunflower Oil", "Wheat Flour", "Paper"];
+
+  // Auto-rotate carousel images every 5 seconds for very smooth scrolling
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex(prev => {
+        const newIndex = { ...prev };
+
+        // Loop through all products and update their image index if they have multiple images
+        products.forEach(product => {
+          if (product.images && product.images.length > 1) {
+            const currentIdx = prev[product.id] || 0;
+            newIndex[product.id] = (currentIdx + 1) % product.images.length;
+          }
+        });
+
+        return newIndex;
+      });
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   // Products data
   const products = [
     {
       id: 1,
-      name: "Sugar",
-      category: "Sugar & Sweeteners",
-      icon: "🍬",
-      image: "https://images.unsplash.com/photo-1673791031093-eb8eefa60083?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1173",
-      description: "Premium quality refined sugar for various culinary and industrial applications",
+      name: "AGT Papers",
+      category: "Paper",
+      icon: "📄",
+      image: "https://images.unsplash.com/photo-1648622981113-1e0f7e2c1b4e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1169",
+      description: "Premium quality paper products for industrial and commercial use",
       features: [
-        "High purity refined sugar",
-        "Available in granulated and powder forms",
-        "Food grade certified",
-        "Consistent quality",
-        "Bulk packaging available",
+        "Multiple paper grades",
+        "Eco-friendly options",
+        "Industrial strength",
+        "Various sizes available",
+        "Bulk orders accepted",
       ],
-      brands: ["AGT Sugar"],
+      brands: ["AGT Papers"],
       origin: "Multiple Sources",
       featured: true,
-      color: "from-pink-600 to-pink-700",
+      color: "from-blue-600 to-blue-700",
     },
     {
       id: 2,
-      name: "Rice",
-      category: "Grains & Flour",
-      icon: "🌾",
-      image: "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&h=400&fit=crop",
-      description: "Premium quality rice varieties including Basmati and long grain rice",
-      features: [
-        "Multiple rice varieties",
-        "Basmati and long grain options",
-        "High nutritional value",
-        "Aromatic and flavorful",
-        "Ideal for all cuisines",
-      ],
-      brands: ["Libaax Rice"],
-      origin: "India, Pakistan, Thailand",
-      featured: true,
-      color: "from-amber-600 to-amber-700",
-    },
-    {
-      id: 3,
-      name: "Palm Oil",
-      category: "Oils",
+      name: "Libaax Palm Oil",
+      category: "Palm Oil",
       icon: "🌴",
       image: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400&h=400&fit=crop",
       description: "Pure and refined palm oil for cooking and food processing",
@@ -83,11 +86,53 @@ export default function ProductsSection() {
       color: "from-orange-600 to-orange-700",
     },
     {
+      id: 3,
+      name: "Libaax Rice",
+      category: "Rice",
+      icon: "🌾",
+      image: "/brands/libaax/rice/featured/libaax-rice.jpeg",
+      images: [
+        "/brands/libaax/rice/product/libaax-rice-1.png",
+        "/brands/libaax/rice/product/libaax-rice-2.png"
+      ],
+      description: "Premium quality rice varieties including Basmati and long grain rice",
+      features: [
+        "Multiple rice varieties",
+        "Basmati and long grain options",
+        "High nutritional value",
+        "Aromatic and flavorful",
+        "Ideal for all cuisines",
+      ],
+      brands: ["Libaax Rice"],
+      origin: "India, Pakistan, Thailand",
+      featured: true,
+      color: "from-amber-600 to-amber-700",
+    },
+    {
       id: 4,
-      name: "Sunflower Oil",
-      category: "Oils",
+      name: "AGT Sugar",
+      category: "Sugar",
+      icon: "🍬",
+      image: "https://images.unsplash.com/photo-1673791031093-eb8eefa60083?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1173",
+      description: "Premium quality refined sugar for various culinary and industrial applications",
+      features: [
+        "High purity refined sugar",
+        "Available in granulated and powder forms",
+        "Food grade certified",
+        "Consistent quality",
+        "Bulk packaging available",
+      ],
+      brands: ["AGT Sugar"],
+      origin: "Multiple Sources",
+      featured: true,
+      color: "from-pink-600 to-pink-700",
+    },
+    {
+      id: 5,
+      name: "Libaax Pure Sunflower Oil",
+      category: "Sunflower Oil",
       icon: "🌻",
-      image: "https://images.unsplash.com/photo-1603833797131-3c0a18fcb6b1?w=400&h=400&fit=crop",
+      image: "https://media.istockphoto.com/id/155284344/photo/sunflower-oil.jpg?s=612x612&w=0&k=20&c=Cr7WLo3oOSNvqUZJoPJ_PHik-l8nBgfwWrMK_DX4EWM=",
       description: "Pure sunflower oil rich in vitamins and perfect for healthy cooking",
       features: [
         "Cold-pressed extraction",
@@ -102,28 +147,9 @@ export default function ProductsSection() {
       color: "from-yellow-600 to-yellow-700",
     },
     {
-      id: 5,
-      name: "Dry Nuts",
-      category: "Other Products",
-      icon: "🥜",
-      image: "https://images.unsplash.com/photo-1608797178974-15b35a64ede9?w=400&h=400&fit=crop",
-      description: "Premium quality assorted dry nuts rich in nutrients",
-      features: [
-        "Variety of nuts available",
-        "High protein content",
-        "Natural and unprocessed",
-        "Rich in healthy fats",
-        "Perfect for snacking",
-      ],
-      brands: ["Multiple Brands"],
-      origin: "Multiple Sources",
-      featured: false,
-      color: "from-stone-600 to-stone-700",
-    },
-    {
       id: 6,
-      name: "Wheat Flour",
-      category: "Grains & Flour",
+      name: "AGT Wheat Flour",
+      category: "Wheat Flour",
       icon: "🌾",
       image: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=400&h=400&fit=crop",
       description: "Premium wheat flour for baking and culinary excellence",
@@ -136,65 +162,8 @@ export default function ProductsSection() {
       ],
       brands: ["AGT Wheat Flour"],
       origin: "Canada, USA",
-      featured: false,
+      featured: true,
       color: "from-stone-600 to-stone-700",
-    },
-    {
-      id: 7,
-      name: "Spices",
-      category: "Other Products",
-      icon: "🌶️",
-      image: "https://images.unsplash.com/photo-1596040033229-a0b3b1e0f69a?w=400&h=400&fit=crop",
-      description: "Wide variety of authentic spices for culinary perfection",
-      features: [
-        "Authentic flavors",
-        "Premium quality spices",
-        "Aromatic and fresh",
-        "Various spice blends",
-        "Sealed packaging",
-      ],
-      brands: ["Multiple Brands"],
-      origin: "India, Sri Lanka",
-      featured: false,
-      color: "from-red-600 to-red-700",
-    },
-    {
-      id: 8,
-      name: "Door Skin",
-      category: "Other Products",
-      icon: "🚪",
-      image: "https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?w=400&h=400&fit=crop",
-      description: "High-quality door skin panels for construction and furniture",
-      features: [
-        "Durable construction",
-        "Multiple finishes available",
-        "Termite resistant",
-        "Easy to install",
-        "Cost-effective solution",
-      ],
-      brands: ["Industrial Grade"],
-      origin: "Multiple Sources",
-      featured: false,
-      color: "from-brown-600 to-brown-700",
-    },
-    {
-      id: 9,
-      name: "Paper",
-      category: "Other Products",
-      icon: "📄",
-      image: "https://images.unsplash.com/photo-1648622981113-1e0f7e2c1b4e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1169",
-      description: "Premium quality paper products for industrial and commercial use",
-      features: [
-        "Multiple paper grades",
-        "Eco-friendly options",
-        "Industrial strength",
-        "Various sizes available",
-        "Bulk orders accepted",
-      ],
-      brands: ["AGT Papers"],
-      origin: "Multiple Sources",
-      featured: false,
-      color: "from-blue-600 to-blue-700",
     },
   ];
 
@@ -308,8 +277,8 @@ export default function ProductsSection() {
                       height={400}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     />
-                    {/* Dark overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20 group-hover:from-black/90 group-hover:via-black/70 transition-all duration-500" />
+                    {/* Subtle gradient at bottom for text visibility */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent group-hover:from-black/90 group-hover:via-black/70 group-hover:to-black/20 transition-all duration-500" />
                   </div>
 
                   {/* Featured badge */}
@@ -321,10 +290,10 @@ export default function ProductsSection() {
                   </div>
 
                   {/* Content - Slides up from bottom on hover */}
-                  <div className={`absolute inset-x-0 bottom-0 p-6 z-10 transition-all duration-500 ${
+                  <div className={`absolute inset-x-0 bottom-0 p-6 pb-8 z-10 transition-all duration-500 ${
                     hoveredProduct === product.id
                       ? 'translate-y-0'
-                      : 'translate-y-[calc(100%-80px)]'
+                      : 'translate-y-[calc(100%-100px)]'
                   }`}>
                     {/* Product Name - Always partially visible */}
                     <h3 className="text-2xl font-bold text-white mb-4">
@@ -392,81 +361,140 @@ export default function ProductsSection() {
             </h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredProducts.map((product) => (
-                <div
-                  key={product.id}
-                  className="group bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-3xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer"
-                  onMouseEnter={() => setHoveredProduct(product.id)}
-                  onMouseLeave={() => setHoveredProduct(null)}
-                >
-                  {/* Gradient overlay */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
+              {filteredProducts.map((product) => {
+                const productImages = product.images || [product.image];
+                const currentIndex = currentImageIndex[product.id] || 0;
 
-                  <div className="relative z-10 p-8">
-                    {/* Product Image */}
-                    <div className="w-20 h-20 bg-white dark:bg-slate-700 rounded-2xl overflow-hidden mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                return (
+                  <div
+                    key={product.id}
+                    className="group bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-3xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer"
+                  >
+                    {/* Full Width Product Image with Carousel */}
+                    <div className="relative w-full h-64 bg-slate-100 dark:bg-slate-700 overflow-hidden">
                       <Image
-                        src={product.image}
+                        src={productImages[currentIndex]}
                         alt={product.name}
-                        width={80}
-                        height={80}
-                        className="w-full h-full object-cover"
+                        width={800}
+                        height={256}
+                        className="w-full h-full object-cover transition-all duration-1000 ease-in-out"
+                        style={{ transition: 'opacity 1s ease-in-out, transform 1s ease-in-out' }}
                       />
+
+                      {/* Carousel Navigation - Only show if multiple images */}
+                      {productImages.length > 1 && (
+                        <>
+                          {/* Dots Indicator */}
+                          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+                            {productImages.map((_, idx) => (
+                              <button
+                                key={idx}
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  setCurrentImageIndex(prev => ({
+                                    ...prev,
+                                    [product.id]: idx
+                                  }));
+                                }}
+                                className={`w-2 h-2 rounded-full transition-all ${
+                                  idx === currentIndex
+                                    ? 'bg-teal-600 w-6'
+                                    : 'bg-slate-300 dark:bg-slate-600'
+                                }`}
+                                aria-label={`View image ${idx + 1}`}
+                              />
+                            ))}
+                          </div>
+
+                          {/* Previous/Next Buttons */}
+                          {currentIndex > 0 && (
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setCurrentImageIndex(prev => ({
+                                  ...prev,
+                                  [product.id]: currentIndex - 1
+                                }));
+                              }}
+                              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 dark:bg-slate-800/80 p-2 rounded-full shadow-lg hover:bg-white dark:hover:bg-slate-700 transition z-10"
+                              aria-label="Previous image"
+                            >
+                              <ArrowRight className="size-4 rotate-180 text-black dark:text-white" />
+                            </button>
+                          )}
+
+                          {currentIndex < productImages.length - 1 && (
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setCurrentImageIndex(prev => ({
+                                  ...prev,
+                                  [product.id]: currentIndex + 1
+                                }));
+                              }}
+                              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 dark:bg-slate-800/80 p-2 rounded-full shadow-lg hover:bg-white dark:hover:bg-slate-700 transition z-10"
+                              aria-label="Next image"
+                            >
+                              <ArrowRight className="size-4 text-black dark:text-white" />
+                            </button>
+                          )}
+                        </>
+                      )}
                     </div>
 
                     {/* Product Info */}
-                    <div className="mb-6">
-                      <h3 className="text-2xl font-bold text-black dark:text-white mb-2 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+                    <div className="p-6">
+                      <h3 className="text-xl font-bold text-black dark:text-white mb-2 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
                         {product.name}
                       </h3>
                       <div className="inline-block px-3 py-1 bg-teal-100 dark:bg-teal-900/40 text-teal-700 dark:text-teal-300 text-xs rounded-full font-medium mb-4">
                         {product.category}
                       </div>
-                      <p className="text-zinc-600 dark:text-slate-400 leading-relaxed mb-4">
+                      <p className="text-zinc-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
                         {product.description}
                       </p>
-                    </div>
 
-                    {/* Features List */}
-                    <div className="mb-6">
-                      <p className="text-xs font-semibold text-zinc-500 dark:text-slate-500 mb-3 uppercase tracking-wide">
-                        Key Features
-                      </p>
-                      <div className="space-y-2">
-                        {product.features.slice(0, 3).map((feature, idx) => (
-                          <div key={idx} className="flex items-start gap-2 text-sm text-zinc-700 dark:text-slate-300">
-                            <CheckCircle2 className="size-4 text-teal-600 dark:text-teal-400 flex-shrink-0 mt-0.5" />
-                            <span>{feature}</span>
+                      {/* Features List */}
+                      <div className="mb-4">
+                        <p className="text-xs font-semibold text-zinc-500 dark:text-slate-500 mb-2 uppercase tracking-wide">
+                          Key Features
+                        </p>
+                        <div className="space-y-1.5">
+                          {product.features.slice(0, 3).map((feature, idx) => (
+                            <div key={idx} className="flex items-start gap-2 text-xs text-zinc-700 dark:text-slate-300">
+                              <CheckCircle2 className="size-3.5 text-teal-600 dark:text-teal-400 flex-shrink-0 mt-0.5" />
+                              <span>{feature}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Brand & Origin */}
+                      <div className="pt-4 border-t border-slate-200 dark:border-slate-700 mb-4">
+                        <div className="grid grid-cols-2 gap-4 text-sm">
+                          <div>
+                            <p className="text-zinc-500 dark:text-slate-500 text-xs mb-1">Brand</p>
+                            <p className="font-semibold text-black dark:text-white text-sm">{product.brands[0]}</p>
                           </div>
-                        ))}
+                          <div>
+                            <p className="text-zinc-500 dark:text-slate-500 text-xs mb-1">Origin</p>
+                            <p className="font-semibold text-black dark:text-white text-sm">{product.origin}</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* View Details Button */}
+                      <div className="flex items-center justify-between text-teal-600 dark:text-teal-400 font-semibold text-sm group-hover:translate-x-2 transition-transform">
+                        <span>View Full Details</span>
+                        <ArrowRight className="size-4" />
                       </div>
                     </div>
 
-                    {/* Brand & Origin */}
-                    <div className="pt-6 border-t border-slate-200 dark:border-slate-700 mb-6">
-                      <div className="grid grid-cols-2 gap-4 text-sm">
-                        <div>
-                          <p className="text-zinc-500 dark:text-slate-500 text-xs mb-1">Brand</p>
-                          <p className="font-semibold text-black dark:text-white">{product.brands[0]}</p>
-                        </div>
-                        <div>
-                          <p className="text-zinc-500 dark:text-slate-500 text-xs mb-1">Origin</p>
-                          <p className="font-semibold text-black dark:text-white">{product.origin}</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* View Details Button */}
-                    <div className="flex items-center justify-between text-teal-600 dark:text-teal-400 font-semibold group-hover:translate-x-2 transition-transform">
-                      <span>View Full Details</span>
-                      <ArrowRight className="size-5" />
-                    </div>
+                    {/* Hover effect overlay */}
+                    <div className="absolute inset-0 border-2 border-teal-500 dark:border-teal-400 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
                   </div>
-
-                  {/* Hover effect overlay */}
-                  <div className="absolute inset-0 border-2 border-teal-500 dark:border-teal-400 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
 
