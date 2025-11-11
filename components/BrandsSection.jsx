@@ -118,7 +118,7 @@ export default function BrandsSection() {
       products: ["Pure Sunflower Oil", "Refined Oil", "Cooking Oil"],
       color: "from-yellow-600 to-yellow-700",
       icon: "🌻",
-      image: "/brands/Karina-oil.png",
+      image: "/brands/karina-oil.png",
       featured: false,
     },
   ];

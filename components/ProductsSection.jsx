@@ -219,7 +219,7 @@ export default function ProductsSection() {
       origin: "Egypt",
       color: "from-yellow-600 to-yellow-700",
       icon: "🌻",
-      image: "/brands/Karina-oil.png",
+      image: "/brands/karina-oil.png",
       featured: true,
     },
     {
@@ -238,7 +238,7 @@ export default function ProductsSection() {
       origin: "Egypt",
       color: "from-yellow-600 to-yellow-700",
       icon: "🌻",
-      images: ["/brands/Karani-veg-oil1.png", "/brands/Karani-veg-oil2.png"],
+      images: ["/brands/karani-veg-oil1.png", "/brands/karani-veg-oil2.png"],
       featured: false,
     },
     {
