@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { id } from "date-fns/locale";
 
 export default function ProductsSection() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -22,16 +23,24 @@ export default function ProductsSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState({});
 
   // All Product categories
-  const categories = ["All", "Sugar", "Rice", "Palm Oil", "Sunflower Oil", "Wheat Flour", "Paper"];
+  const categories = [
+    "All",
+    "Sugar",
+    "Rice",
+    "Palm Oil",
+    "Sunflower Oil",
+    "Wheat Flour",
+    "Paper",
+  ];
 
   // Auto-rotate carousel images every 5 seconds for very smooth scrolling
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex(prev => {
+      setCurrentImageIndex((prev) => {
         const newIndex = { ...prev };
 
         // Loop through all products and update their image index if they have multiple images
-        products.forEach(product => {
+        products.forEach((product) => {
           if (product.images && product.images.length > 1) {
             const currentIdx = prev[product.id] || 0;
             newIndex[product.id] = (currentIdx + 1) % product.images.length;
@@ -52,8 +61,10 @@ export default function ProductsSection() {
       name: "AGT Papers",
       category: "Paper",
       icon: "📄",
-      image: "https://images.unsplash.com/photo-1648622981113-1e0f7e2c1b4e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1169",
-      description: "Premium quality paper products for industrial and commercial use",
+      image:
+        "https://images.unsplash.com/photo-1648622981113-1e0f7e2c1b4e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1169",
+      description:
+        "Premium quality paper products for industrial and commercial use",
       features: [
         "Multiple paper grades",
         "Eco-friendly options",
@@ -71,7 +82,8 @@ export default function ProductsSection() {
       name: "Libaax Palm Oil",
       category: "Palm Oil",
       icon: "🌴",
-      image: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400&h=400&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400&h=400&fit=crop",
       description: "Pure and refined palm oil for cooking and food processing",
       features: [
         "100% pure palm oil",
@@ -93,9 +105,10 @@ export default function ProductsSection() {
       image: "/brands/libaax/rice/featured/libaax-rice.jpeg",
       images: [
         "/brands/libaax/rice/product/libaax-rice-1.png",
-        "/brands/libaax/rice/product/libaax-rice-2.png"
+        "/brands/libaax/rice/product/libaax-rice-2.png",
       ],
-      description: "Premium quality rice varieties including Basmati and long grain rice",
+      description:
+        "Premium quality rice varieties including Basmati and long grain rice",
       features: [
         "Multiple rice varieties",
         "Basmati and long grain options",
@@ -113,8 +126,10 @@ export default function ProductsSection() {
       name: "AGT Sugar",
       category: "Sugar",
       icon: "🍬",
-      image: "https://images.unsplash.com/photo-1673791031093-eb8eefa60083?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1173",
-      description: "Premium quality refined sugar for various culinary and industrial applications",
+      image:
+        "https://images.unsplash.com/photo-1673791031093-eb8eefa60083?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1173",
+      description:
+        "Premium quality refined sugar for various culinary and industrial applications",
       features: [
         "High purity refined sugar",
         "Available in granulated and powder forms",
@@ -132,8 +147,10 @@ export default function ProductsSection() {
       name: "Libaax Pure Sunflower Oil",
       category: "Sunflower Oil",
       icon: "🌻",
-      image: "https://media.istockphoto.com/id/155284344/photo/sunflower-oil.jpg?s=612x612&w=0&k=20&c=Cr7WLo3oOSNvqUZJoPJ_PHik-l8nBgfwWrMK_DX4EWM=",
-      description: "Pure sunflower oil rich in vitamins and perfect for healthy cooking",
+      image:
+        "https://media.istockphoto.com/id/155284344/photo/sunflower-oil.jpg?s=612x612&w=0&k=20&c=Cr7WLo3oOSNvqUZJoPJ_PHik-l8nBgfwWrMK_DX4EWM=",
+      description:
+        "Pure sunflower oil rich in vitamins and perfect for healthy cooking",
       features: [
         "Cold-pressed extraction",
         "Rich in vitamins A, D, and E",
@@ -151,7 +168,8 @@ export default function ProductsSection() {
       name: "AGT Wheat Flour",
       category: "Wheat Flour",
       icon: "🌾",
-      image: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=400&h=400&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=400&h=400&fit=crop",
       description: "Premium wheat flour for baking and culinary excellence",
       features: [
         "Multiple flour grades",
@@ -164,6 +182,88 @@ export default function ProductsSection() {
       origin: "Canada, USA",
       featured: true,
       color: "from-stone-600 to-stone-700",
+    },
+
+    {
+      id: 7,
+      name: "Abusita Vegetable Oil",
+      category: "Edible Oils",
+      description:
+        "Pure sunflower oil rich in vitamins and perfect for healthy cooking",
+      features: [
+        "Cold-pressed extraction",
+        "Rich in vitamins A, D, and E",
+        "Low in saturated fats",
+        "Light and healthy",
+      ],
+      brands: ["Abusita Vegetable Oil"],
+      color: "from-yellow-600 to-yellow-700",
+      origin: "Egypt",
+      icon: "🌻",
+      image: "/brands/abusita-oil.png",
+      featured: true,
+    },
+    {
+      id: 8,
+      name: "Karina Vegetable Oil",
+      category: "Edible Oils",
+      description:
+        "Pure sunflower oil rich in vitamins and perfect for healthy cooking",
+      features: [
+        "Cold-pressed extraction",
+        "Rich in vitamins A, D, and E",
+        "Low in saturated fats",
+        "Light and healthy",
+      ],
+      brands: ["Karina Vegetable Oil"],
+      origin: "Egypt",
+      color: "from-yellow-600 to-yellow-700",
+      icon: "🌻",
+      image: "/brands/Karina-oil.png",
+      featured: true,
+    },
+    {
+      id: 9,
+      name: "Karina Oil",
+      category: "Edible Oils",
+      description:
+        "Pure sunflower oil rich in vitamins and perfect for healthy cooking",
+      features: [
+        "Cold-pressed extraction",
+        "Rich in vitamins A, D, and E",
+        "Low in saturated fats",
+        "Light and healthy",
+      ],
+      brands: ["Karina Oil"],
+      origin: "Egypt",
+      color: "from-yellow-600 to-yellow-700",
+      icon: "🌻",
+      images: ["/brands/Karani-veg-oil1.png", "/brands/Karani-veg-oil2.png"],
+      featured: false,
+    },
+    {
+      id: 10,
+      name: "Rawda Sugar",
+      category: "Sugar",
+      description:
+        "Premium quality refined sugar for various culinary and industrial applications",
+      features: [
+        "High purity refined sugar",
+        "Available in granulated and powder forms",
+        "Food grade certified",
+        "Consistent quality",
+        "Bulk packaging available",
+      ],
+      brands: ["Rawda Sugar"],
+      origin: "India",
+      color: "from-yellow-600 to-yellow-700",
+      icon: "🌻",
+      images: [
+        "/brands/rawda-sugar.png",
+        "/brands/rawda-sugar1.png",
+        "/brands/rawda-sugar2.png",
+      ],
+      featured: false,
     },
   ];
 
@@ -178,10 +278,30 @@ export default function ProductsSection() {
 
   // Stats
   const stats = [
-    { icon: Package, label: "Product Categories", value: "9+", color: "text-teal-600" },
-    { icon: Globe, label: "Source Countries", value: "15+", color: "text-blue-600" },
-    { icon: Award, label: "Quality Certified", value: "100%", color: "text-purple-600" },
-    { icon: TrendingUp, label: "Client Satisfaction", value: "98%", color: "text-orange-600" },
+    {
+      icon: Package,
+      label: "Product Categories",
+      value: "9+",
+      color: "text-teal-600",
+    },
+    {
+      icon: Globe,
+      label: "Source Countries",
+      value: "15+",
+      color: "text-blue-600",
+    },
+    {
+      icon: Award,
+      label: "Quality Certified",
+      value: "100%",
+      color: "text-purple-600",
+    },
+    {
+      icon: TrendingUp,
+      label: "Client Satisfaction",
+      value: "98%",
+      color: "text-orange-600",
+    },
   ];
 
   // Why choose our products
@@ -189,12 +309,14 @@ export default function ProductsSection() {
     {
       icon: Award,
       title: "Premium Quality",
-      description: "All products meet international quality standards and certifications",
+      description:
+        "All products meet international quality standards and certifications",
     },
     {
       icon: Globe,
       title: "Global Sourcing",
-      description: "Sourced from the finest producers across multiple continents",
+      description:
+        "Sourced from the finest producers across multiple continents",
     },
     {
       icon: CheckCircle2,
@@ -225,7 +347,9 @@ export default function ProductsSection() {
           <div className="text-center mb-16 animate-fade-in">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-100 dark:bg-teal-900/40 rounded-full mb-6">
               <Sparkles className="size-5 text-teal-600 dark:text-teal-400" />
-              <span className="text-xs sm:text-sm font-medium text-teal-700 dark:text-teal-300">Premium Commodities</span>
+              <span className="text-xs sm:text-sm font-medium text-teal-700 dark:text-teal-300">
+                Premium Commodities
+              </span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 bg-gradient-to-r from-black dark:from-white to-teal-600 dark:to-teal-400 text-transparent bg-clip-text px-2 break-words">
@@ -234,8 +358,11 @@ export default function ProductsSection() {
 
             <p className="text-sm sm:text-base md:text-lg max-w-3xl mx-auto mb-8">
               Discover our comprehensive range of{" "}
-              <span className="font-semibold text-teal-600 dark:text-teal-400">premium food commodities</span> and
-              industrial products, sourced globally and delivered with excellence.
+              <span className="font-semibold text-teal-600 dark:text-teal-400">
+                premium food commodities
+              </span>{" "}
+              and industrial products, sourced globally and delivered with
+              excellence.
             </p>
 
             {/* Stats Grid */}
@@ -245,9 +372,15 @@ export default function ProductsSection() {
                   key={index}
                   className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 >
-                  <stat.icon className={`size-8 ${stat.color} dark:brightness-125 mx-auto mb-3`} />
-                  <div className="text-3xl font-bold text-black dark:text-white mb-1">{stat.value}</div>
-                  <div className="text-sm text-zinc-600 dark:text-slate-400">{stat.label}</div>
+                  <stat.icon
+                    className={`size-8 ${stat.color} dark:brightness-125 mx-auto mb-3`}
+                  />
+                  <div className="text-3xl font-bold text-black dark:text-white mb-1">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm text-zinc-600 dark:text-slate-400">
+                    {stat.label}
+                  </div>
                 </div>
               ))}
             </div>
@@ -257,7 +390,9 @@ export default function ProductsSection() {
           <div className="mb-16">
             <div className="flex items-center gap-3 mb-8">
               <Star className="size-6 text-teal-600 dark:text-teal-400 fill-current" />
-              <h2 className="text-2xl sm:text-3xl font-semibold text-black dark:text-white px-2">Featured Products</h2>
+              <h2 className="text-2xl sm:text-3xl font-semibold text-black dark:text-white px-2">
+                Featured Products
+              </h2>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -290,22 +425,26 @@ export default function ProductsSection() {
                   </div>
 
                   {/* Content - Slides up from bottom on hover */}
-                  <div className={`absolute inset-x-0 bottom-0 p-6 pb-8 z-10 transition-all duration-500 ${
-                    hoveredProduct === product.id
-                      ? 'translate-y-0'
-                      : 'translate-y-[calc(100%-100px)]'
-                  }`}>
+                  <div
+                    className={`absolute inset-x-0 bottom-0 p-6 pb-8 z-10 transition-all duration-500 ${
+                      hoveredProduct === product.id
+                        ? "translate-y-0"
+                        : "translate-y-[calc(100%-100px)]"
+                    }`}
+                  >
                     {/* Product Name - Always partially visible */}
                     <h3 className="text-2xl font-bold text-white mb-4">
                       {product.name}
                     </h3>
 
                     {/* Additional Content - Shows on hover */}
-                    <div className={`transition-all duration-500 ${
-                      hoveredProduct === product.id
-                        ? 'opacity-100 max-h-96'
-                        : 'opacity-0 max-h-0'
-                    } overflow-hidden`}>
+                    <div
+                      className={`transition-all duration-500 ${
+                        hoveredProduct === product.id
+                          ? "opacity-100 max-h-96"
+                          : "opacity-0 max-h-0"
+                      } overflow-hidden`}
+                    >
                       {/* Category */}
                       <div className="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs rounded-full font-medium mb-3">
                         {product.category}
@@ -313,7 +452,10 @@ export default function ProductsSection() {
 
                       {/* Brand */}
                       <div className="text-sm text-white/90 mb-3">
-                        Brand: <span className="font-semibold text-white">{product.brands[0]}</span>
+                        Brand:{" "}
+                        <span className="font-semibold text-white">
+                          {product.brands[0]}
+                        </span>
                       </div>
 
                       {/* Description */}
@@ -335,7 +477,9 @@ export default function ProductsSection() {
 
           {/* Category Filter */}
           <div className="mb-12">
-            <h2 className="text-3xl font-semibold text-black dark:text-white mb-6">Browse by Category</h2>
+            <h2 className="text-3xl font-semibold text-black dark:text-white mb-6">
+              Browse by Category
+            </h2>
 
             <div className="flex flex-wrap gap-3 mb-8">
               {categories.map((category) => (
@@ -378,7 +522,10 @@ export default function ProductsSection() {
                         width={800}
                         height={256}
                         className="w-full h-full object-cover transition-all duration-1000 ease-in-out"
-                        style={{ transition: 'opacity 1s ease-in-out, transform 1s ease-in-out' }}
+                        style={{
+                          transition:
+                            "opacity 1s ease-in-out, transform 1s ease-in-out",
+                        }}
                       />
 
                       {/* Carousel Navigation - Only show if multiple images */}
@@ -391,15 +538,15 @@ export default function ProductsSection() {
                                 key={idx}
                                 onClick={(e) => {
                                   e.stopPropagation();
-                                  setCurrentImageIndex(prev => ({
+                                  setCurrentImageIndex((prev) => ({
                                     ...prev,
-                                    [product.id]: idx
+                                    [product.id]: idx,
                                   }));
                                 }}
                                 className={`w-2 h-2 rounded-full transition-all ${
                                   idx === currentIndex
-                                    ? 'bg-teal-600 w-6'
-                                    : 'bg-slate-300 dark:bg-slate-600'
+                                    ? "bg-teal-600 w-6"
+                                    : "bg-slate-300 dark:bg-slate-600"
                                 }`}
                                 aria-label={`View image ${idx + 1}`}
                               />
@@ -411,9 +558,9 @@ export default function ProductsSection() {
                             <button
                               onClick={(e) => {
                                 e.stopPropagation();
-                                setCurrentImageIndex(prev => ({
+                                setCurrentImageIndex((prev) => ({
                                   ...prev,
-                                  [product.id]: currentIndex - 1
+                                  [product.id]: currentIndex - 1,
                                 }));
                               }}
                               className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/80 dark:bg-slate-800/80 p-2 rounded-full shadow-lg hover:bg-white dark:hover:bg-slate-700 transition z-10"
@@ -427,9 +574,9 @@ export default function ProductsSection() {
                             <button
                               onClick={(e) => {
                                 e.stopPropagation();
-                                setCurrentImageIndex(prev => ({
+                                setCurrentImageIndex((prev) => ({
                                   ...prev,
-                                  [product.id]: currentIndex + 1
+                                  [product.id]: currentIndex + 1,
                                 }));
                               }}
                               className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/80 dark:bg-slate-800/80 p-2 rounded-full shadow-lg hover:bg-white dark:hover:bg-slate-700 transition z-10"
@@ -461,7 +608,10 @@ export default function ProductsSection() {
                         </p>
                         <div className="space-y-1.5">
                           {product.features.slice(0, 3).map((feature, idx) => (
-                            <div key={idx} className="flex items-start gap-2 text-xs text-zinc-700 dark:text-slate-300">
+                            <div
+                              key={idx}
+                              className="flex items-start gap-2 text-xs text-zinc-700 dark:text-slate-300"
+                            >
                               <CheckCircle2 className="size-3.5 text-teal-600 dark:text-teal-400 flex-shrink-0 mt-0.5" />
                               <span>{feature}</span>
                             </div>
@@ -473,12 +623,20 @@ export default function ProductsSection() {
                       <div className="pt-4 border-t border-slate-200 dark:border-slate-700 mb-4">
                         <div className="grid grid-cols-2 gap-4 text-sm">
                           <div>
-                            <p className="text-zinc-500 dark:text-slate-500 text-xs mb-1">Brand</p>
-                            <p className="font-semibold text-black dark:text-white text-sm">{product.brands[0]}</p>
+                            <p className="text-zinc-500 dark:text-slate-500 text-xs mb-1">
+                              Brand
+                            </p>
+                            <p className="font-semibold text-black dark:text-white text-sm">
+                              {product.brands[0]}
+                            </p>
                           </div>
                           <div>
-                            <p className="text-zinc-500 dark:text-slate-500 text-xs mb-1">Origin</p>
-                            <p className="font-semibold text-black dark:text-white text-sm">{product.origin}</p>
+                            <p className="text-zinc-500 dark:text-slate-500 text-xs mb-1">
+                              Origin
+                            </p>
+                            <p className="font-semibold text-black dark:text-white text-sm">
+                              {product.origin}
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -548,8 +706,10 @@ export default function ProductsSection() {
               </h2>
 
               <p className="text-teal-50 text-lg max-w-3xl mx-auto mb-8">
-                Every product undergoes rigorous quality control and meets international food safety standards.
-                We partner with certified suppliers and conduct regular audits to ensure consistent excellence.
+                Every product undergoes rigorous quality control and meets
+                international food safety standards. We partner with certified
+                suppliers and conduct regular audits to ensure consistent
+                excellence.
               </p>
 
               <div className="flex flex-wrap items-center justify-center gap-4">
@@ -572,7 +732,8 @@ export default function ProductsSection() {
               Interested in Our Products?
             </h2>
             <p className="text-zinc-600 dark:text-slate-400 text-lg mb-8 max-w-2xl mx-auto">
-              Get in touch with us to discuss your requirements, request samples, or learn more about bulk ordering
+              Get in touch with us to discuss your requirements, request
+              samples, or learn more about bulk ordering
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link

@@ -1,7 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import { Package, Award, Globe, TrendingUp, CheckCircle2, ArrowRight, Sparkles, Star, ShoppingBag } from "lucide-react";
+import {
+  Package,
+  Award,
+  Globe,
+  TrendingUp,
+  CheckCircle2,
+  ArrowRight,
+  Sparkles,
+  Star,
+  ShoppingBag,
+} from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -13,11 +23,13 @@ export default function BrandsSection() {
     {
       name: "AGT Papers",
       category: "Paper Products",
-      description: "Premium quality paper products for industrial and commercial use",
+      description:
+        "Premium quality paper products for industrial and commercial use",
       products: ["Industrial Paper", "Packaging Paper", "Specialty Paper"],
       color: "from-blue-600 to-blue-700",
       icon: "📄",
-      image: "https://images.unsplash.com/photo-1648622981113-1e0f7e2c1b4e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1169",
+      image:
+        "https://images.unsplash.com/photo-1648622981113-1e0f7e2c1b4e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1169",
       featured: false,
     },
     {
@@ -27,13 +39,15 @@ export default function BrandsSection() {
       products: ["Refined Palm Oil", "Cooking Oil", "Food Grade"],
       color: "from-orange-600 to-orange-700",
       icon: "🌴",
-      image: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400&h=256&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400&h=256&fit=crop",
       featured: true,
     },
     {
       name: "Libaax Rice",
       category: "Rice & Grains",
-      description: "Premium quality rice varieties sourced from the finest farms",
+      description:
+        "Premium quality rice varieties sourced from the finest farms",
       products: ["Basmati Rice", "Long Grain Rice", "Premium Rice"],
       color: "from-amber-600 to-amber-700",
       icon: "🌾",
@@ -43,7 +57,8 @@ export default function BrandsSection() {
     {
       name: "Libaax Vegetable Cooking Oil",
       category: "Edible Oils",
-      description: "Premium vegetable cooking oil perfect for all your culinary needs",
+      description:
+        "Premium vegetable cooking oil perfect for all your culinary needs",
       products: ["Vegetable Cooking Oil", "Refined Oil", "Multi-purpose Oil"],
       color: "from-green-600 to-green-700",
       icon: "🫒",
@@ -53,17 +68,20 @@ export default function BrandsSection() {
     {
       name: "AGT Sugar",
       category: "Sugar Products",
-      description: "High-quality refined sugar for various culinary applications",
+      description:
+        "High-quality refined sugar for various culinary applications",
       products: ["Refined Sugar", "Granulated Sugar", "Food Grade Sugar"],
       color: "from-pink-600 to-pink-700",
       icon: "🍬",
-      image: "https://images.unsplash.com/photo-1673791031093-eb8eefa60083?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1173",
+      image:
+        "https://images.unsplash.com/photo-1673791031093-eb8eefa60083?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1173",
       featured: false,
     },
     {
       name: "Libaax Pure Sunflower Oil",
       category: "Edible Oils",
-      description: "Pure sunflower oil rich in vitamins and perfect for healthy cooking",
+      description:
+        "Pure sunflower oil rich in vitamins and perfect for healthy cooking",
       products: ["Pure Sunflower Oil", "Refined Oil", "Cooking Oil"],
       color: "from-yellow-600 to-yellow-700",
       icon: "🌻",
@@ -77,17 +95,60 @@ export default function BrandsSection() {
       products: ["All Purpose Flour", "Bread Flour", "Premium Wheat Flour"],
       color: "from-stone-600 to-stone-700",
       icon: "🌾",
-      image: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=400&h=256&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=400&h=256&fit=crop",
+      featured: false,
+    },
+    {
+      name: "Abusita Vegetable Oil",
+      category: "Edible Oils",
+      description:
+        "Pure sunflower oil rich in vitamins and perfect for healthy cooking",
+      products: ["Pure Sunflower Oil", "Refined Oil", "Cooking Oil"],
+      color: "from-yellow-600 to-yellow-700",
+      icon: "🌻",
+      image: "/brands/abusita-oil.png",
+      featured: false,
+    },
+    {
+      name: "Karina Vegetable Oil",
+      category: "Edible Oils",
+      description:
+        "Pure sunflower oil rich in vitamins and perfect for healthy cooking",
+      products: ["Pure Sunflower Oil", "Refined Oil", "Cooking Oil"],
+      color: "from-yellow-600 to-yellow-700",
+      icon: "🌻",
+      image: "/brands/Karina-oil.png",
       featured: false,
     },
   ];
 
   // Stats
   const stats = [
-    { icon: Package, label: "Premium Brands", value: "7+", color: "text-teal-600" },
-    { icon: Globe, label: "Countries Served", value: "9+", color: "text-blue-600" },
-    { icon: Award, label: "Years of Trust", value: "10+", color: "text-purple-600" },
-    { icon: TrendingUp, label: "Products Delivered", value: "10K+", color: "text-orange-600" },
+    {
+      icon: Package,
+      label: "Premium Brands",
+      value: "7+",
+      color: "text-teal-600",
+    },
+    {
+      icon: Globe,
+      label: "Countries Served",
+      value: "9+",
+      color: "text-blue-600",
+    },
+    {
+      icon: Award,
+      label: "Years of Trust",
+      value: "10+",
+      color: "text-purple-600",
+    },
+    {
+      icon: TrendingUp,
+      label: "Products Delivered",
+      value: "10K+",
+      color: "text-orange-600",
+    },
   ];
 
   // Why choose our brands
@@ -95,7 +156,8 @@ export default function BrandsSection() {
     {
       icon: Award,
       title: "Premium Quality",
-      description: "Rigorous quality control and international standards certification",
+      description:
+        "Rigorous quality control and international standards certification",
     },
     {
       icon: Globe,
@@ -131,7 +193,9 @@ export default function BrandsSection() {
           <div className="text-center mb-16 animate-fade-in">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-100 dark:bg-teal-900/40 rounded-full mb-6">
               <Sparkles className="size-5 text-teal-600 dark:text-teal-400" />
-              <span className="text-xs sm:text-sm font-medium text-teal-700 dark:text-teal-300">Premium Brand Portfolio</span>
+              <span className="text-xs sm:text-sm font-medium text-teal-700 dark:text-teal-300">
+                Premium Brand Portfolio
+              </span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 bg-gradient-to-r from-black dark:from-white to-teal-600 dark:to-teal-400 text-transparent bg-clip-text px-2 break-words">
@@ -139,8 +203,12 @@ export default function BrandsSection() {
             </h1>
 
             <p className="text-sm sm:text-base md:text-lg max-w-3xl mx-auto mb-8">
-              Discover our premium portfolio of <span className="font-semibold text-teal-600 dark:text-teal-400">AGT and Libaax brands</span>,
-              delivering quality food commodities across Africa with excellence and reliability.
+              Discover our premium portfolio of{" "}
+              <span className="font-semibold text-teal-600 dark:text-teal-400">
+                AGT and Libaax brands
+              </span>
+              , delivering quality food commodities across Africa with
+              excellence and reliability.
             </p>
 
             {/* Stats Grid */}
@@ -150,9 +218,15 @@ export default function BrandsSection() {
                   key={index}
                   className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 >
-                  <stat.icon className={`size-8 ${stat.color} dark:brightness-125 mx-auto mb-3`} />
-                  <div className="text-3xl font-bold text-black dark:text-white mb-1">{stat.value}</div>
-                  <div className="text-sm text-zinc-600 dark:text-slate-400">{stat.label}</div>
+                  <stat.icon
+                    className={`size-8 ${stat.color} dark:brightness-125 mx-auto mb-3`}
+                  />
+                  <div className="text-3xl font-bold text-black dark:text-white mb-1">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm text-zinc-600 dark:text-slate-400">
+                    {stat.label}
+                  </div>
                 </div>
               ))}
             </div>
@@ -165,7 +239,8 @@ export default function BrandsSection() {
                 Brand Portfolio
               </h2>
               <p className="text-zinc-600 dark:text-slate-400 text-lg max-w-2xl mx-auto">
-                Explore our range of premium brands serving diverse commodity needs
+                Explore our range of premium brands serving diverse commodity
+                needs
               </p>
             </div>
 
@@ -188,7 +263,9 @@ export default function BrandsSection() {
                   )}
 
                   {/* Gradient background */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${brand.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-br ${brand.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
+                  />
 
                   <div className="relative z-10">
                     {/* Brand Image - Full Width */}
@@ -233,7 +310,10 @@ export default function BrandsSection() {
                       </p>
                       <div className="space-y-2">
                         {brand.products.map((product, idx) => (
-                          <div key={idx} className="flex items-center gap-2 text-sm text-zinc-700 dark:text-slate-300">
+                          <div
+                            key={idx}
+                            className="flex items-center gap-2 text-sm text-zinc-700 dark:text-slate-300"
+                          >
                             <CheckCircle2 className="size-4 text-teal-600 dark:text-teal-400 flex-shrink-0" />
                             <span>{product}</span>
                           </div>
@@ -264,7 +344,8 @@ export default function BrandsSection() {
                 Why Choose Our Brands?
               </h2>
               <p className="text-zinc-600 dark:text-slate-400 text-lg max-w-2xl mx-auto">
-                Quality, reliability, and trust - the hallmarks of our brand partnerships
+                Quality, reliability, and trust - the hallmarks of our brand
+                partnerships
               </p>
             </div>
 
@@ -299,20 +380,27 @@ export default function BrandsSection() {
               </h2>
 
               <p className="text-teal-50 text-lg max-w-3xl mx-auto mb-8">
-                We proudly partner with <span className="font-bold text-white">AGT</span> and{" "}
-                <span className="font-bold text-white">Libaax</span>, two industry-leading brands known for
-                their commitment to quality, sustainability, and customer satisfaction across global markets.
+                We proudly partner with{" "}
+                <span className="font-bold text-white">AGT</span> and{" "}
+                <span className="font-bold text-white">Libaax</span>, two
+                industry-leading brands known for their commitment to quality,
+                sustainability, and customer satisfaction across global markets.
               </p>
 
               <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-8">
                 {/* AGT Brand */}
                 <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6">
                   <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <span className="text-3xl font-bold text-teal-700">AGT</span>
+                    <span className="text-3xl font-bold text-teal-700">
+                      AGT
+                    </span>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">AGT Foods</h3>
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    AGT Foods
+                  </h3>
                   <p className="text-teal-50 text-sm">
-                    Global leader in pulses, grains, and food ingredients with a presence in over 120 countries
+                    Global leader in pulses, grains, and food ingredients with a
+                    presence in over 120 countries
                   </p>
                 </div>
 
@@ -321,9 +409,12 @@ export default function BrandsSection() {
                   <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto mb-4">
                     <span className="text-3xl">🦁</span>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">Libaax</h3>
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    Libaax
+                  </h3>
                   <p className="text-teal-50 text-sm">
-                    Premium quality food products trusted across African markets for excellence and reliability
+                    Premium quality food products trusted across African markets
+                    for excellence and reliability
                   </p>
                 </div>
               </div>
@@ -344,7 +435,8 @@ export default function BrandsSection() {
               Interested in Our Brands?
             </h2>
             <p className="text-zinc-600 dark:text-slate-400 text-lg mb-8 max-w-2xl mx-auto">
-              Get in touch with us to learn more about our premium brand portfolio and distribution opportunities
+              Get in touch with us to learn more about our premium brand
+              portfolio and distribution opportunities
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link
