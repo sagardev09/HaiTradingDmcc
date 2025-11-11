@@ -225,7 +225,8 @@ export default function ProductsSection() {
         "/brands/karani-veg-oil2.png",
         "/brands/karina-oil.png",
       ],
-      featured: false,
+      image: "/brands/karina-oil.png",
+      featured: true,
     },
     {
       id: 9,
