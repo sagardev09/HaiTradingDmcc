@@ -203,28 +203,10 @@ export default function ProductsSection() {
       image: "/brands/abusita-oil.png",
       featured: true,
     },
+
     {
       id: 8,
       name: "Karina Vegetable Oil",
-      category: "Edible Oils",
-      description:
-        "Pure sunflower oil rich in vitamins and perfect for healthy cooking",
-      features: [
-        "Cold-pressed extraction",
-        "Rich in vitamins A, D, and E",
-        "Low in saturated fats",
-        "Light and healthy",
-      ],
-      brands: ["Karina Vegetable Oil"],
-      origin: "Egypt",
-      color: "from-yellow-600 to-yellow-700",
-      icon: "🌻",
-      image: "/brands/karina-oil.png",
-      featured: true,
-    },
-    {
-      id: 9,
-      name: "Karina Oil",
       category: "Edible Oils",
       description:
         "Pure sunflower oil rich in vitamins and perfect for healthy cooking",
@@ -238,11 +220,15 @@ export default function ProductsSection() {
       origin: "Egypt",
       color: "from-yellow-600 to-yellow-700",
       icon: "🌻",
-      images: ["/brands/karani-veg-oil1.png", "/brands/karani-veg-oil2.png"],
+      images: [
+        "/brands/karani-veg-oil1.png",
+        "/brands/karani-veg-oil2.png",
+        "/brands/karina-oil.png",
+      ],
       featured: false,
     },
     {
-      id: 10,
+      id: 9,
       name: "Rawda Sugar",
       category: "Sugar",
       description:
