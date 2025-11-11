@@ -27,25 +27,28 @@ const Brands = () => {
                 }
             `}</style>
 
-      <div className="overflow-hidden w-full relative max-w-5xl mx-auto select-none px-4">
-        <div className="absolute left-0 top-0 h-full w-12 sm:w-20 z-10 pointer-events-none bg-gradient-to-r from-white dark:from-slate-900 to-transparent" />
+      <div className="overflow-hidden w-full relative max-w-6xl mx-auto select-none">
+        {/* Clean fade gradients for edges */}
+        <div className="absolute left-0 top-0 h-full w-32 sm:w-40 md:w-48 z-10 pointer-events-none bg-gradient-to-r from-white dark:from-slate-900 via-white/80 dark:via-slate-900/80 to-transparent" />
+
         <div
           className="marquee-inner flex will-change-transform min-w-[200%]"
-          style={{ animationDuration: "15s" }}
+          style={{ animationDuration: "20s" }}
         >
-          <div className="flex items-center">
+          <div className="flex items-center py-4">
             {[...companyLogos, ...companyLogos].map((company, index) => (
               <img
                 key={index}
                 src={`https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/companyLogo/${company}.svg`}
                 alt={company}
-                className="h-8 sm:h-10 md:h-12 w-auto object-contain mx-4 sm:mx-6 md:mx-8 flex-shrink-0"
+                className="h-10 sm:h-12 md:h-14 w-auto object-contain mx-6 sm:mx-8 md:mx-10 flex-shrink-0 opacity-80 hover:opacity-100 transition-opacity"
                 draggable={false}
               />
             ))}
           </div>
         </div>
-        <div className="absolute right-0 top-0 h-full w-12 sm:w-20 md:w-40 z-10 pointer-events-none bg-gradient-to-l from-white dark:from-slate-900 to-transparent" />
+
+        <div className="absolute right-0 top-0 h-full w-32 sm:w-40 md:w-48 z-10 pointer-events-none bg-gradient-to-l from-white dark:from-slate-900 via-white/80 dark:via-slate-900/80 to-transparent" />
       </div>
     </>
   );
