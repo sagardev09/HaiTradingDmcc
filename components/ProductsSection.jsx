@@ -155,8 +155,8 @@ export default function ProductsSection() {
       name: "Libaax Pure Sunflower Oil",
       category: "Sunflower Oil",
       icon: "🌻",
-      image: "/brands/libaaxoil1.png",
-      images: ["/brands/libaaxoil.png", "/brands/libaxoil.png"],
+      image: "/brands/li2.png",
+      images: ["/brands/li2.png", "/brands/li3.png"],
 
       description:
         "Pure sunflower oil rich in vitamins and perfect for healthy cooking",
@@ -304,6 +304,26 @@ export default function ProductsSection() {
         "/brands/rawda-sugar1.png",
         "/brands/rawda-sugar2.png",
       ],
+      featured: false,
+    },
+    {
+      id: 18,
+      name: "Rawda Oil",
+      category: "Edible Oils",
+      description: "oil for various culinary and industrial applications",
+      features: [
+        "High purity refined oil",
+        "Cold-pressed extraction",
+        "Rich in vitamins A, D, and E",
+        "Low in saturated fats",
+        "Light and healthy",
+      ],
+      brands: ["Rawda Oil"],
+      origin: "India",
+      color: "from-yellow-600 to-yellow-700",
+      icon: "🌻",
+      image: "/brands/rawdaoil.png",
+
       featured: false,
     },
   ];
