@@ -40,11 +40,7 @@ export default function SupplyChainCarousel() {
       alt: "Dry Fruits and Nuts",
       title: "Dry Fruits & Nuts",
     },
-    {
-      src: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?q=80&w=1200&auto=format&fit=crop",
-      alt: "Wheat Flour",
-      title: "Wheat Flour",
-    },
+
     {
       src: "https://images.unsplash.com/photo-1506368249639-73a05d6f6488?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687",
       alt: "Premium Spices",

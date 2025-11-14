@@ -284,9 +284,7 @@ export default function BrandsSection() {
                 {/* AGT Brand */}
                 <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6">
                   <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <span className="text-3xl font-bold text-teal-700">
-                      AGT
-                    </span>
+                    <img src="/logos/abusita_logo.png" alt="" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
                     AGT Foods
@@ -300,7 +298,7 @@ export default function BrandsSection() {
                 {/* Libaax Brand */}
                 <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6">
                   <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <span className="text-3xl">🦁</span>
+                    <img src="/logos/libaax.png" alt="" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
                     Libaax

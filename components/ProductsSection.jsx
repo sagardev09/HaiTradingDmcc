@@ -271,7 +271,7 @@ export default function ProductsSection() {
         "/brands/karinaoil2.png",
         "/brands/karinaoil3.png",
       ],
-      image: "/brands/karina-oil.png",
+      image: "/brands/karinaoil2.png",
       featured: true,
     },
     {

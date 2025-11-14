@@ -68,7 +68,7 @@ export default function HeroSection() {
           <div className="absolute inset-0 bg-gradient-to-t from-slate-300/20 via-transparent to-transparent dark:from-slate-900/60 dark:via-transparent dark:to-transparent" />
         </div>
 
-        <div className="flex flex-col items-center justify-center h-full w-full max-w-7xl relative z-10">
+        <div className="flex flex-col items-center justify-center h-full w-full max-w-7xl relative">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-black/90 backdrop-blur-sm rounded-full mb-6 shadow-lg">
             <Sparkles className="size-5 text-primary" />
             <span className="text-xs sm:text-sm font-medium text-primary">

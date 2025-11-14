@@ -25,13 +25,16 @@ export default function Navbar() {
     en: { name: "English", flag: "🇬🇧" },
     ar: { name: "العربية", flag: "🇸🇦" },
     so: { name: "Soomaali", flag: "🇸🇴" },
-    am: { name: "አማርኛ", flag: "🇪🇹" }
+    am: { name: "አማርኛ", flag: "🇪🇹" },
   };
 
   // Close dropdown when clicking outside
   useEffect(() => {
     function handleClickOutside(event) {
-      if (langDropdownRef.current && !langDropdownRef.current.contains(event.target)) {
+      if (
+        langDropdownRef.current &&
+        !langDropdownRef.current.contains(event.target)
+      ) {
         setIsLangOpen(false);
       }
     }
@@ -47,15 +50,15 @@ export default function Navbar() {
 
   // Extract current language from pathname
   const currentLang = useMemo(() => {
-    const segments = pathname.split('/').filter(Boolean);
-    const locales = ['en', 'ar', 'so', 'am'];
-    return locales.includes(segments[0]) ? segments[0] : 'en';
+    const segments = pathname.split("/").filter(Boolean);
+    const locales = ["en", "ar", "so", "am"];
+    return locales.includes(segments[0]) ? segments[0] : "en";
   }, [pathname]);
 
   // Handle language change
   const handleLanguageChange = (newLang) => {
-    const segments = pathname.split('/').filter(Boolean);
-    const locales = ['en', 'ar', 'so', 'am'];
+    const segments = pathname.split("/").filter(Boolean);
+    const locales = ["en", "ar", "so", "am"];
     const currentLocale = locales.includes(segments[0]) ? segments[0] : null;
 
     if (currentLocale) {
@@ -64,7 +67,7 @@ export default function Navbar() {
       segments.unshift(newLang);
     }
 
-    const newPath = '/' + segments.join('/');
+    const newPath = "/" + segments.join("/");
     window.location.href = newPath;
   };
 
@@ -79,7 +82,9 @@ export default function Navbar() {
 
   const isActive = (path) => {
     const fullPath = `/${currentLang}/${path}`;
-    const currentPath = pathname.endsWith('/') ? pathname.slice(0, -1) : pathname;
+    const currentPath = pathname.endsWith("/")
+      ? pathname.slice(0, -1)
+      : pathname;
 
     if (path === "" && currentPath === `/${currentLang}`) return true;
     if (path !== "" && currentPath.endsWith(path)) return true;
@@ -241,7 +246,7 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Menu Content */}
-            <div className="flex-1 overflow-y-auto px-6 py-8">
+            <div className="flex-1 overflow-y-auto px-6 py-8 z-[1000]">
               <div className="space-y-2">
                 {menuLinks.map((link) => (
                   <Link
