@@ -4,6 +4,50 @@ import { Sparkles } from "lucide-react";
 import Brands from "./MarqueeBrands";
 
 export default function HeroSection() {
+  const brands = [
+    {
+      id: 1,
+
+      image: "/logos/abusita_logo.png",
+      imagedark: "/logos/abusita_dark.png",
+    },
+    {
+      id: 2,
+      image: "/logos/LIBAAX.png",
+      imagedark: "/logos/libaax_dark.png",
+    },
+    {
+      id: 3,
+      image: "/logos/RAWDA_SUGAR.png",
+      imagedark: "/logos/rawda_dark.png",
+    },
+    {
+      id: 4,
+      image: "/logos/karina.png",
+      imagedark: "/logos/Karina_dark.png",
+    },
+    {
+      id: 5,
+      image: "/logos/king1.png",
+      imagedark: "/logos/king_dark.png",
+    },
+    {
+      id: 6,
+      image: "/logos/saba.png",
+      imagedark: "/logos/saba_dark.png",
+    },
+    {
+      id: 7,
+      image: "/logos/fallingstar.png",
+      imagedark: "/logos/fallingstar_dark.png",
+    },
+    {
+      id: 8,
+      image: "/logos/kifaya.png",
+      imagedark: "/logos/Kifaya_dark.png",
+    },
+  ];
+
   return (
     <>
       <section className="relative flex flex-col items-center px-4 sm:px-6 md:px-8 text-black text-sm pb-20 pt-32 min-h-screen overflow-hidden -mt-24">
@@ -20,8 +64,8 @@ export default function HeroSection() {
           </video>
 
           {/* Reduced opacity for better video visibility */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-white/40 to-white/50 dark:from-slate-900/75 dark:via-slate-900/60 dark:to-slate-900/70" />
-          <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-transparent dark:from-slate-900/60 dark:via-transparent dark:to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-300/60 via-slate-300/70 to-slate-300/80 dark:from-slate-900/75 dark:via-slate-900/60 dark:to-slate-900/70" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-300/20 via-transparent to-transparent dark:from-slate-900/60 dark:via-transparent dark:to-transparent" />
         </div>
 
         <div className="flex flex-col items-center justify-center h-full w-full max-w-7xl relative z-10">
@@ -40,8 +84,10 @@ export default function HeroSection() {
             <span className="font-semibold text-primary">Dubai, UAE</span>, we
             trade premium staples like rice, sugar, spices, palm oil, and paper
             — connecting global supply with demand across{" "}
-            <span className="font-semibold text-primary">East and West Africa</span> with
-            integrity and expertise.
+            <span className="font-semibold text-primary">
+              East and West Africa
+            </span>{" "}
+            with integrity and expertise.
           </p>
 
           <p className="text-gray-900 dark:text-secondary-foreground text-sm sm:text-base md:text-lg text-center max-w-4xl mt-4 leading-relaxed font-semibold px-2 drop-shadow-md">
@@ -78,7 +124,7 @@ export default function HeroSection() {
 
       {/* Brand Carousel Section - Below Hero */}
       <section className="relative py-12 sm:py-16 bg-white dark:bg-slate-900">
-        <Brands />
+        <Brands brands={brands} />
       </section>
     </>
   );

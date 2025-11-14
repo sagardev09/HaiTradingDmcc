@@ -29,8 +29,8 @@ export default function ProductsSection() {
     "Rice",
     "Palm Oil",
     "Sunflower Oil",
-    "Wheat Flour",
     "Paper",
+    "Others",
   ];
 
   // Auto-rotate carousel images every 5 seconds for very smooth scrolling
@@ -61,8 +61,12 @@ export default function ProductsSection() {
       name: "AGT Papers",
       category: "Paper",
       icon: "📄",
-      image:
-        "https://images.unsplash.com/photo-1648622981113-1e0f7e2c1b4e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1169",
+      image: "/brands/agtpaper.jpeg",
+      images: [
+        "/brands/agtpaper.jpeg",
+        "/brands/agtpaper2.png",
+        "/brands/agtpaper1.png",
+      ],
       description:
         "Premium quality paper products for industrial and commercial use",
       features: [
@@ -82,8 +86,8 @@ export default function ProductsSection() {
       name: "Libaax Palm Oil",
       category: "Palm Oil",
       icon: "🌴",
-      image:
-        "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400&h=400&fit=crop",
+      image: "/brands/libaaxoil.png",
+      images: ["/brands/libaaxoil.png", "/brands/libaaxbox.png"],
       description: "Pure and refined palm oil for cooking and food processing",
       features: [
         "100% pure palm oil",
@@ -92,6 +96,7 @@ export default function ProductsSection() {
         "Long shelf life",
         "Versatile cooking oil",
       ],
+
       brands: ["Libaax Palm Oil"],
       origin: "Malaysia, Indonesia",
       featured: true,
@@ -126,8 +131,7 @@ export default function ProductsSection() {
       name: "AGT Sugar",
       category: "Sugar",
       icon: "🍬",
-      image:
-        "https://images.unsplash.com/photo-1673791031093-eb8eefa60083?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1173",
+      image: "/brands/agtsugar.jpg",
       description:
         "Premium quality refined sugar for various culinary and industrial applications",
       features: [
@@ -147,8 +151,9 @@ export default function ProductsSection() {
       name: "Libaax Pure Sunflower Oil",
       category: "Sunflower Oil",
       icon: "🌻",
-      image:
-        "https://media.istockphoto.com/id/155284344/photo/sunflower-oil.jpg?s=612x612&w=0&k=20&c=Cr7WLo3oOSNvqUZJoPJ_PHik-l8nBgfwWrMK_DX4EWM=",
+      image: "/brands/libaaxoil1.png",
+      images: ["/brands/libaaxoil.png", "/brands/libaaxbox1.png"],
+
       description:
         "Pure sunflower oil rich in vitamins and perfect for healthy cooking",
       features: [
@@ -165,22 +170,61 @@ export default function ProductsSection() {
     },
     {
       id: 6,
-      name: "AGT Wheat Flour",
-      category: "Wheat Flour",
+      name: "Saba Soap",
+      category: "Others",
       icon: "🌾",
-      image:
-        "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=400&h=400&fit=crop",
-      description: "Premium wheat flour for baking and culinary excellence",
+      image: "/brands/sabasoap.png",
+      description: " Natural and organic soap bars for all skin types",
       features: [
-        "Multiple flour grades",
-        "All-purpose and bread flour",
-        "Finely milled",
-        "High gluten content",
-        "Perfect for baking",
+        "Natural ingredients",
+        "Vegan and cruelty-free",
+        "Hypoallergenic",
+        "Non-toxic",
       ],
-      brands: ["AGT Wheat Flour"],
+      images: ["/brands/sabasoap.png", "/brands/sabasoap1.png"],
+      brands: ["Saba Soap"],
       origin: "Canada, USA",
       featured: true,
+      color: "from-stone-600 to-stone-700",
+    },
+    {
+      id: 11,
+      name: "Kifaya Tissue Paper",
+      category: "Others",
+      icon: "🌾",
+      image: "/brands/kifayatissue.png",
+      description: " Soft and absorbent tissue paper for everyday use",
+      features: [
+        "Soft and gentle",
+        "Non-toxic",
+        "Hypoallergenic",
+        "Biodegradable",
+        "Environmentally friendly",
+      ],
+      images: ["/brands/kifayatissue.png", "/brands/kifayatissue1.png"],
+      brands: ["Kifaya Tissue Paper"],
+      origin: "Canada, USA",
+      featured: false,
+      color: "from-stone-600 to-stone-700",
+    },
+    {
+      id: 13,
+      name: "Falling Star Tissue Paper",
+      category: "Others",
+      icon: "🌾",
+      image: "/brands/fstissue.png",
+      description: " Soft and absorbent tissue paper for everyday use",
+      features: [
+        "Soft and gentle",
+        "Non-toxic",
+        "Hypoallergenic",
+        "Biodegradable",
+        "Environmentally friendly",
+      ],
+      images: ["/brands/fstissue.jpg", "/brands/fstissue2.jpg"],
+      brands: ["Falling Star Tissue Paper"],
+      origin: "Canada, USA",
+      featured: false,
       color: "from-stone-600 to-stone-700",
     },
 
@@ -201,6 +245,7 @@ export default function ProductsSection() {
       origin: "Egypt",
       icon: "🌻",
       image: "/brands/abusita-oil.png",
+      images: ["/brands/abusita1.png", "/brands/abusita-oil.png"],
       featured: true,
     },
 
@@ -223,7 +268,8 @@ export default function ProductsSection() {
       images: [
         "/brands/karani-veg-oil1.png",
         "/brands/karani-veg-oil2.png",
-        "/brands/karina-oil.png",
+        "/brands/karinaoil2.png",
+        "/brands/karinaoil3.png",
       ],
       image: "/brands/karina-oil.png",
       featured: true,

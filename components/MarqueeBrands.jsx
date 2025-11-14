@@ -1,4 +1,4 @@
-const Brands = () => {
+const Brands = ({ brands }) => {
   const companyLogos = [
     "slack",
     "framer",
@@ -36,15 +36,26 @@ const Brands = () => {
           style={{ animationDuration: "20s" }}
         >
           <div className="flex items-center py-4">
-            {[...companyLogos, ...companyLogos].map((company, index) => (
-              <img
-                key={index}
-                src={`https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/companyLogo/${company}.svg`}
-                alt={company}
-                className="h-10 sm:h-12 md:h-14 w-auto object-contain mx-6 sm:mx-8 md:mx-10 flex-shrink-0 opacity-80 hover:opacity-100 transition-opacity"
-                draggable={false}
-              />
-            ))}
+            {[...companyLogos, ...companyLogos, ...companyLogos].map(
+              (company, index) => (
+                <div key={index} className="relative flex-shrink-0">
+                  {/* Light mode image */}
+                  <img
+                    src={brands[index % brands.length].image}
+                    alt={brands[index % brands.length].id}
+                    className="h-16 sm:h-20 md:h-28 w-auto object-contain mx-6 sm:mx-8 md:mx-10 opacity-80 hover:opacity-100 transition-opacity dark:hidden"
+                    draggable={false}
+                  />
+                  {/* Dark mode image */}
+                  <img
+                    src={brands[index % brands.length].imagedark}
+                    alt={brands[index % brands.length].id}
+                    className="h-16 sm:h-20 md:h-28 w-auto object-contain mx-6 sm:mx-8 md:mx-10 opacity-80 hover:opacity-100 transition-opacity hidden dark:block"
+                    draggable={false}
+                  />
+                </div>
+              )
+            )}
           </div>
         </div>
 

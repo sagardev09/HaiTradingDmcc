@@ -21,105 +21,45 @@ export default function BrandsSection() {
   // Brand portfolio
   const brands = [
     {
-      name: "AGT Papers",
-      category: "Paper Products",
-      description:
-        "Premium quality paper products for industrial and commercial use",
-      products: ["Industrial Paper", "Packaging Paper", "Specialty Paper"],
-      color: "from-blue-600 to-blue-700",
-      icon: "📄",
-      image:
-        "https://images.unsplash.com/photo-1648622981113-1e0f7e2c1b4e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1169",
-      featured: false,
+      id: 1,
+
+      image: "/logos/abusita_logo.png",
+      imagedark: "/logos/abusita_dark.png",
     },
     {
-      name: "Libaax Palm Oil",
-      category: "Edible Oils",
-      description: "Pure and refined palm oil for cooking and food processing",
-      products: ["Refined Palm Oil", "Cooking Oil", "Food Grade"],
-      color: "from-orange-600 to-orange-700",
-      icon: "🌴",
-      image:
-        "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400&h=256&fit=crop",
-      featured: true,
+      id: 2,
+      image: "/logos/LIBAAX.png",
+      imagedark: "/logos/libaax_dark.png",
     },
     {
-      name: "Libaax Rice",
-      category: "Rice & Grains",
-      description:
-        "Premium quality rice varieties sourced from the finest farms",
-      products: ["Basmati Rice", "Long Grain Rice", "Premium Rice"],
-      color: "from-amber-600 to-amber-700",
-      icon: "🌾",
-      image: "/brands/libaax-rice.jpg",
-      featured: true,
+      id: 3,
+      image: "/logos/RAWDA_SUGAR.png",
+      imagedark: "/logos/rawda_dark.png",
     },
     {
-      name: "Libaax Vegetable Cooking Oil",
-      category: "Edible Oils",
-      description:
-        "Premium vegetable cooking oil perfect for all your culinary needs",
-      products: ["Vegetable Cooking Oil", "Refined Oil", "Multi-purpose Oil"],
-      color: "from-green-600 to-green-700",
-      icon: "🫒",
-      image: "/brands/libaax-vegetable-oil.jpg",
-      featured: true,
+      id: 4,
+      image: "/logos/karina.png",
+      imagedark: "/logos/Karina_dark.png",
     },
     {
-      name: "AGT Sugar",
-      category: "Sugar Products",
-      description:
-        "High-quality refined sugar for various culinary applications",
-      products: ["Refined Sugar", "Granulated Sugar", "Food Grade Sugar"],
-      color: "from-pink-600 to-pink-700",
-      icon: "🍬",
-      image:
-        "https://images.unsplash.com/photo-1673791031093-eb8eefa60083?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1173",
-      featured: false,
+      id: 5,
+      image: "/logos/king1.png",
+      imagedark: "/logos/king_dark.png",
     },
     {
-      name: "Libaax Pure Sunflower Oil",
-      category: "Edible Oils",
-      description:
-        "Pure sunflower oil rich in vitamins and perfect for healthy cooking",
-      products: ["Pure Sunflower Oil", "Refined Oil", "Cooking Oil"],
-      color: "from-yellow-600 to-yellow-700",
-      icon: "🌻",
-      image: "/brands/libaax-sunflower-oil.jpg",
-      featured: true,
+      id: 6,
+      image: "/logos/saba.png",
+      imagedark: "/logos/saba_dark.png",
     },
     {
-      name: "AGT Wheat Flour",
-      category: "Flour & Grains",
-      description: "Premium wheat flour for baking and culinary excellence",
-      products: ["All Purpose Flour", "Bread Flour", "Premium Wheat Flour"],
-      color: "from-stone-600 to-stone-700",
-      icon: "🌾",
-      image:
-        "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=400&h=256&fit=crop",
-      featured: false,
+      id: 7,
+      image: "/logos/fallingstar.png",
+      imagedark: "/logos/fallingstar_dark.png",
     },
     {
-      name: "Abusita Vegetable Oil",
-      category: "Edible Oils",
-      description:
-        "Pure sunflower oil rich in vitamins and perfect for healthy cooking",
-      products: ["Pure Sunflower Oil", "Refined Oil", "Cooking Oil"],
-      color: "from-yellow-600 to-yellow-700",
-      icon: "🌻",
-      image: "/brands/abusita-oil.png",
-      featured: false,
-    },
-    {
-      name: "Karina Vegetable Oil",
-      category: "Edible Oils",
-      description:
-        "Pure sunflower oil rich in vitamins and perfect for healthy cooking",
-      products: ["Pure Sunflower Oil", "Refined Oil", "Cooking Oil"],
-      color: "from-yellow-600 to-yellow-700",
-      icon: "🌻",
-      image: "/brands/karina-oil.png",
-      featured: false,
+      id: 8,
+      image: "/logos/kifaya.png",
+      imagedark: "/logos/Kifaya_dark.png",
     },
   ];
 
@@ -244,7 +184,7 @@ export default function BrandsSection() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {brands.map((brand, index) => (
                 <div
                   key={index}
@@ -252,16 +192,6 @@ export default function BrandsSection() {
                   onMouseEnter={() => setHoveredBrand(brand.name)}
                   onMouseLeave={() => setHoveredBrand(null)}
                 >
-                  {/* Featured badge */}
-                  {brand.featured && (
-                    <div className="absolute top-4 right-4 z-20">
-                      <div className="flex items-center gap-1 bg-teal-600 dark:bg-teal-700 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                        <Star className="size-3 fill-current" />
-                        Featured
-                      </div>
-                    </div>
-                  )}
-
                   {/* Gradient background */}
                   <div
                     className={`absolute inset-0 bg-gradient-to-br ${brand.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
@@ -269,63 +199,26 @@ export default function BrandsSection() {
 
                   <div className="relative z-10">
                     {/* Brand Image - Full Width */}
-                    {brand.image ? (
-                      <div className="w-full h-64 p-4">
-                        <div className="w-full h-full rounded-2xl overflow-hidden border-2 border-slate-200 dark:border-slate-600 shadow-lg group-hover:shadow-xl transition-all duration-300">
-                          <Image
-                            src={brand.image}
-                            alt={brand.name}
-                            width={400}
-                            height={256}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                          />
-                        </div>
-                      </div>
-                    ) : (
-                      <div className="p-8 pb-4">
-                        {/* Brand Icon */}
-                        <div className="w-20 h-20 bg-white dark:bg-slate-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300 overflow-hidden">
-                          <span className="text-4xl">{brand.icon}</span>
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Brand Info */}
-                    <div className="px-8 pb-4">
-                      <h3 className="text-2xl font-bold text-black dark:text-white mb-2 group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
-                        {brand.name}
-                      </h3>
-                      <div className="inline-block px-3 py-1 bg-teal-100 dark:bg-teal-900/40 text-teal-700 dark:text-teal-300 text-xs rounded-full font-medium mb-4">
-                        {brand.category}
-                      </div>
-                      <p className="text-zinc-600 dark:text-slate-400 leading-relaxed mb-6">
-                        {brand.description}
-                      </p>
-                    </div>
-
-                    {/* Products List */}
-                    <div className="px-8 pb-6">
-                      <p className="text-xs font-semibold text-zinc-500 dark:text-slate-500 mb-3 uppercase tracking-wide">
-                        Key Products
-                      </p>
-                      <div className="space-y-2">
-                        {brand.products.map((product, idx) => (
-                          <div
-                            key={idx}
-                            className="flex items-center gap-2 text-sm text-zinc-700 dark:text-slate-300"
-                          >
-                            <CheckCircle2 className="size-4 text-teal-600 dark:text-teal-400 flex-shrink-0" />
-                            <span>{product}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Learn More Button */}
-                    <div className="px-8 pb-8 pt-6 border-t border-slate-200 dark:border-slate-700 mx-8">
-                      <div className="flex items-center justify-between text-teal-600 dark:text-teal-400 font-semibold group-hover:translate-x-2 transition-transform">
-                        <span>Learn More</span>
-                        <ArrowRight className="size-5" />
+                    <div className="w-full h-64 p-4">
+                      <div className="w-full h-full rounded-2xl overflow-hidden border-2 border-slate-200 dark:border-slate-600 shadow-lg group-hover:shadow-xl transition-all duration-300 relative">
+                        {/* Light mode image */}
+                        <Image
+                          src={brand.image}
+                          alt={brand.id}
+                          width={400}
+                          height={300}
+                          className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 dark:hidden"
+                          priority
+                        />
+                        {/* Dark mode image */}
+                        <Image
+                          src={brand.imagedark}
+                          alt={brand.id}
+                          width={400}
+                          height={300}
+                          className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 hidden dark:block"
+                          priority
+                        />
                       </div>
                     </div>
                   </div>
