@@ -245,7 +245,11 @@ export default function ProductsSection() {
       origin: "Egypt",
       icon: "🌻",
       image: "/brands/abusita-oil.png",
-      images: ["/brands/abusita1.png", "/brands/abusita-oil.png"],
+      images: [
+        "/brands/abusita-oil.png",
+        "/brands/ab1.jpeg",
+        "/brands/ab2.jpeg",
+      ],
       featured: true,
     },
 
