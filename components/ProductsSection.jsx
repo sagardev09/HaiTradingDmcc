@@ -87,7 +87,11 @@ export default function ProductsSection() {
       category: "Palm Oil",
       icon: "🌴",
       image: "/brands/libaaxoil.png",
-      images: ["/brands/libaaxoil.png", "/brands/libaaxbox.png"],
+      images: [
+        "/brands/libaaxoil.png",
+        "/brands/libaaxbox1.png",
+        "/brands/libaaxbox.png",
+      ],
       description: "Pure and refined palm oil for cooking and food processing",
       features: [
         "100% pure palm oil",
@@ -152,7 +156,7 @@ export default function ProductsSection() {
       category: "Sunflower Oil",
       icon: "🌻",
       image: "/brands/libaaxoil1.png",
-      images: ["/brands/libaaxoil.png", "/brands/libaaxbox1.png"],
+      images: ["/brands/libaaxoil.png", "/brands/libaxoil.png"],
 
       description:
         "Pure sunflower oil rich in vitamins and perfect for healthy cooking",
@@ -246,7 +250,7 @@ export default function ProductsSection() {
       icon: "🌻",
       image: "/brands/abusita-oil.png",
       images: [
-        "/brands/abusita-oil.png",
+        "/brands/abusita-oil1.png",
         "/brands/ab1.jpeg",
         "/brands/ab2.jpeg",
       ],
