@@ -16,45 +16,45 @@ import {
 export default function SupplyChainCarousel() {
   const images = [
     {
-      src: "https://images.unsplash.com/photo-1673791031093-eb8eefa60083?q=80&w=1200&auto=format&fit=crop",
+      src: "/brands/agtsugar.jpg",
       alt: "Premium Sugar",
-      title: "Sugar",
+      title: "Rawda Sugar",
     },
     {
-      src: "https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=1200&auto=format&fit=crop",
+      src: "/brands/libaax/rice/featured/libaax-rice.jpeg",
       alt: "Premium Rice",
-      title: "Rice",
+      title: "Libaax basmati Rice",
     },
     {
-      src: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?q=80&w=1200&auto=format&fit=crop",
-      alt: "Palm Oil",
-      title: "Palm Oil",
+      src: "/brands/li2.png",
+      alt: "Libaax Sunflower Oil",
+      title: "Libaax Sunflower Oil",
     },
     {
-      src: "https://plus.unsplash.com/premium_photo-1663089525424-ca57c1a28a08?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
-      alt: "Sunflower Oil",
-      title: "Sunflower Oil",
+      src: "/brands/karani-veg-oil1.png",
+      alt: "Karina sunflower Oil",
+      title: "Karina sunflower Oil",
     },
     {
-      src: "https://images.unsplash.com/photo-1608797178974-15b35a64ede9?q=80&w=1200&auto=format&fit=crop",
-      alt: "Dry Fruits and Nuts",
-      title: "Dry Fruits & Nuts",
+      src: "/brands/sabasoap.png",
+      alt: "laundry  Soap",
+      title: "laundry  Soap",
     },
 
     {
-      src: "https://images.unsplash.com/photo-1506368249639-73a05d6f6488?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687",
-      alt: "Premium Spices",
-      title: "Spices",
+      src: "/brands/kifayatissue.png",
+      alt: "Kifaya Tissue Paper",
+      title: "Kifaya Tissue Paper",
     },
     {
-      src: "https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?q=80&w=1200&auto=format&fit=crop",
-      alt: "Door Skin",
-      title: "Door Skin",
+      src: "/brands/fstissue.jpg",
+      alt: "Falling Star Tissue Paper",
+      title: "Falling Star Tissue Paper",
     },
     {
-      src: "https://images.unsplash.com/photo-1648622981113-1e0f7e2c1b4e?q=80&w=1200&auto=format&fit=crop",
-      alt: "Paper and Paper Cups",
-      title: "Paper & Paper Cups",
+      src: "/brands/abusita-oil.png",
+      alt: "Abusita Vegetable Oil",
+      title: "Abusita Vegetable Oil",
     },
   ];
 
@@ -62,7 +62,7 @@ export default function SupplyChainCarousel() {
     <div className="flex h-full w-full items-center justify-center overflow-hidden py-12 sm:py-16 md:py-20">
       <div className="w-full px-4 sm:px-6 md:px-8">
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 sm:mb-10 md:mb-12 text-primary relative px-2 break-words">
-          Our Supply Chain
+          Our Products
         </h2>
         <Carousel_006
           images={images}
@@ -114,7 +114,7 @@ const Carousel_006 = ({
         {images.map((img, index) => (
           <CarouselItem
             key={index}
-            className="relative flex h-[81.5%] w-full basis-[73%] items-center justify-center sm:basis-[50%] md:basis-[30%] lg:basis-[25%] xl:basis-[21%]"
+            className="relative flex h-[91%] w-full basis-[73%] items-center justify-center sm:basis-[50%] md:basis-[30%] lg:basis-[25%] xl:basis-[21%] bg-primary/10 py-6 dark:bg-transparent"
           >
             <motion.div
               initial={false}
@@ -124,9 +124,9 @@ const Carousel_006 = ({
                     ? "inset(15% 0 15% 0 round 2rem)"
                     : "inset(0 0 0 0 round 2rem)",
               }}
-              className="h-full w-full overflow-hidden rounded-3xl"
+              className="h-full w-full overflow-hidden rounded-3xl ring-2 ring-gray-300 dark:ring-gray-600"
             >
-              <div className="relative h-full w-full border">
+              <div className="relative h-full w-full">
                 <img
                   src={img.src}
                   alt={img.alt}
