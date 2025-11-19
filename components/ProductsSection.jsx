@@ -217,18 +217,15 @@ export default function ProductsSection() {
       name: "Libaax parboiled Rice",
       category: "Rice",
       icon: "🌾",
-      image: "/brands/libaax/rice/featured/libaax-rice.jpeg",
-      images: [
-        "/brands/libaax/rice/product/libaax-rice-1.png",
-        "/brands/libaax/rice/product/libaax-rice-2.png",
-      ],
+      image: "/brands/paraboiled.png",
+      images: ["/brands/paraboiled.png", "/brands/paraboiled1.png"],
       description:
-        "Premium quality rice varieties including parboiled and long grain rice",
+        "Premium quality parboiled rice with enhanced nutritional value and easy cooking",
       features: [
-        "Multiple rice varieties",
-        "Basmati and long grain options",
-        "High nutritional value",
-        "Aromatic and flavorful",
+        "Parboiled for better nutrition",
+        "Retains more vitamins",
+        "Fluffy texture when cooked",
+        "Less sticky than white rice",
         "Ideal for all cuisines",
       ],
       brands: ["Libaax Rice"],
@@ -350,6 +347,27 @@ export default function ProductsSection() {
       image: "/brands/rawdaoil.png",
 
       featured: false,
+    },
+    {
+      id: 19,
+      name: "Premium Spaghetti",
+      category: "Others",
+      icon: "🍝",
+      image: "/brands/spaghetti.jpg",
+      images: ["/brands/spaghetti.jpg", "/brands/spaghetti1.jpeg"],
+      description:
+        "High-quality spaghetti pasta made from premium durum wheat for perfect texture",
+      features: [
+        "100% durum wheat",
+        "Al dente texture",
+        "Quick cooking time",
+        "Bulk packaging available",
+        "Restaurant quality",
+      ],
+      brands: ["Premium Spaghetti"],
+      origin: "Italy, Turkey",
+      featured: false,
+      color: "from-yellow-600 to-orange-600",
     },
   ];
 
