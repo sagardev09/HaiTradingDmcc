@@ -430,7 +430,27 @@ export default function ProductsSection() {
       <div className="relative z-0 flex flex-col items-center px-4 sm:px-6 md:px-8 text-black dark:text-white text-sm pb-28 pt-8">
         <div className="w-full max-w-7xl mx-auto px-4 mt-16">
           {/* Hero Section */}
+          <div className="text-center mb-16 animate-fade-in">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-100 dark:bg-teal-900/40 rounded-full mb-6">
+              <Sparkles className="size-5 text-teal-600 dark:text-teal-400" />
+              <span className="text-xs sm:text-sm font-medium text-teal-700 dark:text-teal-300">
+                Premium Commodities
+              </span>
+            </div>
 
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 bg-gradient-to-r from-black dark:from-white to-teal-600 dark:to-teal-400 text-transparent bg-clip-text px-2 break-words">
+              Our Products
+            </h1>
+
+            <p className="text-sm sm:text-base md:text-lg max-w-3xl mx-auto mb-8">
+              Discover our comprehensive range of{" "}
+              <span className="font-semibold text-teal-600 dark:text-teal-400">
+                premium food commodities
+              </span>{" "}
+              and industrial products, sourced globally and delivered with
+              excellence.
+            </p>
+          </div>
           {/* Featured Products */}
           <div className="mb-16">
             <div className="flex items-center gap-3 mb-8">
@@ -701,48 +721,6 @@ export default function ProductsSection() {
             </div>
           </div>
 
-          <div className="text-center mb-16 animate-fade-in">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-100 dark:bg-teal-900/40 rounded-full mb-6">
-              <Sparkles className="size-5 text-teal-600 dark:text-teal-400" />
-              <span className="text-xs sm:text-sm font-medium text-teal-700 dark:text-teal-300">
-                Premium Commodities
-              </span>
-            </div>
-
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 bg-gradient-to-r from-black dark:from-white to-teal-600 dark:to-teal-400 text-transparent bg-clip-text px-2 break-words">
-              Our Products
-            </h1>
-
-            <p className="text-sm sm:text-base md:text-lg max-w-3xl mx-auto mb-8">
-              Discover our comprehensive range of{" "}
-              <span className="font-semibold text-teal-600 dark:text-teal-400">
-                premium food commodities
-              </span>{" "}
-              and industrial products, sourced globally and delivered with
-              excellence.
-            </p>
-
-            {/* Stats Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-16">
-              {stats.map((stat, index) => (
-                <div
-                  key={index}
-                  className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-                >
-                  <stat.icon
-                    className={`size-8 ${stat.color} dark:brightness-125 mx-auto mb-3`}
-                  />
-                  <div className="text-3xl font-bold text-black dark:text-white mb-1">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm text-zinc-600 dark:text-slate-400">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
           {/* Why Choose Our Products Section */}
           <div className="mb-16">
             <div className="text-center mb-12">
@@ -778,6 +756,27 @@ export default function ProductsSection() {
                 </div>
               ))}
             </div>
+            <div className="text-center mb-16 animate-fade-in mt-10">
+              {/* Stats Grid */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-16">
+                {stats.map((stat, index) => (
+                  <div
+                    key={index}
+                    className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                  >
+                    <stat.icon
+                      className={`size-8 ${stat.color} dark:brightness-125 mx-auto mb-3`}
+                    />
+                    <div className="text-3xl font-bold text-black dark:text-white mb-1">
+                      {stat.value}
+                    </div>
+                    <div className="text-sm text-zinc-600 dark:text-slate-400">
+                      {stat.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Quality Assurance Banner */}
@@ -800,9 +799,6 @@ export default function ProductsSection() {
               </p>
 
               <div className="flex flex-wrap items-center justify-center gap-4">
-                <div className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl px-6 py-3">
-                  <p className="text-white font-semibold">ISO Certified</p>
-                </div>
                 <div className="bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl px-6 py-3">
                   <p className="text-white font-semibold">HACCP Compliant</p>
                 </div>

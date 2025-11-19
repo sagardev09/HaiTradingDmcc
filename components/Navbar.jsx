@@ -75,6 +75,7 @@ export default function Navbar() {
     { name: "Home", path: "" },
     { name: "About Us", path: "about" },
     { name: "Products", path: "products" },
+    { name: "Construction", path: "construction" },
     { name: "Brands", path: "brands" },
     { name: "Clients", path: "clients" },
     { name: "News", path: "news" },

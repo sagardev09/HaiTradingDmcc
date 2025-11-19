@@ -1,7 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Youtube, ArrowRight, ExternalLink } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Youtube,
+  ArrowRight,
+  ExternalLink,
+} from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -37,7 +48,12 @@ export default function Footer() {
     { name: "Facebook", icon: Facebook, href: "#", color: "hover:bg-blue-600" },
     { name: "Twitter", icon: Twitter, href: "#", color: "hover:bg-sky-500" },
     { name: "LinkedIn", icon: Linkedin, href: "#", color: "hover:bg-blue-700" },
-    { name: "Instagram", icon: Instagram, href: "#", color: "hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-600" },
+    {
+      name: "Instagram",
+      icon: Instagram,
+      href: "#",
+      color: "hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-600",
+    },
     { name: "YouTube", icon: Youtube, href: "#", color: "hover:bg-red-600" },
   ];
 
@@ -71,24 +87,25 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6">
-              Independent global market leader in food commodities, connecting supply and demand sustainably across Africa.
+              Independent global market leader in food commodities, connecting
+              supply and demand sustainably across Africa.
             </p>
             {/* Trust Badges */}
             <div className="flex flex-wrap items-center gap-2 sm:gap-3">
               <div className="px-2 sm:px-3 py-1 sm:py-1.5 bg-teal-600/20 border border-teal-500/30 rounded-full text-[10px] sm:text-xs text-teal-300 font-medium">
-                ✓ ISO Certified
-              </div>
-              <div className="px-2 sm:px-3 py-1 sm:py-1.5 bg-teal-600/20 border border-teal-500/30 rounded-full text-[10px] sm:text-xs text-teal-300 font-medium whitespace-nowrap">
-                ✓ Trusted Since 2014
+                ✓ Halal Certified
               </div>
             </div>
           </div>
 
           {/* Newsletter Signup */}
           <div className="md:col-span-2">
-            <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Stay Updated</h3>
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">
+              Stay Updated
+            </h3>
             <p className="text-slate-300 text-xs sm:text-sm mb-4">
-              Subscribe to our newsletter for the latest commodity market insights and company updates.
+              Subscribe to our newsletter for the latest commodity market
+              insights and company updates.
             </p>
             <form className="flex flex-col sm:flex-row gap-2 sm:gap-3 max-w-md">
               <input
@@ -111,7 +128,9 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
           {/* Company Links */}
           <div>
-            <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-white">Company</h4>
+            <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-white">
+              Company
+            </h4>
             <ul className="space-y-2 sm:space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
@@ -119,7 +138,9 @@ export default function Footer() {
                     href={link.href}
                     className="text-slate-300 hover:text-teal-400 text-xs sm:text-sm transition-colors duration-200 flex items-center gap-1 group"
                   >
-                    <span className="group-hover:translate-x-1 transition-transform">{link.name}</span>
+                    <span className="group-hover:translate-x-1 transition-transform">
+                      {link.name}
+                    </span>
                   </Link>
                 </li>
               ))}
@@ -128,7 +149,9 @@ export default function Footer() {
 
           {/* Products Links */}
           <div>
-            <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-white">Products</h4>
+            <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-white">
+              Products
+            </h4>
             <ul className="space-y-2 sm:space-y-3">
               {footerLinks.products.map((link) => (
                 <li key={link.name}>
@@ -136,7 +159,9 @@ export default function Footer() {
                     href={link.href}
                     className="text-slate-300 hover:text-teal-400 text-xs sm:text-sm transition-colors duration-200 flex items-center gap-1 group"
                   >
-                    <span className="group-hover:translate-x-1 transition-transform">{link.name}</span>
+                    <span className="group-hover:translate-x-1 transition-transform">
+                      {link.name}
+                    </span>
                   </Link>
                 </li>
               ))}
@@ -145,7 +170,9 @@ export default function Footer() {
 
           {/* Resources Links */}
           <div>
-            <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-white">Resources</h4>
+            <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-white">
+              Resources
+            </h4>
             <ul className="space-y-2 sm:space-y-3">
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
@@ -153,7 +180,9 @@ export default function Footer() {
                     href={link.href}
                     className="text-slate-300 hover:text-teal-400 text-xs sm:text-sm transition-colors duration-200 flex items-center gap-1 group"
                   >
-                    <span className="group-hover:translate-x-1 transition-transform">{link.name}</span>
+                    <span className="group-hover:translate-x-1 transition-transform">
+                      {link.name}
+                    </span>
                   </Link>
                 </li>
               ))}
@@ -162,7 +191,9 @@ export default function Footer() {
 
           {/* Support Links */}
           <div>
-            <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-white">Support</h4>
+            <h4 className="font-semibold text-base sm:text-lg mb-3 sm:mb-4 text-white">
+              Support
+            </h4>
             <ul className="space-y-2 sm:space-y-3">
               {footerLinks.support.map((link) => (
                 <li key={link.name}>
@@ -170,7 +201,9 @@ export default function Footer() {
                     href={link.href}
                     className="text-slate-300 hover:text-teal-400 text-xs sm:text-sm transition-colors duration-200 flex items-center gap-1 group"
                   >
-                    <span className="group-hover:translate-x-1 transition-transform">{link.name}</span>
+                    <span className="group-hover:translate-x-1 transition-transform">
+                      {link.name}
+                    </span>
                   </Link>
                 </li>
               ))}
@@ -203,10 +236,16 @@ export default function Footer() {
             </div>
             <div>
               <p className="text-slate-400 text-xs sm:text-sm mb-1">Call Us</p>
-              <a href="tel:+97145754755" className="text-white hover:text-teal-400 transition-colors font-medium text-xs sm:text-base block">
+              <a
+                href="tel:+97145754755"
+                className="text-white hover:text-teal-400 transition-colors font-medium text-xs sm:text-base block"
+              >
                 +971 4 575 4755
               </a>
-              <a href="tel:+971505013725" className="text-white hover:text-teal-400 transition-colors font-medium text-xs sm:text-base">
+              <a
+                href="tel:+971505013725"
+                className="text-white hover:text-teal-400 transition-colors font-medium text-xs sm:text-base"
+              >
                 +971 50 501 3725
               </a>
             </div>
@@ -220,7 +259,8 @@ export default function Footer() {
             <div>
               <p className="text-slate-400 text-xs sm:text-sm mb-1">Visit Us</p>
               <p className="text-white text-xs sm:text-sm leading-relaxed">
-                Office 1406, Gold Crest Executive<br />
+                Office 1406, Gold Crest Executive
+                <br />
                 Cluster C, JLT Dubai, UAE
               </p>
             </div>
@@ -232,7 +272,9 @@ export default function Footer() {
           {/* Copyright */}
           <div className="text-slate-400 text-xs sm:text-sm text-center md:text-left">
             <p>
-              © {currentYear} <span className="text-white font-medium">HAI Trading DMCC</span>. All rights reserved.
+              © {currentYear}{" "}
+              <span className="text-white font-medium">HAI Trading DMCC</span>.
+              All rights reserved.
             </p>
           </div>
 
@@ -254,11 +296,17 @@ export default function Footer() {
 
           {/* Legal Links */}
           <div className="flex items-center gap-3 sm:gap-4 text-xs sm:text-sm">
-            <Link href="#" className="text-slate-400 hover:text-teal-400 transition-colors whitespace-nowrap">
+            <Link
+              href="#"
+              className="text-slate-400 hover:text-teal-400 transition-colors whitespace-nowrap"
+            >
               Privacy Policy
             </Link>
             <span className="text-slate-600">|</span>
-            <Link href="#" className="text-slate-400 hover:text-teal-400 transition-colors whitespace-nowrap">
+            <Link
+              href="#"
+              className="text-slate-400 hover:text-teal-400 transition-colors whitespace-nowrap"
+            >
               Terms of Service
             </Link>
           </div>

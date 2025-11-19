@@ -2,6 +2,7 @@
 
 import { Sparkles } from "lucide-react";
 import Brands from "./MarqueeBrands";
+import ProductCategories from "./ProductCategories";
 
 export default function HeroSection() {
   const brands = [
@@ -50,7 +51,7 @@ export default function HeroSection() {
 
   return (
     <>
-      <section className="relative flex flex-col items-center px-4 sm:px-6 md:px-8 text-black text-sm pb-20 pt-32 min-h-screen overflow-hidden -mt-24">
+      <section className="relative flex flex-col items-center px-4 sm:px-6 md:px-8 text-black text-sm pb-20 pt-52 min-h-screen overflow-hidden -mt-24">
         {/* Background Video */}
         <div className="absolute -top-4 left-0 w-full h-[calc(100%+1rem)] -z-10">
           <video
@@ -79,15 +80,18 @@ export default function HeroSection() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-center font-bold max-w-5xl mt-6 text-primary px-2 break-words drop-shadow-lg">
             HAI TRADING DMCC
           </h1>
-          <p className="text-gray-800 dark:text-foreground text-sm sm:text-base md:text-lg text-center max-w-4xl mt-6 leading-relaxed px-2 backdrop-blur-sm bg-white/30 dark:bg-slate-900/30 py-4 rounded-2xl shadow-lg">
+          <p className="text-gray-800 dark:text-foreground text-sm sm:text-base md:text-lg text-center max-w-4xl mt-6 leading-relaxed px-2 backdrop-blur-sm bg-white/30 dark:bg-slate-900/30 py-4 rounded-2xl shadow-lg text-balance">
             Based in{" "}
-            <span className="font-semibold text-primary">Dubai, UAE</span>, we
-            trade premium staples like rice, sugar, spices, palm oil, and paper
-            — connecting global supply with demand across{" "}
+            <span className="font-semibold text-primary">Dubai, UAE</span>, our
+            company specializes in the global trade of premium-quality staples,
+            including rice, sugar, spices, palm oil, and paper products.
+            Strategically positioned at one of the world's most important
+            trading hubs, we bridge the gap between reliable suppliers and
+            growing markets across{" "}
             <span className="font-semibold text-primary">
               East and West Africa
-            </span>{" "}
-            with integrity and expertise.
+            </span>
+            .
           </p>
 
           <p className="text-gray-900 dark:text-secondary-foreground text-sm sm:text-base md:text-lg text-center max-w-4xl mt-4 leading-relaxed font-semibold px-2 drop-shadow-md">
@@ -124,6 +128,7 @@ export default function HeroSection() {
 
       {/* Brand Carousel Section - Below Hero */}
       <section className="relative py-12 sm:py-16 bg-white dark:bg-slate-900">
+        <ProductCategories />
         <Brands brands={brands} />
       </section>
     </>

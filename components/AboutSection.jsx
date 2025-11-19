@@ -29,37 +29,43 @@ export default function AboutSection() {
     {
       icon: Shield,
       title: "Quality & Integrity",
-      description: "Uncompromising standards in every transaction, building trust through excellence",
+      description:
+        "Uncompromising standards in every transaction, building trust through excellence",
       color: "bg-teal-100 text-teal-600",
     },
     {
       icon: Handshake,
       title: "Customer-Centric",
-      description: "Your success is our priority, with personalized solutions and dedicated support",
+      description:
+        "Your success is our priority, with personalized solutions and dedicated support",
       color: "bg-blue-100 text-blue-600",
     },
     {
       icon: Leaf,
       title: "Sustainability",
-      description: "Connecting supply and demand responsibly, ensuring long-term growth for all",
+      description:
+        "Connecting supply and demand responsibly, ensuring long-term growth for all",
       color: "bg-emerald-100 text-emerald-600",
     },
     {
       icon: Lightbulb,
       title: "Innovation",
-      description: "Leveraging technology and market insights to deliver cutting-edge solutions",
+      description:
+        "Leveraging technology and market insights to deliver cutting-edge solutions",
       color: "bg-purple-100 text-purple-600",
     },
     {
       icon: Heart,
       title: "Ethical Practice",
-      description: "Operating with transparency and fairness in all our business relationships",
+      description:
+        "Operating with transparency and fairness in all our business relationships",
       color: "bg-red-100 text-red-600",
     },
     {
       icon: Users,
       title: "Team Excellence",
-      description: "Empowering our people to shape their future and drive our collective success",
+      description:
+        "Empowering our people to shape their future and drive our collective success",
       color: "bg-orange-100 text-orange-600",
     },
   ];
@@ -69,12 +75,14 @@ export default function AboutSection() {
     {
       icon: Globe,
       title: "Global Network",
-      description: "Extensive sourcing capabilities across continents with local market expertise",
+      description:
+        "Extensive sourcing capabilities across continents with local market expertise",
     },
     {
       icon: Package,
       title: "Multi-Product Portfolio",
-      description: "Comprehensive range of premium commodities from trusted brands",
+      description:
+        "Comprehensive range of premium commodities from trusted brands",
     },
     {
       icon: TrendingUp,
@@ -84,7 +92,8 @@ export default function AboutSection() {
     {
       icon: Clock,
       title: "Timely Delivery",
-      description: "Efficient supply chain ensuring quick shipping and reliability",
+      description:
+        "Efficient supply chain ensuring quick shipping and reliability",
     },
     {
       icon: Award,
@@ -94,17 +103,38 @@ export default function AboutSection() {
     {
       icon: Handshake,
       title: "Long-term Partnerships",
-      description: "Building lasting relationships through dedication and cooperation",
+      description:
+        "Building lasting relationships through dedication and cooperation",
     },
   ];
 
   // Timeline milestones
   const milestones = [
-    { year: "2014", event: "Company Founded", description: "HAI Trading DMCC established in Dubai" },
-    { year: "2016", event: "Regional Expansion", description: "Entered East African markets" },
-    { year: "2018", event: "Brand Partnerships", description: "Partnered with AGT and Libaax brands" },
-    { year: "2020", event: "Market Leader", description: "Became top commodity trader in the region" },
-    { year: "2024", event: "Global Presence", description: "Serving 9+ countries with 500+ clients" },
+    {
+      year: "2014",
+      event: "Company Founded",
+      description: "HAI Trading DMCC established in Dubai",
+    },
+    {
+      year: "2016",
+      event: "Regional Expansion",
+      description: "Entered East African markets",
+    },
+    {
+      year: "2018",
+      event: "Brand Partnerships",
+      description: "Partnered with AGT and Libaax brands",
+    },
+    {
+      year: "2020",
+      event: "Market Leader",
+      description: "Became top commodity trader in the region",
+    },
+    {
+      year: "2024",
+      event: "Global Presence",
+      description: "Serving 9+ countries with 500+ clients",
+    },
   ];
 
   return (
@@ -124,7 +154,9 @@ export default function AboutSection() {
           <div className="text-center mb-20 animate-fade-in">
             <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-teal-100 dark:bg-teal-900/40 rounded-full mb-6">
               <Sparkles className="size-4 sm:size-5 text-teal-600 dark:text-teal-400" />
-              <span className="text-xs sm:text-sm font-medium text-teal-700 dark:text-teal-300">Established 2014</span>
+              <span className="text-xs sm:text-sm font-medium text-teal-700 dark:text-teal-300">
+                Established 2014
+              </span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 bg-gradient-to-r from-black dark:from-white to-teal-600 dark:to-teal-400 text-transparent bg-clip-text px-2 break-words">
@@ -132,9 +164,16 @@ export default function AboutSection() {
             </h1>
 
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-zinc-800 dark:text-slate-300 max-w-4xl mx-auto mb-8 leading-relaxed px-2">
-              We are an <span className="font-semibold text-teal-600 dark:text-teal-400">independent global market leader</span> in food
-              commodities, connecting supply and demand sustainably by integrating{" "}
-              <span className="font-semibold text-black dark:text-white">global know-how with local knowledge</span>.
+              We are an{" "}
+              <span className="font-semibold text-teal-600 dark:text-teal-400">
+                independent global market leader
+              </span>{" "}
+              in food commodities, connecting supply and demand sustainably by
+              integrating{" "}
+              <span className="font-semibold text-black dark:text-white">
+                global know-how with local knowledge
+              </span>
+              .
             </p>
 
             {/* Quick stats */}
@@ -173,21 +212,33 @@ export default function AboutSection() {
                 </h2>
 
                 <p className="text-zinc-700 dark:text-slate-300 text-lg leading-relaxed">
-                  To establish a <span className="font-semibold text-teal-600 dark:text-teal-400">global presence</span> through our
-                  completely integrated business model, customer-centric products, dependable commitments,{" "}
-                  <span className="font-semibold text-black dark:text-white">unrivaled quality</span>, timely services, and{" "}
-                  <span className="font-semibold text-black dark:text-white">ethical business practices</span>.
+                  To establish a{" "}
+                  <span className="font-semibold text-teal-600 dark:text-teal-400">
+                    global presence
+                  </span>{" "}
+                  through our completely integrated business model,
+                  customer-centric products, dependable commitments,{" "}
+                  <span className="font-semibold text-black dark:text-white">
+                    unrivaled quality
+                  </span>
+                  , timely services, and{" "}
+                  <span className="font-semibold text-black dark:text-white">
+                    ethical business practices
+                  </span>
+                  .
                 </p>
 
                 <div className="mt-6 flex flex-wrap gap-2">
-                  {["Quality", "Service", "Ethics", "Innovation"].map((tag, idx) => (
-                    <span
-                      key={idx}
-                      className="px-3 py-1 bg-teal-100 dark:bg-teal-900/40 text-teal-700 dark:text-teal-300 text-sm rounded-full font-medium"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                  {["Quality", "Service", "Ethics", "Innovation"].map(
+                    (tag, idx) => (
+                      <span
+                        key={idx}
+                        className="px-3 py-1 bg-teal-100 dark:bg-teal-900/40 text-teal-700 dark:text-teal-300 text-sm rounded-full font-medium"
+                      >
+                        {tag}
+                      </span>
+                    )
+                  )}
                 </div>
               </div>
             </div>
@@ -207,18 +258,30 @@ export default function AboutSection() {
                 </h2>
 
                 <p className="text-teal-50 text-lg leading-relaxed mb-6">
-                  To encourage <span className="font-semibold text-white">entrepreneurship</span>, enable our employees
-                  to shape their own future, and expand naturally by leveraging our strengths while maintaining our{" "}
-                  <span className="font-semibold text-white">expertise in commodity groups</span>.
+                  To encourage{" "}
+                  <span className="font-semibold text-white">
+                    entrepreneurship
+                  </span>
+                  , enable our employees to shape their own future, and expand
+                  naturally by leveraging our strengths while maintaining our{" "}
+                  <span className="font-semibold text-white">
+                    expertise in commodity groups
+                  </span>
+                  .
                 </p>
 
                 <div className="space-y-3">
-                  {["Empower People", "Natural Growth", "Market Expertise"].map((item, idx) => (
-                    <div key={idx} className="flex items-center gap-3 text-white">
-                      <CheckCircle2 className="size-5 flex-shrink-0" />
-                      <span className="text-teal-50">{item}</span>
-                    </div>
-                  ))}
+                  {["Empower People", "Natural Growth", "Market Expertise"].map(
+                    (item, idx) => (
+                      <div
+                        key={idx}
+                        className="flex items-center gap-3 text-white"
+                      >
+                        <CheckCircle2 className="size-5 flex-shrink-0" />
+                        <span className="text-teal-50">{item}</span>
+                      </div>
+                    )
+                  )}
                 </div>
               </div>
             </div>
@@ -227,42 +290,54 @@ export default function AboutSection() {
           {/* Core Values Section */}
           <div className="mb-20 relative">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-semibold text-black dark:text-white mb-4">Our Core Values</h2>
+              <h2 className="text-3xl md:text-4xl font-semibold text-black dark:text-white mb-4">
+                Our Core Values
+              </h2>
               <p className="text-zinc-600 dark:text-slate-400 text-lg max-w-2xl mx-auto">
                 The principles that guide our decisions and define who we are
               </p>
             </div>
 
             {/* Accordion-style Layout */}
-            <div className="max-w-5xl mx-auto space-y-3">
+            <div
+              className=" mx-auto space-y-3 grid md:grid-cols-2
+             grid-cols-1 gap-8"
+            >
               {values.map((value, index) => (
                 <div
                   key={index}
                   className="group relative"
                   onMouseEnter={() => setActiveValue(index)}
                 >
-                  <div className={`relative overflow-hidden rounded-2xl bg-white dark:bg-slate-800 border-l-4 ${
-                    activeValue === index
-                      ? 'border-teal-500 shadow-2xl shadow-teal-500/20'
-                      : 'border-slate-300 dark:border-slate-600 shadow-lg hover:border-teal-400'
-                  } transition-all duration-300`}>
-
+                  <div
+                    className={`relative overflow-hidden rounded-2xl bg-white dark:bg-slate-800 border-l-4 ${
+                      activeValue === index
+                        ? "border-teal-500 shadow-2xl shadow-teal-500/20"
+                        : "border-slate-300 dark:border-slate-600 shadow-lg hover:border-teal-400"
+                    } transition-all duration-300`}
+                  >
                     {/* Content Container */}
                     <div className="flex items-center gap-6 p-6">
                       {/* Icon */}
-                      <div className={`flex-shrink-0 w-20 h-20 ${value.color} dark:bg-opacity-30 rounded-xl flex items-center justify-center shadow-md ${
-                        activeValue === index ? 'scale-110' : 'scale-100'
-                      } transition-transform duration-300`}>
+                      <div
+                        className={`flex-shrink-0 w-20 h-20 ${
+                          value.color
+                        } dark:bg-opacity-30 rounded-xl flex items-center justify-center shadow-md ${
+                          activeValue === index ? "scale-110" : "scale-100"
+                        } transition-transform duration-300`}
+                      >
                         <value.icon className="size-10 dark:brightness-150" />
                       </div>
 
                       {/* Text Content */}
                       <div className="flex-1 min-w-0">
-                        <h3 className={`text-xl md:text-2xl font-bold mb-2 ${
-                          activeValue === index
-                            ? 'text-teal-600 dark:text-teal-400'
-                            : 'text-black dark:text-white'
-                        } transition-colors duration-300`}>
+                        <h3
+                          className={`text-xl md:text-2xl font-bold mb-2 ${
+                            activeValue === index
+                              ? "text-teal-600 dark:text-teal-400"
+                              : "text-black dark:text-white"
+                          } transition-colors duration-300`}
+                        >
                           {value.title}
                         </h3>
                         <p className="text-zinc-600 dark:text-slate-300 text-sm md:text-base leading-relaxed">
@@ -273,15 +348,19 @@ export default function AboutSection() {
                       {/* Index Number */}
                       <div className="hidden md:flex flex-shrink-0 items-center justify-center w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-700">
                         <span className="text-slate-600 dark:text-slate-300 font-bold text-lg">
-                          {String(index + 1).padStart(2, '0')}
+                          {String(index + 1).padStart(2, "0")}
                         </span>
                       </div>
                     </div>
 
                     {/* Hover Gradient Overlay */}
-                    <div className={`absolute inset-0 bg-gradient-to-r ${value.color.replace('bg-', 'from-').replace('-100', '-50')} to-transparent opacity-0 ${
-                      activeValue === index ? 'opacity-5' : ''
-                    } transition-opacity duration-300 pointer-events-none`} />
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-r ${value.color
+                        .replace("bg-", "from-")
+                        .replace("-100", "-50")} to-transparent opacity-0 ${
+                        activeValue === index ? "opacity-5" : ""
+                      } transition-opacity duration-300 pointer-events-none`}
+                    />
                   </div>
                 </div>
               ))}
@@ -289,7 +368,7 @@ export default function AboutSection() {
           </div>
 
           {/* Our Journey Timeline */}
-          <div className="mb-20">
+          {/* <div className="mb-20">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-semibold text-black dark:text-white mb-4">Our Journey</h2>
               <p className="text-zinc-600 dark:text-slate-400 text-lg max-w-2xl mx-auto">
@@ -298,7 +377,7 @@ export default function AboutSection() {
             </div>
 
             <div className="relative">
-              {/* Timeline line */}
+              
               <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-teal-600 via-teal-500 to-teal-400" />
 
               <div className="space-y-12">
@@ -309,7 +388,7 @@ export default function AboutSection() {
                       index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                     }`}
                   >
-                    {/* Content Card */}
+                    
                     <div className="flex-1">
                       <div
                         className={`bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${
@@ -322,23 +401,26 @@ export default function AboutSection() {
                       </div>
                     </div>
 
-                    {/* Timeline dot */}
+                   
                     <div className="hidden md:flex flex-shrink-0 w-6 h-6 bg-teal-600 dark:bg-teal-500 rounded-full border-4 border-white dark:border-slate-800 shadow-lg relative z-10" />
 
-                    {/* Spacer for alternating layout */}
+                   
                     <div className="hidden md:block flex-1" />
                   </div>
                 ))}
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Why Choose Us Section */}
           <div className="mb-20">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-semibold text-black dark:text-white mb-4">Why Choose HAI Trading?</h2>
+              <h2 className="text-3xl md:text-4xl font-semibold text-black dark:text-white mb-4">
+                Why Choose HAI Trading?
+              </h2>
               <p className="text-zinc-600 dark:text-slate-400 text-lg max-w-2xl mx-auto">
-                Our competitive advantages that set us apart in the global commodities market
+                Our competitive advantages that set us apart in the global
+                commodities market
               </p>
             </div>
 
@@ -353,8 +435,12 @@ export default function AboutSection() {
                       <feature.icon className="size-6 text-teal-600 dark:text-teal-400" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-black dark:text-white mb-2">{feature.title}</h3>
-                      <p className="text-zinc-600 dark:text-slate-400 text-sm">{feature.description}</p>
+                      <h3 className="text-lg font-semibold text-black dark:text-white mb-2">
+                        {feature.title}
+                      </h3>
+                      <p className="text-zinc-600 dark:text-slate-400 text-sm">
+                        {feature.description}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -369,13 +455,19 @@ export default function AboutSection() {
                 <Users className="size-10 text-white" />
               </div>
 
-              <h2 className="text-3xl md:text-4xl font-semibold text-black dark:text-white mb-6">Our Team & Culture</h2>
+              <h2 className="text-3xl md:text-4xl font-semibold text-black dark:text-white mb-6">
+                Our Team & Culture
+              </h2>
 
               <p className="text-zinc-700 dark:text-slate-300 text-lg leading-relaxed mb-8">
-                We are composed of <span className="font-semibold text-teal-600 dark:text-teal-400">motivated professionals</span> who
-                bring global expertise and local market knowledge to every transaction. Our decentralized
-                decision-making empowers teams to deliver exceptional results while maintaining the highest standards of
-                quality and service.
+                We are composed of{" "}
+                <span className="font-semibold text-teal-600 dark:text-teal-400">
+                  motivated professionals
+                </span>{" "}
+                who bring global expertise and local market knowledge to every
+                transaction. Our decentralized decision-making empowers teams to
+                deliver exceptional results while maintaining the highest
+                standards of quality and service.
               </p>
 
               <div className="grid md:grid-cols-3 gap-6 mb-8">
@@ -384,9 +476,14 @@ export default function AboutSection() {
                   { icon: Users, label: "Team Collaboration" },
                   { icon: Award, label: "Excellence Focused" },
                 ].map((item, idx) => (
-                  <div key={idx} className="bg-white/60 dark:bg-slate-700/60 backdrop-blur-sm p-6 rounded-xl border border-slate-200 dark:border-slate-600">
+                  <div
+                    key={idx}
+                    className="bg-white/60 dark:bg-slate-700/60 backdrop-blur-sm p-6 rounded-xl border border-slate-200 dark:border-slate-600"
+                  >
                     <item.icon className="size-8 text-teal-600 dark:text-teal-400 mx-auto mb-3" />
-                    <p className="font-semibold text-black dark:text-white">{item.label}</p>
+                    <p className="font-semibold text-black dark:text-white">
+                      {item.label}
+                    </p>
                   </div>
                 ))}
               </div>
