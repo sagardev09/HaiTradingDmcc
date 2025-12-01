@@ -22,7 +22,16 @@ export default function ConstructionSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState({});
 
   // Construction product categories
-  const categories = ["All", "Door Skins", "Paper Products", "Building Materials"];
+  const categories = [
+    "All",
+    "Building Materials",
+    "Hardware",
+    "Paints",
+    "Tools",
+    "Electricals",
+    "Plumbing & Sanitary",
+    "Wood",
+  ];
 
   // Auto-rotate carousel images
   useEffect(() => {
@@ -46,96 +55,203 @@ export default function ConstructionSection() {
   const products = [
     {
       id: 1,
-      name: "Premium Door Skins",
-      category: "Door Skins",
-      icon: "🚪",
-      image: "https://images.unsplash.com/photo-1534009590571-7f5b8f197127?w=800&h=600&fit=crop",
+      name: "Steel Rebars",
+      category: "Building Materials",
+      icon: "🔩",
+      image:
+        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop",
       images: [
-        "https://images.unsplash.com/photo-1534009590571-7f5b8f197127?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop",
       ],
       description:
-        "High-quality veneer door skins for residential and commercial applications. Available in multiple wood finishes and sizes.",
+        "High-quality steel reinforcing bars for concrete structures. Essential for foundations, columns, beams, and slabs.",
       features: [
-        "Natural wood veneers",
-        "Multiple finish options",
-        "Standard and custom sizes",
-        "Moisture resistant",
-        "Smooth surface finish",
+        "High tensile strength",
+        "Corrosion resistant options",
+        "Multiple sizes available",
+        "Quality certified",
+        "Bulk orders accepted",
       ],
-      brands: ["Premium Door Skins"],
-      origin: "Multiple Sources",
+      brands: ["Steel Rebars"],
+      origin: "Turkey, UAE",
+      featured: true,
+      color: "from-gray-600 to-gray-700",
+    },
+    {
+      id: 2,
+      name: "Cement",
+      category: "Building Materials",
+      icon: "🏗️",
+      image:
+        "https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?w=800&h=600&fit=crop",
+      images: [
+        "https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1590644365607-1c5a7093def4?w=800&h=600&fit=crop",
+      ],
+      description:
+        "Premium quality Portland cement for all construction applications. Ideal for concrete, mortar, and plastering works.",
+      features: [
+        "High compressive strength",
+        "Consistent quality",
+        "Fast setting options",
+        "Weather resistant",
+        "50kg bags available",
+      ],
+      brands: ["Premium Cement"],
+      origin: "UAE, India",
+      featured: true,
+      color: "from-stone-600 to-stone-700",
+    },
+    {
+      id: 3,
+      name: "Red Meranti Wood",
+      category: "Wood",
+      icon: "🪵",
+      image:
+        "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
+      images: [
+        "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1541123603104-512919d6a96c?w=800&h=600&fit=crop",
+      ],
+      description:
+        "Premium Red Meranti hardwood timber from Southeast Asia. Perfect for doors, window frames, furniture, and interior applications.",
+      features: [
+        "Natural hardwood",
+        "Excellent workability",
+        "Attractive grain pattern",
+        "Durable and long-lasting",
+        "Various dimensions available",
+      ],
+      brands: ["Red Meranti Wood"],
+      origin: "Malaysia, Indonesia",
+      featured: true,
+      color: "from-red-700 to-red-800",
+    },
+    {
+      id: 4,
+      name: "Laminates",
+      category: "Wood",
+      icon: "🎨",
+      image:
+        "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=800&h=600&fit=crop",
+      images: [
+        "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1594844532765-12c32d813e94?w=800&h=600&fit=crop",
+      ],
+      description:
+        "Decorative laminates for furniture, countertops, and wall panels. Wide range of colors, textures, and wood grain finishes.",
+      features: [
+        "Scratch resistant surface",
+        "Multiple design options",
+        "Easy to clean",
+        "UV resistant",
+        "Standard sheet sizes",
+      ],
+      brands: ["Decorative Laminates"],
+      origin: "India, China",
       featured: true,
       color: "from-amber-600 to-amber-700",
     },
     {
-      id: 2,
-      name: "Industrial Paper Sheets",
-      category: "Paper Products",
-      icon: "📄",
-      image: "/brands/agtpaper.jpeg",
+      id: 5,
+      name: "National Eggshell Emulsion Paints",
+      category: "Paints",
+      icon: "🎨",
+      image:
+        "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=800&h=600&fit=crop",
       images: [
-        "/brands/agtpaper.jpeg",
-        "/brands/agtpaper2.png",
-        "/brands/agtpaper1.png",
+        "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&h=600&fit=crop",
       ],
       description:
-        "Heavy-duty industrial paper for construction, packaging, and manufacturing applications.",
+        "Premium quality eggshell emulsion paints for interior walls and ceilings. Smooth finish with excellent coverage and durability.",
       features: [
-        "High tensile strength",
-        "Multiple thickness options",
-        "Water-resistant grades",
-        "Eco-friendly production",
-        "Bulk quantities available",
+        "Low odour formula",
+        "Quick drying",
+        "Excellent coverage",
+        "Washable finish",
+        "Wide color range",
       ],
-      brands: ["AGT Papers"],
-      origin: "International Suppliers",
+      brands: ["National Paints"],
+      origin: "UAE",
       featured: true,
       color: "from-blue-600 to-blue-700",
     },
     {
-      id: 3,
-      name: "Decorative Door Panels",
-      category: "Door Skins",
-      icon: "🚪",
-      image: "https://images.unsplash.com/photo-1563298723-dcfebaa392e3?w=800&h=600&fit=crop",
+      id: 6,
+      name: "Asmaco Spray Paints",
+      category: "Paints",
+      icon: "🖌️",
+      image:
+        "https://images.unsplash.com/photo-1560343090-f0409e92791a?w=800&h=600&fit=crop",
       images: [
-        "https://images.unsplash.com/photo-1563298723-dcfebaa392e3?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1560343090-f0409e92791a?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1541513161836-81e422d2e1a5?w=800&h=600&fit=crop",
       ],
       description:
-        "Elegant decorative door panels with various patterns and finishes for modern interiors.",
+        "High-quality aerosol spray paints for metal, wood, and plastic surfaces. Fast drying with excellent adhesion and finish.",
       features: [
-        "Contemporary designs",
-        "Scratch resistant",
-        "Easy installation",
-        "UV protected",
-        "Low maintenance",
+        "Fast drying formula",
+        "Multi-surface application",
+        "Vibrant colors",
+        "Rust protection options",
+        "Easy to apply",
       ],
-      brands: ["Decorative Panels"],
-      origin: "Asia, Europe",
+      brands: ["Asmaco"],
+      origin: "UAE",
       featured: true,
       color: "from-purple-600 to-purple-700",
     },
     {
-      id: 4,
-      name: "Kraft Paper Rolls",
-      category: "Paper Products",
+      id: 7,
+      name: "MDF Boards",
+      category: "Wood",
       icon: "📦",
-      image: "https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?w=800&h=600&fit=crop",
-      description:
-        "Heavy-duty kraft paper rolls ideal for construction wrapping, packaging, and protective covering.",
-      features: [
-        "High burst strength",
-        "Tear resistant",
-        "Available in multiple widths",
-        "Recyclable material",
-        "Cost-effective solution",
+      image:
+        "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&h=600&fit=crop",
+      images: [
+        "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1595515106864-077aeb1c6a5c?w=800&h=600&fit=crop",
       ],
-      brands: ["Industrial Kraft"],
-      origin: "Global Suppliers",
+      description:
+        "Medium Density Fiberboard for furniture, cabinetry, and interior applications. Smooth surface ideal for painting and laminating.",
+      features: [
+        "Uniform density",
+        "Smooth surface finish",
+        "Easy to machine",
+        "Multiple thicknesses",
+        "Cost effective",
+      ],
+      brands: ["MDF Boards"],
+      origin: "Malaysia, China",
       featured: true,
-      color: "from-stone-600 to-stone-700",
+      color: "from-yellow-700 to-yellow-800",
+    },
+    {
+      id: 8,
+      name: "Gypsum Board",
+      category: "Building Materials",
+      icon: "🧱",
+      image:
+        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop",
+      images: [
+        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&h=600&fit=crop",
+      ],
+      description:
+        "High-quality gypsum boards for wall partitions, ceilings, and drywall applications. Fire resistant with excellent acoustic properties.",
+      features: [
+        "Fire resistant",
+        "Sound insulation",
+        "Easy installation",
+        "Moisture resistant options",
+        "Standard sizes available",
+      ],
+      brands: ["Gypsum Board"],
+      origin: "UAE, Saudi Arabia",
+      featured: true,
+      color: "from-slate-600 to-slate-700",
     },
   ];
 
@@ -153,7 +269,7 @@ export default function ConstructionSection() {
     {
       icon: Package,
       label: "Product Lines",
-      value: "4+",
+      value: "8+",
       color: "text-teal-600",
     },
     {
@@ -233,7 +349,7 @@ export default function ConstructionSection() {
             <p className="text-sm sm:text-base md:text-lg max-w-3xl mx-auto mb-8">
               Quality construction materials including{" "}
               <span className="font-semibold text-teal-600 dark:text-teal-400">
-                door skins, industrial paper,
+                rebars, cement, wood, paints,
               </span>{" "}
               and building essentials for your projects across Africa.
             </p>
@@ -448,7 +564,8 @@ export default function ConstructionSection() {
                 Why Choose Our Materials?
               </h2>
               <p className="text-zinc-600 dark:text-slate-400 text-lg max-w-2xl mx-auto">
-                Quality construction materials backed by expertise and reliability
+                Quality construction materials backed by expertise and
+                reliability
               </p>
             </div>
 
@@ -481,7 +598,8 @@ export default function ConstructionSection() {
               Ready to Start Your Project?
             </h2>
             <p className="text-zinc-600 dark:text-slate-400 text-lg mb-8 max-w-2xl mx-auto">
-              Contact us for product specifications, pricing, and delivery options for your construction needs
+              Contact us for product specifications, pricing, and delivery
+              options for your construction needs
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link

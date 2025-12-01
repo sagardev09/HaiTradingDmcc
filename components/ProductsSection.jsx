@@ -58,7 +58,7 @@ export default function ProductsSection() {
   const products = [
     {
       id: 1,
-      name: "AGT Papers",
+      name: "Paper Cups",
       category: "Paper",
       icon: "📄",
       image: "/brands/agtpaper.jpeg",
@@ -76,7 +76,7 @@ export default function ProductsSection() {
         "Various sizes available",
         "Bulk orders accepted",
       ],
-      brands: ["AGT Papers"],
+      brands: ["Paper Cups"],
       origin: "Multiple Sources",
       featured: true,
       color: "from-blue-600 to-blue-700",
@@ -92,7 +92,7 @@ export default function ProductsSection() {
         "/brands/libaaxbox1.png",
         "/brands/libaaxbox.png",
       ],
-      description: "Pure and refined palm oil for cooking and food processing",
+      description: "Pure and refined palm oil for cooking and food processing. Available in 1L, 3L, and 5L packaging.",
       features: [
         "100% pure palm oil",
         "Refined and filtered",
@@ -117,7 +117,7 @@ export default function ProductsSection() {
         "/brands/libaax/rice/product/libaax-rice-2.png",
       ],
       description:
-        "Premium quality rice varieties including Basmati and long grain rice",
+        "Premium quality rice varieties including Basmati and long grain rice. Available in 5kg and 25kg packaging.",
       features: [
         "Multiple rice varieties",
         "Basmati and long grain options",
@@ -126,7 +126,7 @@ export default function ProductsSection() {
         "Ideal for all cuisines",
       ],
       brands: ["Libaax Rice"],
-      origin: "India, Pakistan, Thailand",
+      origin: "India, Pakistan",
       featured: true,
       color: "from-amber-600 to-amber-700",
     },
@@ -147,7 +147,7 @@ export default function ProductsSection() {
         "Bulk packaging available",
       ],
       brands: ["AGT Sugar"],
-      origin: "Multiple Sources",
+      origin: "Brazil, India",
       featured: true,
       color: "from-pink-600 to-pink-700",
     },
@@ -160,7 +160,7 @@ export default function ProductsSection() {
       images: ["/brands/li2.png", "/brands/li3.png"],
 
       description:
-        "Pure sunflower oil rich in vitamins and perfect for healthy cooking , Available in various packaging options(1L,3L,5L,10L)",
+        "Pure sunflower oil rich in vitamins and perfect for healthy cooking. Available in 1L, 3L, 5L, and 10L packaging.",
       features: [
         "Cold-pressed extraction",
         "Rich in vitamins A, D, and E",
@@ -169,7 +169,7 @@ export default function ProductsSection() {
         "No artificial additives",
       ],
       brands: ["Libaax Pure Sunflower Oil"],
-      origin: "Ukraine, Russia",
+      origin: "Turkey",
       featured: true,
       color: "from-yellow-600 to-yellow-700",
     },
@@ -188,7 +188,7 @@ export default function ProductsSection() {
       ],
       images: ["/brands/sabasoap.png", "/brands/sabasoap1.png"],
       brands: ["Laundry Soap"],
-      origin: "Canada, USA",
+      origin: "Multiple Sources",
       featured: true,
       color: "from-stone-600 to-stone-700",
     },
@@ -208,7 +208,7 @@ export default function ProductsSection() {
       ],
       images: ["/brands/kifayatissue.png", "/brands/kifayatissue1.png"],
       brands: ["Kifaya Tissue Paper"],
-      origin: "Canada, USA",
+      origin: "UAE",
       featured: false,
       color: "from-stone-600 to-stone-700",
     },
@@ -220,7 +220,7 @@ export default function ProductsSection() {
       image: "/brands/paraboiled.png",
       images: ["/brands/paraboiled.png", "/brands/paraboiled1.png"],
       description:
-        "Premium quality parboiled rice with enhanced nutritional value and easy cooking",
+        "Premium quality parboiled rice with enhanced nutritional value and easy cooking. Available in 5kg and 25kg packaging.",
       features: [
         "Parboiled for better nutrition",
         "Retains more vitamins",
@@ -249,7 +249,7 @@ export default function ProductsSection() {
       ],
       images: ["/brands/fstissue.jpg", "/brands/fstissue2.jpg"],
       brands: ["Falling Star Tissue Paper"],
-      origin: "Canada, USA",
+      origin: "Multiple Sources",
       featured: false,
       color: "from-stone-600 to-stone-700",
     },
@@ -259,7 +259,7 @@ export default function ProductsSection() {
       name: "Abusita Vegetable Oil",
       category: "Edible Oils",
       description:
-        "Pure sunflower oil rich in vitamins and perfect for healthy cooking",
+        "Pure sunflower oil rich in vitamins and perfect for healthy cooking. Available in 1L, 3L, and 5L packaging.",
       features: [
         "Cold-pressed extraction",
         "Rich in vitamins A, D, and E",
@@ -268,7 +268,7 @@ export default function ProductsSection() {
       ],
       brands: ["Abusita Vegetable Oil"],
       color: "from-yellow-600 to-yellow-700",
-      origin: "Egypt",
+      origin: "Malaysia, Indonesia",
       icon: "🌻",
       image: "/brands/abusita-oil.png",
       images: [
@@ -284,7 +284,7 @@ export default function ProductsSection() {
       name: "Karina Sunflower Oil",
       category: "Edible Oils",
       description:
-        "Pure sunflower oil rich in vitamins and perfect for healthy cooking",
+        "Pure sunflower oil rich in vitamins and perfect for healthy cooking. Available in 1L, 3L, and 5L packaging.",
       features: [
         "Cold-pressed extraction",
         "Rich in vitamins A, D, and E",
@@ -332,7 +332,7 @@ export default function ProductsSection() {
       id: 18,
       name: "Rawda Oil",
       category: "Edible Oils",
-      description: "oil for various culinary and industrial applications",
+      description: "Oil for various culinary and industrial applications. Available in 1L, 3L, and 5L packaging.",
       features: [
         "High purity refined oil",
         "Cold-pressed extraction",
@@ -341,7 +341,7 @@ export default function ProductsSection() {
         "Light and healthy",
       ],
       brands: ["Rawda Oil"],
-      origin: "India",
+      origin: "Malaysia, Indonesia",
       color: "from-yellow-600 to-yellow-700",
       icon: "🌻",
       image: "/brands/rawdaoil.png",
