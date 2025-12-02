@@ -26,9 +26,8 @@ export default function ConstructionSection() {
     "All",
     "Building Materials",
     "Hardware",
-    "Paints",
+    "Painting",
     "Tools",
-    "Electricals",
     "Plumbing & Sanitary",
     "Wood",
   ];
@@ -51,207 +50,721 @@ export default function ConstructionSection() {
     return () => clearInterval(interval);
   }, []);
 
-  // Construction products data
+  // Construction products data from CSV
   const products = [
+    // Painting Products
     {
       id: 1,
-      name: "Steel Rebars",
-      category: "Building Materials",
-      icon: "🔩",
+      name: "National Polyester Putty 3.5kg",
+      category: "Painting",
+      itemGroup: "Stucco, Putty & Filler",
       image:
-        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop",
-      images: [
-        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop",
-      ],
+        "/construction/painting/National_Polyester_Putty_Light_Weight-35kg.jpg",
       description:
-        "High-quality steel reinforcing bars for concrete structures. Essential for foundations, columns, beams, and slabs.",
+        "Light weight polyester putty for automobiles and wooden surfaces. Good rheological properties for uniform leveling.",
       features: [
-        "High tensile strength",
-        "Corrosion resistant options",
-        "Multiple sizes available",
-        "Quality certified",
-        "Bulk orders accepted",
+        "Repair and dent filler",
+        "For automobiles & wood",
+        "Uniform surface leveling",
+        "Dry and wet sanding",
       ],
-      brands: ["Steel Rebars"],
-      origin: "Turkey, UAE",
       featured: true,
-      color: "from-gray-600 to-gray-700",
     },
     {
       id: 2,
-      name: "Cement",
-      category: "Building Materials",
-      icon: "🏗️",
+      name: "National Polyester Putty 1.5kg",
+      category: "Painting",
+      itemGroup: "Stucco, Putty & Filler",
       image:
-        "https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?w=800&h=600&fit=crop",
-      images: [
-        "https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1590644365607-1c5a7093def4?w=800&h=600&fit=crop",
-      ],
+        "/construction/painting/National_Polyester_Putty_Light_Weight-15kg.jpg",
       description:
-        "Premium quality Portland cement for all construction applications. Ideal for concrete, mortar, and plastering works.",
+        "Light weight polyester putty for automobiles and wooden surfaces. Good rheological properties for uniform leveling.",
       features: [
-        "High compressive strength",
-        "Consistent quality",
-        "Fast setting options",
-        "Weather resistant",
-        "50kg bags available",
+        "Repair and dent filler",
+        "For automobiles & wood",
+        "Uniform surface leveling",
+        "Dry and wet sanding",
       ],
-      brands: ["Premium Cement"],
-      origin: "UAE, India",
-      featured: true,
-      color: "from-stone-600 to-stone-700",
+      featured: false,
     },
     {
       id: 3,
-      name: "Red Meranti Wood",
-      category: "Wood",
-      icon: "🪵",
+      name: "National PU Wood Thinner 200Ltr",
+      category: "Painting",
+      itemGroup: "Solvents & Thinners",
       image:
-        "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
-      images: [
-        "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1541123603104-512919d6a96c?w=800&h=600&fit=crop",
-      ],
+        "/construction/painting/National_PU_Wood_Thinner_Normal_T1_200Ltr_A58300000200L.jpg",
       description:
-        "Premium Red Meranti hardwood timber from Southeast Asia. Perfect for doors, window frames, furniture, and interior applications.",
+        "Two pack polyurethane topcoat with excellent water, salt & corrosion resistance. UV resistant for interior & exterior applications.",
       features: [
-        "Natural hardwood",
-        "Excellent workability",
-        "Attractive grain pattern",
-        "Durable and long-lasting",
-        "Various dimensions available",
+        "Colour retentive glossy finish",
+        "Excellent water resistance",
+        "UV resistant",
+        "Marine conditions suitable",
       ],
-      brands: ["Red Meranti Wood"],
-      origin: "Malaysia, Indonesia",
       featured: true,
-      color: "from-red-700 to-red-800",
     },
     {
       id: 4,
-      name: "Laminates",
-      category: "Wood",
-      icon: "🎨",
+      name: "National PU Wood Thinner 18Ltr",
+      category: "Painting",
+      itemGroup: "Solvents & Thinners",
       image:
-        "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=800&h=600&fit=crop",
-      images: [
-        "https://images.unsplash.com/photo-1615529182904-14819c35db37?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1594844532765-12c32d813e94?w=800&h=600&fit=crop",
-      ],
+        "/construction/painting/National_PU_Wood_Thinner_Normal_T1_18Ltr_A5830000020L.jpg",
       description:
-        "Decorative laminates for furniture, countertops, and wall panels. Wide range of colors, textures, and wood grain finishes.",
+        "Two pack polyurethane topcoat with excellent water, salt & corrosion resistance. UV resistant for interior & exterior applications.",
       features: [
-        "Scratch resistant surface",
-        "Multiple design options",
-        "Easy to clean",
+        "Colour retentive glossy finish",
+        "Excellent water resistance",
         "UV resistant",
-        "Standard sheet sizes",
+        "Marine conditions suitable",
       ],
-      brands: ["Decorative Laminates"],
-      origin: "India, China",
-      featured: true,
-      color: "from-amber-600 to-amber-700",
+      featured: false,
     },
     {
       id: 5,
-      name: "National Eggshell Emulsion Paints",
-      category: "Paints",
-      icon: "🎨",
-      image:
-        "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=800&h=600&fit=crop",
-      images: [
-        "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&h=600&fit=crop",
-      ],
+      name: "National Epoxy Thinner 18Ltr",
+      category: "Painting",
+      itemGroup: "Solvents & Thinners",
+      image: "/construction/painting/National_Epoxy_Thinner-18Ltr.jpg",
       description:
-        "Premium quality eggshell emulsion paints for interior walls and ceilings. Smooth finish with excellent coverage and durability.",
+        "Thinner for epoxy based protective coatings. Gives good flow and improves brush ability.",
       features: [
-        "Low odour formula",
-        "Quick drying",
-        "Excellent coverage",
-        "Washable finish",
-        "Wide color range",
+        "For epoxy coatings",
+        "Improves brush ability",
+        "Good flow properties",
+        "Tool cleaning suitable",
       ],
-      brands: ["National Paints"],
-      origin: "UAE",
-      featured: true,
-      color: "from-blue-600 to-blue-700",
+      featured: false,
     },
     {
       id: 6,
-      name: "Asmaco Spray Paints",
-      category: "Paints",
-      icon: "🖌️",
-      image:
-        "https://images.unsplash.com/photo-1560343090-f0409e92791a?w=800&h=600&fit=crop",
-      images: [
-        "https://images.unsplash.com/photo-1560343090-f0409e92791a?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1541513161836-81e422d2e1a5?w=800&h=600&fit=crop",
-      ],
+      name: "National Lacquer Thinner 0.9Ltr",
+      category: "Painting",
+      itemGroup: "Solvents & Thinners",
+      image: "/construction/painting/National_Lacquer_Thinner-09Ltr.jpg",
       description:
-        "High-quality aerosol spray paints for metal, wood, and plastic surfaces. Fast drying with excellent adhesion and finish.",
+        "Medium for dilution of alkyd, P.U, epoxy and NC paints. Used for ease of paint application.",
       features: [
-        "Fast drying formula",
-        "Multi-surface application",
-        "Vibrant colors",
-        "Rust protection options",
-        "Easy to apply",
+        "Multi-coating compatible",
+        "Easy application",
+        "Alkyd & PU suitable",
+        "NC paints compatible",
       ],
-      brands: ["Asmaco"],
-      origin: "UAE",
-      featured: true,
-      color: "from-purple-600 to-purple-700",
+      featured: false,
     },
     {
       id: 7,
-      name: "MDF Boards",
-      category: "Wood",
-      icon: "📦",
-      image:
-        "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&h=600&fit=crop",
-      images: [
-        "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1595515106864-077aeb1c6a5c?w=800&h=600&fit=crop",
-      ],
+      name: "National Lacquer Thinner 3.6Ltr",
+      category: "Painting",
+      itemGroup: "Solvents & Thinners",
+      image: "/construction/painting/National_Lacquer_Thinner-36Ltr.png",
       description:
-        "Medium Density Fiberboard for furniture, cabinetry, and interior applications. Smooth surface ideal for painting and laminating.",
+        "Medium for dilution of alkyd, P.U, epoxy and NC paints. Used for ease of paint application.",
       features: [
-        "Uniform density",
-        "Smooth surface finish",
-        "Easy to machine",
-        "Multiple thicknesses",
-        "Cost effective",
+        "Multi-coating compatible",
+        "Easy application",
+        "Alkyd & PU suitable",
+        "NC paints compatible",
       ],
-      brands: ["MDF Boards"],
-      origin: "Malaysia, China",
-      featured: true,
-      color: "from-yellow-700 to-yellow-800",
+      featured: false,
     },
     {
       id: 8,
-      name: "Gypsum Board",
-      category: "Building Materials",
-      icon: "🧱",
-      image:
-        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop",
-      images: [
-        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&h=600&fit=crop",
-      ],
+      name: "Jotun Paint Thinner 5Ltr No.2",
+      category: "Painting",
+      itemGroup: "Solvents & Thinners",
+      image: "/construction/painting/Jotun_Paint_Thinner_5Ltr_No2.jpg",
       description:
-        "High-quality gypsum boards for wall partitions, ceilings, and drywall applications. Fire resistant with excellent acoustic properties.",
+        "Solvent for thinning alkyd and oil based products. Also used as cleaner for pumps & tools.",
       features: [
-        "Fire resistant",
-        "Sound insulation",
-        "Easy installation",
-        "Moisture resistant options",
-        "Standard sizes available",
+        "Alkyd & oil based",
+        "Pump & tool cleaner",
+        "Safe storage required",
+        "Jotun quality",
       ],
-      brands: ["Gypsum Board"],
-      origin: "UAE, Saudi Arabia",
       featured: true,
-      color: "from-slate-600 to-slate-700",
+    },
+    {
+      id: 9,
+      name: "National NC Thinner 18Ltr",
+      category: "Painting",
+      itemGroup: "Solvents & Thinners",
+      image:
+        "/construction/painting/National_NC_Thinner_E_18Ltr_A5860000020L.jpg",
+      description:
+        "Nitro cellulose thinner - mixture of esters, glycol, alcohol, aromatic solvents and ketones for all nitro products.",
+      features: [
+        "For nitro products",
+        "Precise blend ratio",
+        "Lacquer reduction",
+        "Multiple methods",
+      ],
+      featured: false,
+    },
+    {
+      id: 10,
+      name: "National NC Thinner 200Ltr",
+      category: "Painting",
+      itemGroup: "Solvents & Thinners",
+      image:
+        "/construction/painting/National_NC_Thinner_E_200Ltr_A58600000200L.jpg",
+      description:
+        "Nitro cellulose thinner - mixture of esters, glycol, alcohol, aromatic solvents and ketones for all nitro products.",
+      features: [
+        "For nitro products",
+        "Precise blend ratio",
+        "Lacquer reduction",
+        "Bulk quantity",
+      ],
+      featured: false,
+    },
+    {
+      id: 11,
+      name: "National PU Wood Thinner Slow Dry 0.9Ltr",
+      category: "Painting",
+      itemGroup: "Solvents & Thinners",
+      image:
+        "/construction/painting/National_PU_Wood_Thinner_Slow_Dry_09Ltr_A585000001L.jpg",
+      description:
+        "Paint thinner that dissolves paint and reduces viscosity for sprayer applicators. Aids in paint removal and cleanup.",
+      features: [
+        "Slow drying formula",
+        "Sprayer compatible",
+        "Paint removal aid",
+        "Cleanup suitable",
+      ],
+      featured: false,
+    },
+    // Building Materials
+    {
+      id: 12,
+      name: 'Gi-Block Mesh 6" X 45Mtr',
+      category: "Building Materials",
+      itemGroup: "Nets & Mesh",
+      image: "/construction/building-materials/Gi-Block_Mesh_6_X_45Mtr.jpg",
+      description:
+        "Metal mesh that adds strength to bricks and prevents cracking. Ideal for reinforcing window and wall openings.",
+      features: [
+        "Brick reinforcement",
+        "Prevents cracking",
+        "Single sheet production",
+        "Model making suitable",
+      ],
+      featured: true,
+    },
+    {
+      id: 13,
+      name: "Asmaco PU Foam Gold 750ml",
+      category: "Building Materials",
+      itemGroup: "PU Foam",
+      image: "/construction/building-materials/Asmaco_Pu_Foam_Gold_750ml.jpg",
+      description:
+        "Efficient seal against smoke and gas. Quick drying, moisture curing with thermal insulation characteristics.",
+      features: [
+        "Smoke & gas seal",
+        "Quick drying",
+        "Thermal insulation",
+        "CFC free",
+      ],
+      featured: true,
+    },
+    // Hardware
+    {
+      id: 14,
+      name: "Veneer Lipping Mahogany 22mmX50Mtr",
+      category: "Hardware",
+      itemGroup: "Veneer Lipping",
+      image:
+        "/construction/hardware/Venner_Lipping_With_Glue_Mahogany-22mmX50Mtr.jpg",
+      description:
+        "Highest grade pre-glued maple wood veneer edging for cabinetry, furniture, DIY projects and shelving.",
+      features: [
+        "Pre-glued with adhesive",
+        "Finely sanded finish",
+        "German hot melt glue",
+        "Household iron apply",
+      ],
+      featured: true,
+    },
+    // Plumbing & Sanitary
+    {
+      id: 15,
+      name: "Geepas Angle Valve GSW61113",
+      category: "Plumbing & Sanitary",
+      itemGroup: "Bathroom Accessories",
+      image: "/construction/plumbing-sanitary/Geepas_Angle_Valve-GSW61113.jpg",
+      description:
+        "High-quality stylish radiator valve with chrome plated solid brass. Perfect shining finish with maximum rust protection.",
+      features: [
+        "Chrome plated brass",
+        "Rust protection",
+        "Designer look",
+        "Highly durable",
+      ],
+      featured: true,
+    },
+    {
+      id: 16,
+      name: 'RAK Angle Valve CP 1/2" 33003',
+      category: "Plumbing & Sanitary",
+      itemGroup: "Bathroom Accessories",
+      image: "/construction/plumbing-sanitary/RAK_Angle_Valve-CP-12-33003.jpg",
+      description:
+        "Chrome plated product with perfect finishing. Ceramic disc fitting and ABS handle with brass 1/4 turn valve.",
+      features: [
+        "Chrome plated",
+        "Ceramic disc fitting",
+        "ABS handle",
+        "1/4 turn valve",
+      ],
+      featured: false,
+    },
+    {
+      id: 17,
+      name: 'Milano Square Angle Valve 1/2"',
+      category: "Plumbing & Sanitary",
+      itemGroup: "Bathroom Accessories",
+      image:
+        "/construction/plumbing-sanitary/Milano_Square_Angle_Valve-12-140800300063.jpg",
+      description:
+        "High-quality material for long term use. Thread type valve with secure closure and shiny polished finish.",
+      features: [
+        "Long term durability",
+        "Thread type valve",
+        "Secure closure",
+        "Polished finish",
+      ],
+      featured: false,
+    },
+    {
+      id: 18,
+      name: 'RAK Ceramics Angle Valve 1/2" 13013',
+      category: "Plumbing & Sanitary",
+      itemGroup: "Bathroom Accessories",
+      image:
+        "/construction/plumbing-sanitary/RAK_Ceramics_Angle_Valve-12-13013.jpg",
+      description:
+        "Beautiful chrome plated product with perfect finishing. High quality authentic valve with ceramic disc fitting.",
+      features: [
+        "Chrome plated",
+        "Ceramic disc fitting",
+        "ABS handle",
+        "Authentic quality",
+      ],
+      featured: false,
+    },
+    {
+      id: 19,
+      name: "Geepas Angle Valve GSW61132",
+      category: "Plumbing & Sanitary",
+      itemGroup: "Bathroom Accessories",
+      image:
+        "/construction/plumbing-sanitary/Geepas_Angle_Valve_-_GSW61132.jpeg",
+      description:
+        "Non-ferrous angle valve with solid knob. Quality solid metal construction with 1/4 turn ceramic brass cartridge.",
+      features: [
+        "Non-ferrous material",
+        "Solid metal construction",
+        "Ceramic brass cartridge",
+        "Hot & cold water",
+      ],
+      featured: false,
+    },
+    {
+      id: 20,
+      name: "Geepas Angle Valve GSW61134",
+      category: "Plumbing & Sanitary",
+      itemGroup: "Bathroom Accessories",
+      image:
+        "/construction/plumbing-sanitary/Geepas_Angle_Valve_-_GSW61134.jpg",
+      description:
+        "Stylized slim-line design with premium non-ferrous materials. Durable, corrosion and abrasion-resistant.",
+      features: [
+        "Slim-line design",
+        "Non-ferrous materials",
+        "Corrosion resistant",
+        "Lifetime durability",
+      ],
+      featured: false,
+    },
+    {
+      id: 21,
+      name: "RAK Kludi Polaris Sink Mixer RAK10050",
+      category: "Plumbing & Sanitary",
+      itemGroup: "Sanitary",
+      image:
+        "/construction/plumbing-sanitary/RAK_Kludi_Polaris_Single_Lever_Sink_Mixer_-_RAK10050.jpeg",
+      description:
+        "Single lever sink mixer with ceramic cartridge and hot water safety device. Flexible high pressure supply tubes.",
+      features: [
+        "Ceramic cartridge 35mm",
+        "Hot water safety device",
+        "High pressure tubes",
+        "Rapid installation",
+      ],
+      featured: true,
+    },
+    {
+      id: 22,
+      name: "Geepas Bathroom Accessories 8pc GSW61704",
+      category: "Plumbing & Sanitary",
+      itemGroup: "Bathroom Accessories",
+      image:
+        "/construction/plumbing-sanitary/Geepas_Bathroom_Accessories_1x8_-_GSW61704.jpg",
+      description:
+        "7-in-1 master bathroom accessories set. Includes towel ring, towel rail, robe hook and toilet paper holder.",
+      features: [
+        "7-in-1 set",
+        "Easy clean coating",
+        "High shine finish",
+        "Complete bathroom set",
+      ],
+      featured: false,
+    },
+    // Tools
+    {
+      id: 23,
+      name: "Makita Jigsaw Blade B-12 A-85640",
+      category: "Tools",
+      itemGroup: "Sawing Acc.",
+      image: "/construction/tools/Makita_Jigsaw_Blade_B-12_A-85640.jpg",
+      description:
+        "High-quality jigsaw blade with symmetrical tip geometry. Designed for fast finishing of wood and plastic.",
+      features: [
+        "High-quality material",
+        "Symmetrical tip",
+        "Sharp teeth design",
+        "Wood & plastic cutting",
+      ],
+      featured: true,
+    },
+    // Wood Products
+    {
+      id: 24,
+      name: "Kingdo Commercial Plywood 18mm",
+      category: "Wood",
+      itemGroup: "Commercial Plywood",
+      image: "/construction/wood/Kingdo_Commercial_Plywood_18mmx122x244cm.jpg",
+      description:
+        "Commercial plywood for furniture base panels like sofa, wardrobe, cabinet. Moisture resistant and durable.",
+      features: [
+        "122x244cm size",
+        "Moisture resistant",
+        "Furniture grade",
+        "Multi-purpose use",
+      ],
+      featured: true,
+    },
+    {
+      id: 25,
+      name: "JR 18mm Marine Plywood Plex Premium",
+      category: "Wood",
+      itemGroup: "Marine Plywood",
+      image: "/construction/wood/JR_18mm_Marine_Plywood_Plex-Premium.jpg",
+      description:
+        "Premium marine grade plywood, highly water-resistant and boiling water proof. Sustains 500+ hours in boiling water.",
+      features: [
+        "Boiling water proof",
+        "500+ hours tested",
+        "Outdoor furniture",
+        "Boat manufacturing",
+      ],
+      featured: true,
+    },
+    {
+      id: 26,
+      name: "JR 18mm Marine Plywood Film Face",
+      category: "Wood",
+      itemGroup: "Marine Plywood",
+      image: "/construction/wood/JR_18mm_Marine_Plywood-Film_Face.jpg",
+      description:
+        "Marine plywood for partition walls, furniture, cupboards, kitchen cabinets, office tables, and light doors.",
+      features: [
+        "Partition walls",
+        "Kitchen cabinets",
+        "Office furniture",
+        "Light doors & shutters",
+      ],
+      featured: false,
+    },
+    {
+      id: 27,
+      name: "6mm Bendply Vertical",
+      category: "Wood",
+      itemGroup: "Commercial Plywood",
+      image: "/construction/wood/6mm_Bendply_Vertical_55mm_Generic.jpeg",
+      description:
+        "Flexible plywood for curved furniture, interior elements, lamp stands, ornamental woodwork and staircases.",
+      features: [
+        "Curved furniture",
+        "Ornamental woodwork",
+        "Staircases",
+        "Office furniture",
+      ],
+      featured: false,
+    },
+    {
+      id: 28,
+      name: "6mm Bendply Horizontal",
+      category: "Wood",
+      itemGroup: "Commercial Plywood",
+      image: "/construction/wood/6mm_Bendply_Horizontal_55mm_Generic.jpg",
+      description:
+        "Flexible plywood for curved furniture, interior elements, lamp stands, ornamental woodwork and staircases.",
+      features: [
+        "Curved furniture",
+        "Ornamental woodwork",
+        "Staircases",
+        "Office furniture",
+      ],
+      featured: false,
+    },
+    {
+      id: 29,
+      name: "6mm Plain MDF Thailand",
+      category: "Wood",
+      itemGroup: "Plain MDF",
+      image: "/construction/wood/6mm_Plain_MDF_Thailand_4Ft_X_8Ft.jpg",
+      description:
+        "Versatile MDF for furniture, skirting boards, doors, wall panels, flooring and kitchen cabinets. 4Ft X 8Ft size.",
+      features: [
+        "4Ft x 8Ft size",
+        "Furniture industry",
+        "Laminate flooring",
+        "Kitchen cabinets",
+      ],
+      featured: false,
+    },
+    {
+      id: 30,
+      name: "6mm FR MDF Thailand",
+      category: "Wood",
+      itemGroup: "FR MDF",
+      image: "/construction/wood/6mm_FR_MDF_Thailand_4Ft_x_8Ft.jpg",
+      description:
+        "Fire-rated MDF with exact machining qualities as typical MDF. Environmentally friendly from recycled wood fibres.",
+      features: [
+        "Fire rated",
+        "Easy to work",
+        "Environmentally friendly",
+        "Recycled wood fibres",
+      ],
+      featured: true,
+    },
+    {
+      id: 31,
+      name: "9mm FR MDF Thailand",
+      category: "Wood",
+      itemGroup: "FR MDF",
+      image: "/construction/wood/9mm_FR_MDF_Thailand_4Ft_x_8Ft.jpg",
+      description:
+        "Fire-rated MDF with exact machining qualities as typical MDF. Environmentally friendly from recycled wood fibres.",
+      features: [
+        "Fire rated",
+        "Easy to work",
+        "Environmentally friendly",
+        "9mm thickness",
+      ],
+      featured: false,
+    },
+    {
+      id: 32,
+      name: "6mm Commercial Plywood China",
+      category: "Wood",
+      itemGroup: "Commercial Plywood",
+      image: "/construction/wood/6Mm-Commercial_Plywood-China.jpg",
+      description:
+        "Commercial plywood for furniture inside base panels. Moisture resistant and durable for various applications.",
+      features: [
+        "Moisture resistant",
+        "Furniture grade",
+        "Interior decoration",
+        "Packing materials",
+      ],
+      featured: false,
+    },
+    {
+      id: 33,
+      name: "6mm Commercial Plywood India",
+      category: "Wood",
+      itemGroup: "Commercial Plywood",
+      image: "/construction/wood/6mm-Commercial_Plywood-India.jpg",
+      description:
+        "Commercial plywood for furniture inside base panels. Moisture resistant and durable for various applications.",
+      features: [
+        "Moisture resistant",
+        "Furniture grade",
+        "Interior decoration",
+        "Packing materials",
+      ],
+      featured: false,
+    },
+    {
+      id: 34,
+      name: "15mm Commercial Plywood Indonesia",
+      category: "Wood",
+      itemGroup: "Commercial Plywood",
+      image:
+        "/construction/wood/15mm_Commercial_Plywood_Indonesia_4Ft_x_8Ft.jpg",
+      description:
+        "Commercial plywood for furniture base panels. 4Ft x 8Ft size, moisture resistant and durable.",
+      features: [
+        "4Ft x 8Ft size",
+        "15mm thickness",
+        "Moisture resistant",
+        "Indonesia origin",
+      ],
+      featured: false,
+    },
+    {
+      id: 35,
+      name: "12mm Commercial Plywood Indonesia",
+      category: "Wood",
+      itemGroup: "Commercial Plywood",
+      image:
+        "/construction/wood/12mm_Commercial_Plywood_Indonesia_4Ft_x_8Ft.jpg",
+      description:
+        "Commercial plywood for furniture base panels. 4Ft x 8Ft size, moisture resistant and durable.",
+      features: [
+        "4Ft x 8Ft size",
+        "12mm thickness",
+        "Moisture resistant",
+        "Indonesia origin",
+      ],
+      featured: false,
+    },
+    {
+      id: 36,
+      name: "9mm Commercial Plywood Indonesia",
+      category: "Wood",
+      itemGroup: "Commercial Plywood",
+      image:
+        "/construction/wood/9mm_Commercial_Plywood_Indonesia_4Ft_x_8Ft.jpg",
+      description:
+        "Commercial plywood for furniture base panels. 4Ft x 8Ft size, moisture resistant and durable.",
+      features: [
+        "4Ft x 8Ft size",
+        "9mm thickness",
+        "Moisture resistant",
+        "Indonesia origin",
+      ],
+      featured: false,
+    },
+    {
+      id: 37,
+      name: "6mm Commercial Plywood Indonesia",
+      category: "Wood",
+      itemGroup: "Commercial Plywood",
+      image:
+        "/construction/wood/6mm_Commercial_Plywood_Indonesia_4Ft_x_8Ft.jpg",
+      description:
+        "Commercial plywood for furniture base panels. 4Ft x 8Ft size, moisture resistant and durable.",
+      features: [
+        "4Ft x 8Ft size",
+        "6mm thickness",
+        "Moisture resistant",
+        "Indonesia origin",
+      ],
+      featured: false,
+    },
+    {
+      id: 38,
+      name: "JR 18mm Commercial Plywood India",
+      category: "Wood",
+      itemGroup: "Commercial Plywood",
+      image:
+        "/construction/wood/JR_18mm_Commercial_Plywood_India_4Ft_x_8Ft.jpg",
+      description:
+        "Grade A commercial plywood for partition walls, furniture, cupboards, kitchen cabinets and office tables.",
+      features: [
+        "Grade A quality",
+        "18mm thickness",
+        "Partition walls",
+        "Kitchen cabinets",
+      ],
+      featured: false,
+    },
+    {
+      id: 39,
+      name: "JR 6mm Commercial Plywood India",
+      category: "Wood",
+      itemGroup: "Commercial Plywood",
+      image: "/construction/wood/JR_6mm_Commercial_Plywood_India_4Ft_x_8Ft.jpg",
+      description:
+        "Commercial plywood for furniture base panels. Moisture resistant and durable for various applications.",
+      features: [
+        "6mm thickness",
+        "Moisture resistant",
+        "Furniture grade",
+        "India origin",
+      ],
+      featured: false,
+    },
+    {
+      id: 40,
+      name: "JR 12mm Commercial Plywood India",
+      category: "Wood",
+      itemGroup: "Commercial Plywood",
+      image:
+        "/construction/wood/JR_12mm_Commercial_Plywood_India_4Ft_x_8Ft.jpg",
+      description:
+        "Commercial plywood for furniture manufacturing, interior decoration, container floors and packing materials.",
+      features: [
+        "12mm thickness",
+        "Multi-purpose use",
+        "Interior decoration",
+        "Container floors",
+      ],
+      featured: false,
+    },
+    {
+      id: 41,
+      name: "9mm Plain MDF Thailand",
+      category: "Wood",
+      itemGroup: "Plain MDF",
+      image: "/construction/wood/9mm_Plain_MDF_Thailand_4Ft_x_8Ft.jpg",
+      description:
+        "Versatile MDF for cabinets, wardrobes, desks, doors, wall panels, flooring and kitchen cabinets. 4Ft x 8Ft size.",
+      features: [
+        "4Ft x 8Ft size",
+        "9mm thickness",
+        "Laminate flooring",
+        "Store fixtures",
+      ],
+      featured: false,
+    },
+    {
+      id: 42,
+      name: "12mm Plain MDF Thailand",
+      category: "Wood",
+      itemGroup: "Plain MDF",
+      image: "/construction/wood/12mm_Plain_MDF_Thailand_4Ft_x_8Ft.jpg",
+      description:
+        "MDF for furniture industry, skirting boards, architraves, packaging and flooring. 4Ft x 8Ft size.",
+      features: [
+        "4Ft x 8Ft size",
+        "12mm thickness",
+        "Skirting boards",
+        "Prefinished paneling",
+      ],
+      featured: false,
+    },
+    {
+      id: 43,
+      name: "15mm Plain MDF Thailand",
+      category: "Wood",
+      itemGroup: "Plain MDF",
+      image: "/construction/wood/15mm_Plain_MDF_Thailand_4Ft_x_8Ft.jpg",
+      description:
+        "MDF for furniture industry, skirting boards, architraves, doors and laminate flooring core. 4Ft x 8Ft size.",
+      features: [
+        "4Ft x 8Ft size",
+        "15mm thickness",
+        "Laminate flooring core",
+        "Office furniture",
+      ],
+      featured: false,
     },
   ];
 
@@ -268,8 +781,8 @@ export default function ConstructionSection() {
   const stats = [
     {
       icon: Package,
-      label: "Product Lines",
-      value: "8+",
+      label: "Products",
+      value: "43+",
       color: "text-teal-600",
     },
     {
@@ -349,7 +862,7 @@ export default function ConstructionSection() {
             <p className="text-sm sm:text-base md:text-lg max-w-3xl mx-auto mb-8">
               Quality construction materials including{" "}
               <span className="font-semibold text-teal-600 dark:text-teal-400">
-                rebars, cement, wood, paints,
+                plywood, MDF, paints, thinners, plumbing fixtures,
               </span>{" "}
               and building essentials for your projects across Africa.
             </p>
@@ -486,13 +999,13 @@ export default function ConstructionSection() {
                     key={product.id}
                     className="group bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-3xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer"
                   >
-                    <div className="relative w-full h-64 bg-slate-100 dark:bg-slate-700 overflow-hidden">
+                    <div className="relative w-full h-96 bg-white  overflow-hidden">
                       <Image
                         src={productImages[currentIndex]}
                         alt={product.name}
-                        width={800}
-                        height={256}
-                        className="w-full h-full object-cover transition-all duration-1000 ease-in-out"
+                        width={400}
+                        height={400}
+                        className="w-full h-full object-cover transition-all duration-1000 ease-in-out "
                       />
 
                       {productImages.length > 1 && (
