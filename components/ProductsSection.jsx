@@ -83,7 +83,7 @@ export default function ProductsSection() {
     },
     {
       id: 2,
-      name: "Libaax Palm Oil",
+      name: "Abusita Palm Oil",
       category: "Palm Oil",
       icon: "🌴",
       image: "/brands/libaaxoil.png",
@@ -92,7 +92,8 @@ export default function ProductsSection() {
         "/brands/libaaxbox1.png",
         "/brands/libaaxbox.png",
       ],
-      description: "Pure and refined palm oil for cooking and food processing. Available in 1L, 3L, and 5L packaging.",
+      description:
+        "Pure and refined palm oil for cooking and food processing. Available in 1L, 3L, and 5L packaging.",
       features: [
         "100% pure palm oil",
         "Refined and filtered",
@@ -101,7 +102,7 @@ export default function ProductsSection() {
         "Versatile cooking oil",
       ],
 
-      brands: ["Libaax Palm Oil"],
+      brands: ["Abusita Palm Oil"],
       origin: "Malaysia, Indonesia",
       featured: true,
       color: "from-orange-600 to-orange-700",
@@ -153,7 +154,7 @@ export default function ProductsSection() {
     },
     {
       id: 5,
-      name: "Libaax Pure Sunflower Oil",
+      name: "Abusita Pure Sunflower Oil",
       category: "Sunflower Oil",
       icon: "🌻",
       image: "/brands/li2.png",
@@ -168,7 +169,7 @@ export default function ProductsSection() {
         "Light and healthy",
         "No artificial additives",
       ],
-      brands: ["Libaax Pure Sunflower Oil"],
+      brands: ["Abusita Pure Sunflower Oil"],
       origin: "Turkey",
       featured: true,
       color: "from-yellow-600 to-yellow-700",
@@ -273,8 +274,8 @@ export default function ProductsSection() {
       image: "/brands/abusita-oil.png",
       images: [
         "/brands/abusita-oil1.png",
-        "/brands/ab1.jpeg",
-        "/brands/ab2.jpeg",
+        "/brands/ab1.png",
+        "/brands/ab2.png",
       ],
       featured: true,
     },
@@ -332,7 +333,8 @@ export default function ProductsSection() {
       id: 18,
       name: "Rawda Oil",
       category: "Edible Oils",
-      description: "Oil for various culinary and industrial applications. Available in 1L, 3L, and 5L packaging.",
+      description:
+        "Oil for various culinary and industrial applications. Available in 1L, 3L, and 5L packaging.",
       features: [
         "High purity refined oil",
         "Cold-pressed extraction",
@@ -353,8 +355,8 @@ export default function ProductsSection() {
       name: "Premium Spaghetti",
       category: "Others",
       icon: "🍝",
-      image: "/brands/spaghetti.jpg",
-      images: ["/brands/spaghetti.jpg", "/brands/spaghetti1.jpeg"],
+      image: "/brands/spaghetti.png",
+      images: ["/brands/spaghetti.png", "/brands/spaghetti1.png"],
       description:
         "High-quality spaghetti pasta made from premium durum wheat for perfect texture",
       features: [

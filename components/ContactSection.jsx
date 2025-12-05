@@ -218,8 +218,8 @@ export default function ContactSection() {
                     </div>
                     <div>
                       <h3 className="font-medium text-sm text-zinc-600 dark:text-slate-400 mb-1">Email</h3>
-                      <a href="mailto:Muzaffar@haidmcc.com" className="text-base text-black dark:text-white hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
-                        Muzaffar@haidmcc.com
+                      <a href="mailto:info@haitrading.com" className="text-base text-black dark:text-white hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
+                        info@haitrading.com
                       </a>
                     </div>
                   </div>

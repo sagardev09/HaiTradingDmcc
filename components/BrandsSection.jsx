@@ -274,7 +274,7 @@ export default function BrandsSection() {
 
               <p className="text-teal-50 text-lg max-w-3xl mx-auto mb-8">
                 We proudly partner with{" "}
-                <span className="font-bold text-white">AGT</span> and{" "}
+                <span className="font-bold text-white">Abusita</span> and{" "}
                 <span className="font-bold text-white">Libaax</span>, two
                 industry-leading brands known for their commitment to quality,
                 sustainability, and customer satisfaction across global markets.
@@ -287,7 +287,7 @@ export default function BrandsSection() {
                     <img src="/logos/abusita_logo.png" alt="" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
-                    AGT Foods
+                    Abusita Groups
                   </h3>
                   <p className="text-teal-50 text-sm">
                     Global leader in pulses, grains, and food ingredients with a

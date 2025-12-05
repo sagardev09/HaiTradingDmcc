@@ -24,7 +24,7 @@ export default function Navbar() {
   const languages = {
     en: { name: "English", flag: "🇬🇧" },
     ar: { name: "العربية", flag: "🇸🇦" },
-    so: { name: "Soomaali", flag: "🇸🇴" },
+    so: { name: "Somaliland", flag: "🏴" },
     am: { name: "አማርኛ", flag: "🇪🇹" },
   };
 

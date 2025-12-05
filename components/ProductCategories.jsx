@@ -1,10 +1,19 @@
 "use client";
 
+import { useMemo } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ArrowRight, Package, Hammer } from "lucide-react";
 import { GlareCard } from "./ui/glare-card";
 
 export default function ProductCategories() {
+  const pathname = usePathname();
+
+  const currentLang = useMemo(() => {
+    const segments = pathname.split("/").filter(Boolean);
+    const locales = ["en", "ar", "so", "am"];
+    return locales.includes(segments[0]) ? segments[0] : "en";
+  }, [pathname]);
   const categories = [
     {
       id: "food",
@@ -19,7 +28,7 @@ export default function ProductCategories() {
         "Guaranteed certifications",
         "Bulk & retail packaging",
       ],
-      link: "/products",
+      link: "products",
       linkText: "Explore Food Products",
       gradient: "from-orange-600/50 to-amber-600/90",
     },
@@ -28,7 +37,7 @@ export default function ProductCategories() {
       title: "Construction & Building Materials",
       icon: Hammer,
       image:
-        "https://images.unsplash.com/photo-1590856029826-c7a73142bbf1?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?q=80&w=1379&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       description:
         "High-quality construction materials including premium door skins, industrial paper products, and building essentials.",
       features: [
@@ -37,7 +46,7 @@ export default function ProductCategories() {
         "Certified materials",
         "Contractor & retail supply",
       ],
-      link: "/construction",
+      link: "construction",
       linkText: "Explore Construction Materials",
       gradient: "from-slate-700/90 to-slate-600/90",
     },
@@ -57,7 +66,7 @@ export default function ProductCategories() {
             markets across Africa with excellence.
           </p>
           <Link
-            href="/contact"
+            href={`/${currentLang}/contact`}
             className="group inline-flex items-center text-sm font-medium md:text-base hover:text-primary transition-colors"
           >
             Request a Quote
@@ -70,7 +79,7 @@ export default function ProductCategories() {
           {categories.map((category) => (
             <GlareCard key={category.id} className="h-[500px]">
               <Link
-                href={category.link}
+                href={`/${currentLang}/${category.link}`}
                 className="group relative rounded-2xl overflow-hidden cursor-pointer h-full w-full block shadow-xl hover:shadow-2xl transition-all duration-500"
               >
                 {/* Background Image */}
@@ -116,7 +125,7 @@ export default function ProductCategories() {
                   </div>
 
                   {/* CTA Button */}
-                  <div className="inline-flex items-center gap-2 text-white font-semibold text-base bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/30 hover:bg-white/20 transition-all">
+                  <div className="inline-flex items-center gap-2 text-white font-semibold text-base bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/30 hover:bg-white/20 transition-all z-[1000]">
                     <span>{category.linkText}</span>
                     <ArrowRight className="size-5 group-hover:translate-x-1 transition-transform" />
                   </div>

@@ -54,122 +54,6 @@ export default function ConstructionSection() {
   const products = [
     // Painting Products
     {
-      id: 1,
-      name: "National Polyester Putty 3.5kg",
-      category: "Painting",
-      itemGroup: "Stucco, Putty & Filler",
-      image:
-        "/construction/painting/National_Polyester_Putty_Light_Weight-35kg.jpg",
-      description:
-        "Light weight polyester putty for automobiles and wooden surfaces. Good rheological properties for uniform leveling.",
-      features: [
-        "Repair and dent filler",
-        "For automobiles & wood",
-        "Uniform surface leveling",
-        "Dry and wet sanding",
-      ],
-      featured: true,
-    },
-    {
-      id: 2,
-      name: "National Polyester Putty 1.5kg",
-      category: "Painting",
-      itemGroup: "Stucco, Putty & Filler",
-      image:
-        "/construction/painting/National_Polyester_Putty_Light_Weight-15kg.jpg",
-      description:
-        "Light weight polyester putty for automobiles and wooden surfaces. Good rheological properties for uniform leveling.",
-      features: [
-        "Repair and dent filler",
-        "For automobiles & wood",
-        "Uniform surface leveling",
-        "Dry and wet sanding",
-      ],
-      featured: false,
-    },
-    {
-      id: 3,
-      name: "National PU Wood Thinner 200Ltr",
-      category: "Painting",
-      itemGroup: "Solvents & Thinners",
-      image:
-        "/construction/painting/National_PU_Wood_Thinner_Normal_T1_200Ltr_A58300000200L.jpg",
-      description:
-        "Two pack polyurethane topcoat with excellent water, salt & corrosion resistance. UV resistant for interior & exterior applications.",
-      features: [
-        "Colour retentive glossy finish",
-        "Excellent water resistance",
-        "UV resistant",
-        "Marine conditions suitable",
-      ],
-      featured: true,
-    },
-    {
-      id: 4,
-      name: "National PU Wood Thinner 18Ltr",
-      category: "Painting",
-      itemGroup: "Solvents & Thinners",
-      image:
-        "/construction/painting/National_PU_Wood_Thinner_Normal_T1_18Ltr_A5830000020L.jpg",
-      description:
-        "Two pack polyurethane topcoat with excellent water, salt & corrosion resistance. UV resistant for interior & exterior applications.",
-      features: [
-        "Colour retentive glossy finish",
-        "Excellent water resistance",
-        "UV resistant",
-        "Marine conditions suitable",
-      ],
-      featured: false,
-    },
-    {
-      id: 5,
-      name: "National Epoxy Thinner 18Ltr",
-      category: "Painting",
-      itemGroup: "Solvents & Thinners",
-      image: "/construction/painting/National_Epoxy_Thinner-18Ltr.jpg",
-      description:
-        "Thinner for epoxy based protective coatings. Gives good flow and improves brush ability.",
-      features: [
-        "For epoxy coatings",
-        "Improves brush ability",
-        "Good flow properties",
-        "Tool cleaning suitable",
-      ],
-      featured: false,
-    },
-    {
-      id: 6,
-      name: "National Lacquer Thinner 0.9Ltr",
-      category: "Painting",
-      itemGroup: "Solvents & Thinners",
-      image: "/construction/painting/National_Lacquer_Thinner-09Ltr.jpg",
-      description:
-        "Medium for dilution of alkyd, P.U, epoxy and NC paints. Used for ease of paint application.",
-      features: [
-        "Multi-coating compatible",
-        "Easy application",
-        "Alkyd & PU suitable",
-        "NC paints compatible",
-      ],
-      featured: false,
-    },
-    {
-      id: 7,
-      name: "National Lacquer Thinner 3.6Ltr",
-      category: "Painting",
-      itemGroup: "Solvents & Thinners",
-      image: "/construction/painting/National_Lacquer_Thinner-36Ltr.png",
-      description:
-        "Medium for dilution of alkyd, P.U, epoxy and NC paints. Used for ease of paint application.",
-      features: [
-        "Multi-coating compatible",
-        "Easy application",
-        "Alkyd & PU suitable",
-        "NC paints compatible",
-      ],
-      featured: false,
-    },
-    {
       id: 8,
       name: "Jotun Paint Thinner 5Ltr No.2",
       category: "Painting",
@@ -184,57 +68,6 @@ export default function ConstructionSection() {
         "Jotun quality",
       ],
       featured: true,
-    },
-    {
-      id: 9,
-      name: "National NC Thinner 18Ltr",
-      category: "Painting",
-      itemGroup: "Solvents & Thinners",
-      image:
-        "/construction/painting/National_NC_Thinner_E_18Ltr_A5860000020L.jpg",
-      description:
-        "Nitro cellulose thinner - mixture of esters, glycol, alcohol, aromatic solvents and ketones for all nitro products.",
-      features: [
-        "For nitro products",
-        "Precise blend ratio",
-        "Lacquer reduction",
-        "Multiple methods",
-      ],
-      featured: false,
-    },
-    {
-      id: 10,
-      name: "National NC Thinner 200Ltr",
-      category: "Painting",
-      itemGroup: "Solvents & Thinners",
-      image:
-        "/construction/painting/National_NC_Thinner_E_200Ltr_A58600000200L.jpg",
-      description:
-        "Nitro cellulose thinner - mixture of esters, glycol, alcohol, aromatic solvents and ketones for all nitro products.",
-      features: [
-        "For nitro products",
-        "Precise blend ratio",
-        "Lacquer reduction",
-        "Bulk quantity",
-      ],
-      featured: false,
-    },
-    {
-      id: 11,
-      name: "National PU Wood Thinner Slow Dry 0.9Ltr",
-      category: "Painting",
-      itemGroup: "Solvents & Thinners",
-      image:
-        "/construction/painting/National_PU_Wood_Thinner_Slow_Dry_09Ltr_A585000001L.jpg",
-      description:
-        "Paint thinner that dissolves paint and reduces viscosity for sprayer applicators. Aids in paint removal and cleanup.",
-      features: [
-        "Slow drying formula",
-        "Sprayer compatible",
-        "Paint removal aid",
-        "Cleanup suitable",
-      ],
-      featured: false,
     },
     // Building Materials
     {
@@ -474,7 +307,7 @@ export default function ConstructionSection() {
     },
     {
       id: 26,
-      name: "JR 18mm Marine Plywood Film Face",
+      name: "18mm Marine Plywood Film Face",
       category: "Wood",
       itemGroup: "Marine Plywood",
       image: "/construction/wood/JR_18mm_Marine_Plywood-Film_Face.jpg",
@@ -670,7 +503,7 @@ export default function ConstructionSection() {
     },
     {
       id: 38,
-      name: "JR 18mm Commercial Plywood India",
+      name: " 18mm Commercial Plywood India",
       category: "Wood",
       itemGroup: "Commercial Plywood",
       image:
@@ -687,7 +520,7 @@ export default function ConstructionSection() {
     },
     {
       id: 39,
-      name: "JR 6mm Commercial Plywood India",
+      name: " 6mm Commercial Plywood India",
       category: "Wood",
       itemGroup: "Commercial Plywood",
       image: "/construction/wood/JR_6mm_Commercial_Plywood_India_4Ft_x_8Ft.jpg",
@@ -703,7 +536,7 @@ export default function ConstructionSection() {
     },
     {
       id: 40,
-      name: "JR 12mm Commercial Plywood India",
+      name: " 12mm Commercial Plywood India",
       category: "Wood",
       itemGroup: "Commercial Plywood",
       image:
@@ -868,24 +701,6 @@ export default function ConstructionSection() {
             </p>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-16">
-              {stats.map((stat, index) => (
-                <div
-                  key={index}
-                  className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-                >
-                  <stat.icon
-                    className={`size-8 ${stat.color} dark:brightness-125 mx-auto mb-3`}
-                  />
-                  <div className="text-3xl font-bold text-black dark:text-white mb-1">
-                    {stat.value}
-                  </div>
-                  <div className="text-sm text-zinc-600 dark:text-slate-400">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
 
           {/* Featured Products */}
@@ -999,13 +814,13 @@ export default function ConstructionSection() {
                     key={product.id}
                     className="group bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-3xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer"
                   >
-                    <div className="relative w-full h-96 bg-white  overflow-hidden">
+                    <div className="relative w-full h-64  dark:bg-white overflow-hidden flex items-center justify-center">
                       <Image
                         src={productImages[currentIndex]}
                         alt={product.name}
-                        width={400}
+                        width={600}
                         height={400}
-                        className="w-full h-full object-cover transition-all duration-1000 ease-in-out "
+                        className="w-full h-full object-contain p-4 transition-all duration-1000 ease-in-out"
                       />
 
                       {productImages.length > 1 && (
@@ -1099,6 +914,24 @@ export default function ConstructionSection() {
                     <p className="text-zinc-600 dark:text-slate-300 text-sm leading-relaxed">
                       {feature.description}
                     </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mt-16">
+              {stats.map((stat, index) => (
+                <div
+                  key={index}
+                  className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                >
+                  <stat.icon
+                    className={`size-8 ${stat.color} dark:brightness-125 mx-auto mb-3`}
+                  />
+                  <div className="text-3xl font-bold text-black dark:text-white mb-1">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm text-zinc-600 dark:text-slate-400">
+                    {stat.label}
                   </div>
                 </div>
               ))}

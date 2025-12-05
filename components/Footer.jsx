@@ -221,10 +221,10 @@ export default function Footer() {
             <div className="min-w-0">
               <p className="text-slate-400 text-xs sm:text-sm mb-1">Email Us</p>
               <a
-                href="mailto:Muzaffar@haidmcc.com"
+                href="mailto:info@haitrading.com"
                 className="text-white hover:text-teal-400 transition-colors font-medium text-xs sm:text-base break-all"
               >
-                Muzaffar@haidmcc.com
+                info@haitrading.com
               </a>
             </div>
           </div>

@@ -4,6 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import SupplyChainCarousel from "@/components/SupplyChainCarousel";
 import WhyTradingLLC from "@/components/WhyTradingLLC";
 import FAQSection from "@/components/FAQSection";
+import MainFaq from "@/components/FAQSection";
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
       {/* <SupplyChainCarousel /> */}
       <WhyTradingLLC />
       {/* <ShuffleHero /> */}
-      <FAQSection />
+      <MainFaq />
       {/* <MainFaq /> */}
     </main>
   );
