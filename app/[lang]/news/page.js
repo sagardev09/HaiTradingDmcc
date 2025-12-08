@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 import NewsSection from "@/components/NewsSection";
 
 export const metadata = {

@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 import ProductsSection from "@/components/ProductsSection";
 
 export const metadata = {

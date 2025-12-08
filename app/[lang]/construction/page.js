@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 import ConstructionSection from "@/components/ConstructionSection";
 
 export const metadata = {

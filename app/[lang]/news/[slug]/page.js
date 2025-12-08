@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 import NewsArticle from "@/components/NewsArticle";
 import { notFound } from "next/navigation";
 

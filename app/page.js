@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 import HeroSection from "@/components/HeroSection";
 import { ShuffleHero } from "@/components/MainBrands";
 import MainFaq from "@/components/MainFaq";

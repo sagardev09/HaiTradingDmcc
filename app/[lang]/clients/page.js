@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 import ClientsSection from "@/components/ClientsSection";
 
 export const metadata = {
