@@ -1,8 +1,7 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import Navbar from "@/components/Navbar";
+import LayoutContent from "@/components/LayoutContent";
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -33,11 +32,7 @@ export default function RootLayout({ children }) {
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/80 dark:to-slate-900/80 pointer-events-none" />
 
           <ThemeProvider>
-            <div className="relative z-10 flex flex-col items-center pt-8">
-              <Navbar />
-            </div>
-            {children}
-            <Footer />
+            <LayoutContent>{children}</LayoutContent>
           </ThemeProvider>
         </div>
       </body>
